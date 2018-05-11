@@ -35,3 +35,16 @@ make
 ```
 
 Then, a static compiled library file, named as *libdfanalyzer.so*, is generated at the directory *./library/dfa-lib-cpp/lib*.
+
+## Use in scientific applications
+
+### C++ library
+
+When computational specialist needs to configure the *Makefile* of his/her scientific application, it has to add the following set of directives used by a make build automation tool to generate a target/goal.
+
+```bash
+DFANALYZER_DIR 	?= $(DFANALYZER_REPOSITORY)/library/dfa-lib-cpp
+LDFLAGS  += -lcurl -L$(DFANALYZER_DIR)/lib -ldfanalyzer
+```
+
+Then, he/she can run the command make for generating an executable file of his/her application.
