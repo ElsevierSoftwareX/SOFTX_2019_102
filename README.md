@@ -40,7 +40,7 @@ Then, a static compiled library file, named as *libdfanalyzer.so*, is generated 
 
 ### C++ library
 
-When computational specialist needs to configure the *Makefile* of his/her scientific application, it has to add the following set of directives used by a make build automation tool to generate a target/goal.
+When computational specialist needs to configure the *Makefile* of his scientific application, he has to add the following set of directives used by a make build automation tool to generate a target/goal.
 
 ```bash
 DFANALYZER_DIR 	?= $(DFANALYZER_REPOSITORY)/library/dfa-lib-cpp
