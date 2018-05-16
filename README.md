@@ -8,9 +8,16 @@ This repository presents DfAnalyzer, a dataflow tool for monitoring, debugging, 
 
 The following softwares have to be configured / installed for running this application.
 
+### RESTful services
+
 1. [Java](https://www.oracle.com/java/index.html) as the main programming language.
 2. [Apache Maven](https://maven.apache.org/), the software project management and comprehension tool.
 3. [MonetDB](https://www.monetdb.org) as the open-source column-store database system.
+
+### C++ library
+
+1. [GCC](https://gcc.gnu.org/), the GNU Compiler Collection.
+2. [curl](https://curl.haxx.se/), a command line tool and library for transferring data with URLs.
 
 ## Installation
 
