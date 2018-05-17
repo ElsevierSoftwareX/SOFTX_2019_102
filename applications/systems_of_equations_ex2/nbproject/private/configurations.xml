@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name=".libs">
+      </df>
+      <df name="rde">
+        <df name="1">
+        </df>
+        <df name="10">
+          <df name="OptimizedFastBit_extractor_10_b.precision=2_e.equality">
+            <df name="extractor_10">
+            </df>
+          </df>
+        </df>
+        <df name="11">
+          <df name="OptimizedFastBit_extractor_11_b.precision=2_e.equality">
+            <df name="extractor_11">
+            </df>
+          </df>
+        </df>
+        <df name="12">
+          <df name="OptimizedFastBit_extractor_12_b.precision=2_e.equality">
+            <df name="extractor_12">
+            </df>
+          </df>
+        </df>
+        <df name="13">
+          <df name="OptimizedFastBit_extractor_13_b.precision=2_e.equality">
+            <df name="extractor_13">
+            </df>
+          </df>
+        </df>
+        <df name="14">
+          <df name="OptimizedFastBit_extractor_14_b.precision=2_e.equality">
+            <df name="extractor_14">
+            </df>
+          </df>
+        </df>
+        <df name="15">
+          <df name="OptimizedFastBit_extractor_15_b.precision=2_e.equality">
+            <df name="extractor_15">
+            </df>
+          </df>
+        </df>
+        <df name="2">
+          <df name="OptimizedFastBit_extractor_2_b.precision=2_e.equality">
+            <df name="extractor_2">
+            </df>
+          </df>
+        </df>
+        <df name="3">
+          <df name="OptimizedFastBit_extractor_3_b.precision=2_e.equality">
+            <df name="extractor_3">
+            </df>
+          </df>
+        </df>
+        <df name="4">
+          <df name="OptimizedFastBit_extractor_4_b.precision=2_e.equality">
+            <df name="extractor_4">
+            </df>
+          </df>
+        </df>
+        <df name="5">
+          <df name="OptimizedFastBit_extractor_5_b.precision=2_e.equality">
+            <df name="extractor_5">
+            </df>
+          </df>
+        </df>
+        <df name="6">
+          <df name="OptimizedFastBit_extractor_6_b.precision=2_e.equality">
+            <df name="extractor_6">
+            </df>
+          </df>
+        </df>
+        <df name="7">
+          <df name="OptimizedFastBit_extractor_7_b.precision=2_e.equality">
+            <df name="extractor_7">
+            </df>
+          </df>
+        </df>
+        <df name="8">
+          <df name="OptimizedFastBit_extractor_8_b.precision=2_e.equality">
+            <df name="extractor_8">
+            </df>
+          </df>
+        </df>
+        <df name="9">
+          <df name="OptimizedFastBit_extractor_9_b.precision=2_e.equality">
+            <df name="extractor_9">
+            </df>
+          </df>
+        </df>
+      </df>
+      <df name="script">
+      </df>
+      <in>systems_of_equations_ex2.C</in>
+    </df>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>2</platform>
+      </toolsSet>
+      <compile>
+        <compiledirpicklist>
+          <compiledirpicklistitem>.</compiledirpicklistitem>
+          <compiledirpicklistitem>${AUTO_FOLDER}</compiledirpicklistitem>
+        </compiledirpicklist>
+        <compiledir>${AUTO_FOLDER}</compiledir>
+        <compilecommandpicklist>
+          <compilecommandpicklistitem>${MAKE} ${ITEM_NAME}.o</compilecommandpicklistitem>
+          <compilecommandpicklistitem>${AUTO_COMPILE}</compilecommandpicklistitem>
+        </compilecommandpicklist>
+        <compilecommand>${AUTO_COMPILE}</compilecommand>
+      </compile>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_options>
+          <DebugOptions>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>"${OUTPUT_PATH}"</runcommand>
+        <rundir>.</rundir>
+        <buildfirst>false</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+          <variable name="PARAVIEW_DIR"
+                    value="/media/vitor/data-linux/program/paraview-5.4"/>
+          <variable name="DFANALYZER_DIR"
+                    value="/home/vitor/Documents/dev/workflow-sedimentation/program/dfa-lib"/>
+          <variable name="FASTBIT_DIR"
+                    value="/media/vitor/data-linux/program/fastbit-2.0.3"/>
+          <variable name="LD_LIBRARY_PATH"
+                    value="/home/vitor/Documents/dev/workflow-sedimentation/program/dfa-lib/lib:$LD_LIBRARY_PATH"/>
+        </environment>
+      </runprofile>
+    </conf>
+  </confs>
+</configurationDescriptor>
