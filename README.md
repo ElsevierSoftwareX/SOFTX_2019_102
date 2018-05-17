@@ -106,7 +106,7 @@ There are also some optional software requirements, if raw data extraction and i
 
 #### Source code compilation
 
-Application files are stored in directory `applications/systems_of_equations_ex2` and it has to be compiled. However, it is necessary to define the environment variable `LIBMESH` with the installation path of libMesh before to run the following command lines:
+Application files are stored in directory `applications/systems_of_equations_ex2` and it has to be compiled. However, it is necessary to define the environment variable `LIBMESH_DIR` with the installation path of libMesh before to run the following command lines:
 
 ```bash
 cd applications/systems_of_equations_ex2
@@ -115,10 +115,10 @@ make
 
 #### Environment configuration for raw data extraction and visualization
 
-If visualization and raw data extraction/indexing are enabled in the CSE application (according to the *#define* statements in `systems_of_equations_ex2.C`), it is necessary to configure some environment variables (`PARAVIEW`, `FASTBIT`), since this application will use ParaView tool for extracting raw data from files in [ExodusII](http://prod.sandia.gov/techlib/access-control.cgi/1992/922137.pdf) format and FastBit for applying bitmap indexing technique. Please find below the definition of these variables in our Docker image, besides the environment variable `LIBMESH`.
+If visualization and raw data extraction/indexing are enabled in the CSE application (according to the *#define* statements in `systems_of_equations_ex2.C`), it is necessary to configure some environment variables (`PARAVIEW`, `FASTBIT`), since this application will use ParaView tool for extracting raw data from files in [ExodusII](http://prod.sandia.gov/techlib/access-control.cgi/1992/922137.pdf) format and FastBit for applying bitmap indexing technique. Please find below the definition of these variables in our Docker image, besides the environment variable `LIBMESH_DIR`.
 
 ```bash
-export LIBMESH=/program/libmesh
+export LIBMESH_DIR=/program/libmesh
 export PARAVIEW=/program/paraview
 export FASTBIT=/program/fastbit
 ```
