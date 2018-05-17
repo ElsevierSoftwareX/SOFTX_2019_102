@@ -35,6 +35,20 @@ Then, the package file JAR is generated for DfAnalyzer project. It allows Java r
 
 **Important note**: The components *Provenance Data Extractor* (PDE), *Dataflow Viewer* (DfViewer), *Query Interface* (QI), and *Query Dashboard* (QP) are implemented as RESTful services in DfAnalyzer project.
 
+### Raw Data Extractor and Indexer: RDE and RDI
+
+RDE and RDI can also be compiled in the same way of RESTful services, as follows:
+
+```bash
+# RDE
+cd RawDataExtractor
+mvn clean package
+
+# RDI
+cd ../RawDataIndexer
+mvn clean package
+```
+
 ### C++ library
 
 The DfAnalyzer library for the programming language C++ can be built with the following command lines:
@@ -46,9 +60,23 @@ make
 
 Then, a static compiled library file, named as *libdfanalyzer.so*, is generated at the directory *./library/dfa-lib-cpp/lib*.
 
-## DfA-lib documentation
+## Documentation
+
+### DfA-lib in C++
 
 The documentation of dfa-lib in C++ can be found in [here](https://dfa-lib-cpp-docs.herokuapp.com/).
+
+### RDE and RDI
+
+The user guide of RDE and RDI can be found in their respective directories, as follows:
+
+`RawDataExtractor` ([easy access with this link](./RawDataExtractor))
+
+`RawDataIndexer` ([easy access with this link](./RawDataIndexer))
+
+### RESTful services
+
+More details about DfAnalyzer RESTful services can be found [here](https://hpcdb.github.io/armful/dfanalyzer.html).
 
 ## Use in scientific applications
 
