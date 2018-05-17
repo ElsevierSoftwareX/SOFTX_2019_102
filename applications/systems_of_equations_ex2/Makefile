@@ -1,9 +1,7 @@
 ######################################################################
 #
 # Template libMesh application Makefile
-MACOS			?= 0
 DFANALYZER_DIR 	?= ../../library/dfa-lib-cpp
-LIBMESH_DIR ?= $$(LIBMESH)
 
 # include the library options determined by configure
 include $(LIBMESH_DIR)/Make.common
