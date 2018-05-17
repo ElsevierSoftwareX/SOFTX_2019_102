@@ -46,7 +46,7 @@ Then, a static compiled library file, named as *libdfanalyzer.so*, is generated 
 
 ## DfA-lib documentation
 
-The documentation of dfa-lib in C++ can be found in `library/dfa-lib-cpp/html/index.html`.
+The documentation of dfa-lib in C++ can be found in [here](https://dfa-lib-cpp-docs.herokuapp.com/).
 
 ## Use in scientific applications
 
