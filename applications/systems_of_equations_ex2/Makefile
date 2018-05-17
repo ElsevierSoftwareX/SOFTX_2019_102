@@ -1,10 +1,17 @@
 ######################################################################
 #
 # Template libMesh application Makefile
+MACOS			?= 0
 DFANALYZER_DIR 	?= ../../library/dfa-lib-cpp
 
+ifeq (${MACOS}, 1) 
+	LIBMESH_DIR 	?= $(PROGRAM)/libmesh_apr_2018
+else
+	LIBMESH_DIR 	?= $(PROGRAM)/libmesh
+endif
+
 # include the library options determined by configure
-include $(LIBMESH)/Make.common
+include $(LIBMESH_DIR)/Make.common
 
 target     := ./example-$(METHOD)
 
@@ -19,7 +26,6 @@ srcfiles 	:= $(wildcard *.C)
 libmesh_CXXFLAGS += -w -I$(DFANALYZER_DIR)/include 
 libmesh_LDFLAGS  += -lcurl -L$(DFANALYZER_DIR)/lib -ldfanalyzer
 
-# libmesh_CXXFLAGS +=  -I$(DFANALYZER_DIR)/include 
 #
 # object files
 objects		:= $(patsubst %.C, %.$(obj-suffix), $(srcfiles))
@@ -78,8 +84,8 @@ complete: $(wildcard *.in)
 	@echo "***************************************************************"
 
 gmv:
-	@$(MAKE) -C $(LIBMESH)/roy/meshplot/ meshplot-$(METHOD)
-	@for file in out.mesh.*; do ${LIBMESH_RUN} $(LIBMESH)/roy/meshplot/meshplot-$(METHOD) $$file out.soln.$${file##out.mesh.} out.gmv.$${file:9:4}; done
+	@$(MAKE) -C $(LIBMESH_DIR)/roy/meshplot/ meshplot-$(METHOD)
+	@for file in out.mesh.*; do ${LIBMESH_RUN} $(LIBMESH_DIR)/roy/meshplot/meshplot-$(METHOD) $$file out.soln.$${file##out.mesh.} out.gmv.$${file:9:4}; done
 
 # include the dependency list
 -include .depend
@@ -87,7 +93,7 @@ gmv:
 #
 # Dependencies
 #
-.depend: $(srcfiles) $(LIBMESH)/include/libmesh/*.h
-	@$(perl) $(LIBMESH)/contrib/bin/make_dependencies.pl -I. $(foreach i, $(LIBMESH)/include $(wildcard $(LIBMESH)/include/*), -I$(i)) "-S\$$(obj-suffix)" $(srcfiles) > .depend
+.depend: $(srcfiles) $(LIBMESH_DIR)/include/libmesh/*.h
+	@$(perl) $(LIBMESH_DIR)/contrib/bin/make_dependencies.pl -I. $(foreach i, $(LIBMESH_DIR)/include $(wildcard $(LIBMESH_DIR)/include/*), -I$(i)) "-S\$$(obj-suffix)" $(srcfiles) > .depend
 
 ###############################################################################
