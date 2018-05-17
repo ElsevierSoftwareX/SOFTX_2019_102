@@ -4,6 +4,8 @@
 
 This repository presents DfAnalyzer, a dataflow tool for monitoring, debugging, steering, and analyzing dataflow paths of scientific applications.
 
+**Important note**: The components *Provenance Data Extractor* (PDE), *Dataflow Viewer* (DfViewer), *Query Interface* (QI), and *Query Dashboard* (QP) are implemented as RESTful services in DfAnalyzer project.
+
 ## Software requirements
 
 The following softwares have to be configured / installed for running this application.
@@ -33,8 +35,6 @@ mvn clean package
 
 Then, the package file JAR is generated for DfAnalyzer project. It allows Java runtimes to efficiently deploy our tool. This JAR file is named as *DfAnalyzer-v2.jar* and it can be found in *./DfAnalyzer/target*.
 
-**Important note**: The components *Provenance Data Extractor* (PDE), *Dataflow Viewer* (DfViewer), *Query Interface* (QI), and *Query Dashboard* (QP) are implemented as RESTful services in DfAnalyzer project.
-
 ### Raw Data Extractor and Indexer: RDE and RDI
 
 RDE and RDI can also be compiled in the same way of RESTful services, as follows:
@@ -60,6 +60,12 @@ make
 
 Then, a static compiled library file, named as *libdfanalyzer.so*, is generated at the directory *./library/dfa-lib-cpp/lib*.
 
+## An overview of DfAnalyzer components and their documentations
+
+### RESTful services
+
+More details about DfAnalyzer RESTful services can be found [here](https://hpcdb.github.io/armful/dfanalyzer.html).
+
 ### DfA-lib in C++
 
 The documentation of dfa-lib in C++ can be found in [here](https://dfa-lib-cpp-docs.herokuapp.com/).
@@ -71,10 +77,6 @@ The user guide of RDE and RDI can be found in their respective directories, as f
 `RawDataExtractor` ([easy access with this link](./RawDataExtractor))
 
 `RawDataIndexer` ([easy access with this link](./RawDataIndexer))
-
-### RESTful services
-
-More details about DfAnalyzer RESTful services can be found [here](https://hpcdb.github.io/armful/dfanalyzer.html).
 
 ### Dataflow Viewer (DfViewer)
 
