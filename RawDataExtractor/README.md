@@ -4,10 +4,12 @@ It aims at accessing and extracting data from a raw data file.
 
 ## RDE invocation
 
-	RDE <cartridge>:<operation> <extractor_name> 
-		<directory_path> <file_name or invocation> 
-		{<attribute>:<attribute_type>} 
-		[-delimeter="<delimeter>"] 
+```bash
+RDE <cartridge>:<operation> <extractor_name> 
+	<directory_path> <file_name or invocation> 
+	{<attribute>:<attribute_type>} 
+	[-delimeter="<delimeter>"]
+```
 
 **Mandatory parameters**
 
@@ -26,14 +28,16 @@ Example of RDE invocation:
 
 **Raw data extraction**
 
-	./bin/RDE PROGRAM:EXTRACT extractor 
-			/root/dfa ./bin/program.bin 
-			[A:numeric:key,B:numeric,C:numeric]
+```bash
+./bin/RDE PROGRAM:EXTRACT extractor 
+		/root/dfa ./bin/program.bin 
+		[A:numeric:key,B:numeric,C:numeric]
+```
 
 ### Running RDE
 
-#####file1.csv
-> 
+#### file1.csv
+```csv
 A;B;C  
 0;0.0;99  
 1;1.0;98  
@@ -45,9 +49,11 @@ A;B;C
 7;7.0;92  
 8;8.0;91  
 9;9.0;90  
+```
 
-#####extractor.data
-> 
+#### extractor.data
+
+```csv
 A;B;C  
 0;0.0;99  
 1;1.0;98  
@@ -59,6 +65,7 @@ A;B;C
 7;7.0;92  
 8;8.0;91  
 9;9.0;90  
+```
 
 ## Extraction cartridges
 ### CSV

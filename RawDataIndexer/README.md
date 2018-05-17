@@ -4,11 +4,13 @@ It aims at accessing and indexing raw data from a file.
 
 ## RDI invocation
 
-	RDI <cartridge>:<operation> <extractor_name> 
-		<directory_path> <file_name> 
-		{<attribute>:<attribute_type>} 
-		[-delimeter="<delimeter>"] 
-		[-bin="<fastbit_bin_path>"]
+```bash
+RDI <cartridge>:<operation> <extractor_name> 
+	<directory_path> <file_name> 
+	{<attribute>:<attribute_type>} 
+	[-delimeter="<delimeter>"] 
+	[-bin="<fastbit_bin_path>"]
+```
 
 **Mandatory parameters**
 
@@ -26,12 +28,13 @@ It aims at accessing and indexing raw data from a file.
 
 Example of RDI invocation:
 
-	./bin/RDI OPTIMIZED_FASTBIT:INDEX ofb-idx-f1 
-		/root/dfa file-1.csv 
-		[customerID:numeric:key,country:text,continent:text] 
-		-delimiter="," 
-		-bin="/root/program/fastbit/bin"
-
+```bash
+./bin/RDI OPTIMIZED_FASTBIT:INDEX ofb-idx-f1 
+	/root/dfa file-1.csv 
+	[customerID:numeric:key,country:text,continent:text] 
+	-delimiter="," 
+	-bin="/root/program/fastbit/bin"
+```
 
 ## Example with synthetic raw data files
 
@@ -40,14 +43,18 @@ This example using RDI considers synthetic raw data files.
 ### Script invocation
 
 * Invoke our script for accessing and indexing raw data from files:
-`./index-raw-data.sh`
+
+```bash
+./index-raw-data.sh
+```
 
 * Indexed raw data files are presented in the DATA (<i>e.g.</i>, csv-ext-f1.data) and INDEX (<i>e.g.</i>, csv-idx-f1.index) formats.
 
 ### Running RDI
 
-#####csv-ext-f1.data
-> 
+#### csv-ext-f1.data
+
+```csv
 CUSTOMERID;COUNTRY;CONTINENT    
 1;'United_Kingdom';'Europe'  
 2;'United_States';'North_America'  
@@ -57,9 +64,11 @@ CUSTOMERID;COUNTRY;CONTINENT
 6;'United_Kingdom';'Europe' 
 7;'Belgium';'Europe'  
 8;'Portugal';'Europe'  
+```
 
-#####csv-idx-f1.index
-> 
+#### csv-idx-f1.index
+
+```csv
 FILENAME;CUSTOMERID;COUNTRY;CONTINENT    
 '/root/files/file-1.csv';1;32;49  
 '/root/files/file-1.csv';2;60;76  
@@ -69,6 +78,7 @@ FILENAME;CUSTOMERID;COUNTRY;CONTINENT
 '/root/files/file-1.csv';6;162;179  
 '/root/files/file-1.csv';7;190;200  
 '/root/files/file-1.csv';8;211;222  
+```
 
 ## Indexing algorithms
 ### CSV

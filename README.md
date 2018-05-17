@@ -60,8 +60,6 @@ make
 
 Then, a static compiled library file, named as *libdfanalyzer.so*, is generated at the directory *./library/dfa-lib-cpp/lib*.
 
-## Documentation
-
 ### DfA-lib in C++
 
 The documentation of dfa-lib in C++ can be found in [here](https://dfa-lib-cpp-docs.herokuapp.com/).
@@ -77,6 +75,24 @@ The user guide of RDE and RDI can be found in their respective directories, as f
 ### RESTful services
 
 More details about DfAnalyzer RESTful services can be found [here](https://hpcdb.github.io/armful/dfanalyzer.html).
+
+### Dataflow Viewer (DfViewer)
+
+After the provenance and domain data capture, users can also analyze dataflow specifications stored in our provenance database using DfViewer. DfViewer is a feature provided by our Web application.
+
+As a first step, users have to use a Web browser (*e.g.*, Google Chrome) with the following URL for accessing DfViewer features:
+
+```bash
+http://localhost:22000 # users can also use the hostname for external connections
+```
+
+Then, they have access to a list of dataflow specifications stored in DfAnalyzer's database.
+
+![List of dataflow specifications](./img/dfa-webpage.png)
+
+Since users have decided to view a specific dataflow by clicking on the button with the name *View* (*e.g.*, to analyze dataflow specification with tag *systems_of_equations_ex2*), then the following web page will be provided to them. This visualization consists of a dataset perspective view of the dataflow specification, where users can investigate the schema (*i.e.*, attributes of each dataset).
+
+![List of dataflow specifications](./img/dfviewer-libmesh-app.png)
 
 ## Use in scientific applications
 
