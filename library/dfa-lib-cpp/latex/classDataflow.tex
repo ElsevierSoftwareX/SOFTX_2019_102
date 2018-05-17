@@ -1,0 +1,247 @@
+\hypertarget{classDataflow}{}\section{Dataflow Class Reference}
+\label{classDataflow}\index{Dataflow@{Dataflow}}
+
+
+{\ttfamily \#include $<$dataflow.\+h$>$}
+
+
+
+Collaboration diagram for Dataflow\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{classDataflow__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDataflow_afebeeacfc0c5fdee45155ebb76dc62c8}{Dataflow} (string \hyperlink{classDataflow_a45d9ba19359e42a9a8d1fa089c994b17}{tag}, string hostname=dfa\+\_\+hostname, int port=dfa\+\_\+port)
+\item 
+void \hyperlink{classDataflow_a91f7c9eaf26223ff4c1da5f34fedb7be}{save} ()
+\item 
+\hyperlink{classTransformation}{Transformation} \& \hyperlink{classDataflow_ad0ad633cf3e23c76847e75ae388d29ea}{add\+\_\+transformation} (string \hyperlink{classDataflow_a45d9ba19359e42a9a8d1fa089c994b17}{tag}, vector$<$ \hyperlink{classSet}{Set} $>$ input\+\_\+sets, vector$<$ \hyperlink{classSet}{Set} $>$ output\+\_\+sets)
+\item 
+\hyperlink{classTransformation}{Transformation} \& \hyperlink{classDataflow_aad2e47f28cfdef9db53520328b88537a}{add\+\_\+transformation} (string \hyperlink{classDataflow_a45d9ba19359e42a9a8d1fa089c994b17}{tag}, \hyperlink{classSet}{Set} input\+\_\+set, \hyperlink{classSet}{Set} output\+\_\+set)
+\item 
+\hyperlink{classTransformation}{Transformation} \& \hyperlink{classDataflow_a36fad179e5f47f9a9ba1a598650c9b59}{add\+\_\+transformation} (string \hyperlink{classDataflow_a45d9ba19359e42a9a8d1fa089c994b17}{tag}, vector$<$ \hyperlink{classSet}{Set} $>$ input\+\_\+sets, \hyperlink{classSet}{Set} output\+\_\+set)
+\item 
+\hyperlink{classTransformation}{Transformation} \& \hyperlink{classDataflow_a777634e410ccfe677bf326858efd406f}{add\+\_\+transformation} (string \hyperlink{classDataflow_a45d9ba19359e42a9a8d1fa089c994b17}{tag}, \hyperlink{classSet}{Set} input\+\_\+set, vector$<$ \hyperlink{classSet}{Set} $>$ output\+\_\+sets)
+\item 
+\hyperlink{classSet}{Set} \& \hyperlink{classDataflow_a1b30ee20329211e193b90e8f8f78242f}{add\+\_\+set} (string \hyperlink{classDataflow_a45d9ba19359e42a9a8d1fa089c994b17}{tag})
+\item 
+\hyperlink{classSet}{Set} \& \hyperlink{classDataflow_abae00eba6d2eda469cba2391bd293915}{add\+\_\+set} (string \hyperlink{classDataflow_a45d9ba19359e42a9a8d1fa089c994b17}{tag}, string attribute\+\_\+name, attribute\+\_\+type attribute\+\_\+type)
+\item 
+\hyperlink{classSet}{Set} \& \hyperlink{classDataflow_a8621d2a61fbc9ec4ce8b21662d5804b9}{add\+\_\+set} (string \hyperlink{classDataflow_a45d9ba19359e42a9a8d1fa089c994b17}{tag}, vector$<$ string $>$ attribute\+\_\+names, vector$<$ attribute\+\_\+type $>$ attribute\+\_\+types)
+\item 
+string \hyperlink{classDataflow_a0d4fcfeba2d4fe22283c925d22eca17d}{get\+\_\+tag} ()
+\item 
+string \hyperlink{classDataflow_aa1023af477da09f5dcb63b048e19692e}{get\+\_\+specification} ()
+\item 
+vector$<$ \hyperlink{classTransformation}{Transformation} $>$ \hyperlink{classDataflow_a947b0d9382901eb90277f648b40f6946}{get\+\_\+sorted\+\_\+transformations} ()
+\item 
+int \hyperlink{classDataflow_af25c9cda8407c89e7099d680270e1a38}{get\+\_\+dependent\+\_\+transformation\+\_\+position\+\_\+from\+\_\+dataset\+\_\+tag} (vector$<$ \hyperlink{classTransformation}{Transformation} $>$ vec\+\_\+transformations, int current\+\_\+transformation\+\_\+position, vector$<$ string $>$ dataset\+\_\+tags)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{classDataflow_ace58f5775ef9eb6fb155d9280c5f2842}{get\+\_\+post\+\_\+message} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDataflow_a9194612ab9663190100ac63ef4a570ca}\label{classDataflow_a9194612ab9663190100ac63ef4a570ca}} 
+\hyperlink{structDfA__Config}{Df\+A\+\_\+\+Config} \hyperlink{classDataflow_a9194612ab9663190100ac63ef4a570ca}{config}
+\begin{DoxyCompactList}\small\item\em dataflow configuration \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDataflow_a45d9ba19359e42a9a8d1fa089c994b17}\label{classDataflow_a45d9ba19359e42a9a8d1fa089c994b17}} 
+string \hyperlink{classDataflow_a45d9ba19359e42a9a8d1fa089c994b17}{tag}
+\begin{DoxyCompactList}\small\item\em dataflow tag \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDataflow_a8b7aa91c6867e58d0829f2fdf0f74012}\label{classDataflow_a8b7aa91c6867e58d0829f2fdf0f74012}} 
+map$<$ string, \hyperlink{classTransformation}{Transformation} $>$ \hyperlink{classDataflow_a8b7aa91c6867e58d0829f2fdf0f74012}{transformations}
+\begin{DoxyCompactList}\small\item\em set of data transformations \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDataflow_a9adaff2ceea3186eb28aebf42b5c6911}\label{classDataflow_a9adaff2ceea3186eb28aebf42b5c6911}} 
+map$<$ string, \hyperlink{classSet}{Set} $>$ \hyperlink{classDataflow_a9adaff2ceea3186eb28aebf42b5c6911}{sets}
+\begin{DoxyCompactList}\small\item\em set of datasets \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to represent a dataflow specification (prospective provenance). 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDataflow_afebeeacfc0c5fdee45155ebb76dc62c8}\label{classDataflow_afebeeacfc0c5fdee45155ebb76dc62c8}} 
+\index{Dataflow@{Dataflow}!Dataflow@{Dataflow}}
+\index{Dataflow@{Dataflow}!Dataflow@{Dataflow}}
+\subsubsection{\texorpdfstring{Dataflow()}{Dataflow()}}
+{\footnotesize\ttfamily Dataflow\+::\+Dataflow (\begin{DoxyParamCaption}\item[{string}]{tag,  }\item[{string}]{hostname = {\ttfamily dfa\+\_\+hostname},  }\item[{int}]{port = {\ttfamily dfa\+\_\+port} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor of a dataflow specification 
+\begin{DoxyParams}{Parameters}
+{\em tag} & a dataflow tag \\
+\hline
+{\em hostname} & an optional argument that corresponds to the hostname of Df\+Analyzer R\+E\+S\+Tful server \\
+\hline
+{\em port} & an optional argument that corresponds to the port of Df\+Analyzer R\+E\+S\+Tful server. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classDataflow_a1b30ee20329211e193b90e8f8f78242f}\label{classDataflow_a1b30ee20329211e193b90e8f8f78242f}} 
+\index{Dataflow@{Dataflow}!add\+\_\+set@{add\+\_\+set}}
+\index{add\+\_\+set@{add\+\_\+set}!Dataflow@{Dataflow}}
+\subsubsection{\texorpdfstring{add\+\_\+set()}{add\_set()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \hyperlink{classSet}{Set} \& Dataflow\+::add\+\_\+set (\begin{DoxyParamCaption}\item[{string}]{tag }\end{DoxyParamCaption})}
+
+Add a dataset to the dataflow specification. 
+\begin{DoxyParams}{Parameters}
+{\em tag} & a dataset tag \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDataflow_abae00eba6d2eda469cba2391bd293915}\label{classDataflow_abae00eba6d2eda469cba2391bd293915}} 
+\index{Dataflow@{Dataflow}!add\+\_\+set@{add\+\_\+set}}
+\index{add\+\_\+set@{add\+\_\+set}!Dataflow@{Dataflow}}
+\subsubsection{\texorpdfstring{add\+\_\+set()}{add\_set()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \hyperlink{classSet}{Set} \& Dataflow\+::add\+\_\+set (\begin{DoxyParamCaption}\item[{string}]{tag,  }\item[{string}]{attribute\+\_\+name,  }\item[{attribute\+\_\+type}]{attribute\+\_\+type }\end{DoxyParamCaption})}
+
+Add a dataset to the dataflow specification. 
+\begin{DoxyParams}{Parameters}
+{\em tag} & a dataset tag \\
+\hline
+{\em attribute\+\_\+name} & an attribute name \\
+\hline
+{\em attribute\+\_\+type} & an attribute types \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDataflow_a8621d2a61fbc9ec4ce8b21662d5804b9}\label{classDataflow_a8621d2a61fbc9ec4ce8b21662d5804b9}} 
+\index{Dataflow@{Dataflow}!add\+\_\+set@{add\+\_\+set}}
+\index{add\+\_\+set@{add\+\_\+set}!Dataflow@{Dataflow}}
+\subsubsection{\texorpdfstring{add\+\_\+set()}{add\_set()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \hyperlink{classSet}{Set} \& Dataflow\+::add\+\_\+set (\begin{DoxyParamCaption}\item[{string}]{tag,  }\item[{vector$<$ string $>$}]{attribute\+\_\+names,  }\item[{vector$<$ attribute\+\_\+type $>$}]{attribute\+\_\+types }\end{DoxyParamCaption})}
+
+Add a dataset to the dataflow specification. 
+\begin{DoxyParams}{Parameters}
+{\em tag} & a dataset tag \\
+\hline
+{\em attribute\+\_\+names} & a set of attribute names \\
+\hline
+{\em attribute\+\_\+types} & a set of attribute types \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDataflow_ad0ad633cf3e23c76847e75ae388d29ea}\label{classDataflow_ad0ad633cf3e23c76847e75ae388d29ea}} 
+\index{Dataflow@{Dataflow}!add\+\_\+transformation@{add\+\_\+transformation}}
+\index{add\+\_\+transformation@{add\+\_\+transformation}!Dataflow@{Dataflow}}
+\subsubsection{\texorpdfstring{add\+\_\+transformation()}{add\_transformation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \hyperlink{classTransformation}{Transformation} \& Dataflow\+::add\+\_\+transformation (\begin{DoxyParamCaption}\item[{string}]{tag,  }\item[{vector$<$ \hyperlink{classSet}{Set} $>$}]{input\+\_\+sets,  }\item[{vector$<$ \hyperlink{classSet}{Set} $>$}]{output\+\_\+sets }\end{DoxyParamCaption})}
+
+Add a data transformation to the dataflow specification. 
+\begin{DoxyParams}{Parameters}
+{\em tag} & a dataflow tag \\
+\hline
+{\em input\+\_\+sets} & a set of input datasets \\
+\hline
+{\em output\+\_\+sets} & a set of output datasets \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDataflow_aad2e47f28cfdef9db53520328b88537a}\label{classDataflow_aad2e47f28cfdef9db53520328b88537a}} 
+\index{Dataflow@{Dataflow}!add\+\_\+transformation@{add\+\_\+transformation}}
+\index{add\+\_\+transformation@{add\+\_\+transformation}!Dataflow@{Dataflow}}
+\subsubsection{\texorpdfstring{add\+\_\+transformation()}{add\_transformation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \hyperlink{classTransformation}{Transformation} \& Dataflow\+::add\+\_\+transformation (\begin{DoxyParamCaption}\item[{string}]{tag,  }\item[{\hyperlink{classSet}{Set}}]{input\+\_\+set,  }\item[{\hyperlink{classSet}{Set}}]{output\+\_\+set }\end{DoxyParamCaption})}
+
+Add a data transformation to the dataflow specification. 
+\begin{DoxyParams}{Parameters}
+{\em tag} & a dataflow tag \\
+\hline
+{\em input\+\_\+set} & an input dataset \\
+\hline
+{\em output\+\_\+set} & an output dataset \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDataflow_a36fad179e5f47f9a9ba1a598650c9b59}\label{classDataflow_a36fad179e5f47f9a9ba1a598650c9b59}} 
+\index{Dataflow@{Dataflow}!add\+\_\+transformation@{add\+\_\+transformation}}
+\index{add\+\_\+transformation@{add\+\_\+transformation}!Dataflow@{Dataflow}}
+\subsubsection{\texorpdfstring{add\+\_\+transformation()}{add\_transformation()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \hyperlink{classTransformation}{Transformation} \& Dataflow\+::add\+\_\+transformation (\begin{DoxyParamCaption}\item[{string}]{tag,  }\item[{vector$<$ \hyperlink{classSet}{Set} $>$}]{input\+\_\+sets,  }\item[{\hyperlink{classSet}{Set}}]{output\+\_\+set }\end{DoxyParamCaption})}
+
+Add a data transformation to the dataflow specification. 
+\begin{DoxyParams}{Parameters}
+{\em tag} & a dataflow tag \\
+\hline
+{\em input\+\_\+sets} & a set of input datasets \\
+\hline
+{\em output\+\_\+set} & an output dataset \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDataflow_a777634e410ccfe677bf326858efd406f}\label{classDataflow_a777634e410ccfe677bf326858efd406f}} 
+\index{Dataflow@{Dataflow}!add\+\_\+transformation@{add\+\_\+transformation}}
+\index{add\+\_\+transformation@{add\+\_\+transformation}!Dataflow@{Dataflow}}
+\subsubsection{\texorpdfstring{add\+\_\+transformation()}{add\_transformation()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \hyperlink{classTransformation}{Transformation} \& Dataflow\+::add\+\_\+transformation (\begin{DoxyParamCaption}\item[{string}]{tag,  }\item[{\hyperlink{classSet}{Set}}]{input\+\_\+set,  }\item[{vector$<$ \hyperlink{classSet}{Set} $>$}]{output\+\_\+sets }\end{DoxyParamCaption})}
+
+Add a data transformation to the dataflow specification. 
+\begin{DoxyParams}{Parameters}
+{\em tag} & a dataflow tag \\
+\hline
+{\em input\+\_\+set} & an input dataset \\
+\hline
+{\em output\+\_\+sets} & a set of output datasets \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDataflow_af25c9cda8407c89e7099d680270e1a38}\label{classDataflow_af25c9cda8407c89e7099d680270e1a38}} 
+\index{Dataflow@{Dataflow}!get\+\_\+dependent\+\_\+transformation\+\_\+position\+\_\+from\+\_\+dataset\+\_\+tag@{get\+\_\+dependent\+\_\+transformation\+\_\+position\+\_\+from\+\_\+dataset\+\_\+tag}}
+\index{get\+\_\+dependent\+\_\+transformation\+\_\+position\+\_\+from\+\_\+dataset\+\_\+tag@{get\+\_\+dependent\+\_\+transformation\+\_\+position\+\_\+from\+\_\+dataset\+\_\+tag}!Dataflow@{Dataflow}}
+\subsubsection{\texorpdfstring{get\+\_\+dependent\+\_\+transformation\+\_\+position\+\_\+from\+\_\+dataset\+\_\+tag()}{get\_dependent\_transformation\_position\_from\_dataset\_tag()}}
+{\footnotesize\ttfamily int Dataflow\+::get\+\_\+dependent\+\_\+transformation\+\_\+position\+\_\+from\+\_\+dataset\+\_\+tag (\begin{DoxyParamCaption}\item[{vector$<$ \hyperlink{classTransformation}{Transformation} $>$}]{vec\+\_\+transformations,  }\item[{int}]{current\+\_\+transformation\+\_\+position,  }\item[{vector$<$ string $>$}]{dataset\+\_\+tags }\end{DoxyParamCaption})}
+
+Get dependent data transformation position based on a dataset tag.  a set of data transformations  a data transformation position in vec\+\_\+transformations  a set of dataset tags to get their dependencies \begin{DoxyReturn}{Returns}
+the position of the dependent data transformation 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDataflow_ace58f5775ef9eb6fb155d9280c5f2842}\label{classDataflow_ace58f5775ef9eb6fb155d9280c5f2842}} 
+\index{Dataflow@{Dataflow}!get\+\_\+post\+\_\+message@{get\+\_\+post\+\_\+message}}
+\index{get\+\_\+post\+\_\+message@{get\+\_\+post\+\_\+message}!Dataflow@{Dataflow}}
+\subsubsection{\texorpdfstring{get\+\_\+post\+\_\+message()}{get\_post\_message()}}
+{\footnotesize\ttfamily string Dataflow\+::get\+\_\+post\+\_\+message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Get message to be sent to Df\+Analyzer server using an H\+T\+TP request with P\+O\+ST method. \begin{DoxyReturn}{Returns}
+the message in H\+T\+TP request 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDataflow_a947b0d9382901eb90277f648b40f6946}\label{classDataflow_a947b0d9382901eb90277f648b40f6946}} 
+\index{Dataflow@{Dataflow}!get\+\_\+sorted\+\_\+transformations@{get\+\_\+sorted\+\_\+transformations}}
+\index{get\+\_\+sorted\+\_\+transformations@{get\+\_\+sorted\+\_\+transformations}!Dataflow@{Dataflow}}
+\subsubsection{\texorpdfstring{get\+\_\+sorted\+\_\+transformations()}{get\_sorted\_transformations()}}
+{\footnotesize\ttfamily vector$<$ \hyperlink{classTransformation}{Transformation} $>$ Dataflow\+::get\+\_\+sorted\+\_\+transformations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get sorted data transformation. \begin{DoxyReturn}{Returns}
+the set of sorted data transformations 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDataflow_aa1023af477da09f5dcb63b048e19692e}\label{classDataflow_aa1023af477da09f5dcb63b048e19692e}} 
+\index{Dataflow@{Dataflow}!get\+\_\+specification@{get\+\_\+specification}}
+\index{get\+\_\+specification@{get\+\_\+specification}!Dataflow@{Dataflow}}
+\subsubsection{\texorpdfstring{get\+\_\+specification()}{get\_specification()}}
+{\footnotesize\ttfamily string Dataflow\+::get\+\_\+specification (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get dataflow specification. \begin{DoxyReturn}{Returns}
+the dataflow specification as a string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDataflow_a0d4fcfeba2d4fe22283c925d22eca17d}\label{classDataflow_a0d4fcfeba2d4fe22283c925d22eca17d}} 
+\index{Dataflow@{Dataflow}!get\+\_\+tag@{get\+\_\+tag}}
+\index{get\+\_\+tag@{get\+\_\+tag}!Dataflow@{Dataflow}}
+\subsubsection{\texorpdfstring{get\+\_\+tag()}{get\_tag()}}
+{\footnotesize\ttfamily string Dataflow\+::get\+\_\+tag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get dataflow tag \begin{DoxyReturn}{Returns}
+the dataflow tag 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDataflow_a91f7c9eaf26223ff4c1da5f34fedb7be}\label{classDataflow_a91f7c9eaf26223ff4c1da5f34fedb7be}} 
+\index{Dataflow@{Dataflow}!save@{save}}
+\index{save@{save}!Dataflow@{Dataflow}}
+\subsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void Dataflow\+::save (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Save dataflow specification. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/dataflow.\+h\item 
+src/dataflow.\+cpp\end{DoxyCompactItemize}

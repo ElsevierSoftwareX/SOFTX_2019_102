@@ -1,0 +1,135 @@
+\hypertarget{classDependency}{}\section{Dependency Class Reference}
+\label{classDependency}\index{Dependency@{Dependency}}
+
+
+{\ttfamily \#include $<$dependency.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDependency_aa92957076c5000d1d3a56073302f1a41}{Dependency} ()
+\item 
+void \hyperlink{classDependency_a2436d5c4e0363832d2f81163467de426}{add\+\_\+transformation\+\_\+tag} (string transformation\+\_\+tag)
+\item 
+void \hyperlink{classDependency_aba3c43b4eb1e2429143cf297122f92ef}{add\+\_\+transformation\+\_\+ids} (vector$<$ int $>$ \hyperlink{classDependency_a357743c29d1e50ea6a06f0d89e4fa58c}{transformation\+\_\+ids})
+\item 
+void \hyperlink{classDependency_ac942f51b05df8875957b99ce74b9baec}{set\+\_\+transformation\+\_\+tags} (vector$<$ string $>$ \hyperlink{classDependency_a080b8391c054aaf43a7a6dfa9d57e125}{transformation\+\_\+tags})
+\item 
+vector$<$ string $>$ \& \hyperlink{classDependency_a89bbac105889b8fcf84a32f731a3a0b8}{get\+\_\+transformation\+\_\+tags} ()
+\item 
+vector$<$ vector$<$ int $>$ $>$ \& \hyperlink{classDependency_a9854eb2da947e302cefa36d25a880208}{get\+\_\+transformation\+\_\+ids} ()
+\item 
+string \hyperlink{classDependency_a158cbadc3e5d8a2a062a0f70c130821f}{get\+\_\+transformation\+\_\+tags\+\_\+as\+\_\+string} ()
+\item 
+string \hyperlink{classDependency_ab83b7f76991bb3f0ae6a42631002c8f4}{get\+\_\+transformation\+\_\+ids\+\_\+as\+\_\+string} ()
+\item 
+string \hyperlink{classDependency_adbff6153e89ab5a4143ee4f139a6f43a}{get\+\_\+specification} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDependency_a080b8391c054aaf43a7a6dfa9d57e125}\label{classDependency_a080b8391c054aaf43a7a6dfa9d57e125}} 
+vector$<$ string $>$ \hyperlink{classDependency_a080b8391c054aaf43a7a6dfa9d57e125}{transformation\+\_\+tags}
+\begin{DoxyCompactList}\small\item\em set of dependent data transformations \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDependency_a357743c29d1e50ea6a06f0d89e4fa58c}\label{classDependency_a357743c29d1e50ea6a06f0d89e4fa58c}} 
+vector$<$ vector$<$ int $>$ $>$ \hyperlink{classDependency_a357743c29d1e50ea6a06f0d89e4fa58c}{transformation\+\_\+ids}
+\begin{DoxyCompactList}\small\item\em set of tasks identifiers to the dependent data transformations \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to represent a data dependency (retrospective provenance). 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDependency_aa92957076c5000d1d3a56073302f1a41}\label{classDependency_aa92957076c5000d1d3a56073302f1a41}} 
+\index{Dependency@{Dependency}!Dependency@{Dependency}}
+\index{Dependency@{Dependency}!Dependency@{Dependency}}
+\subsubsection{\texorpdfstring{Dependency()}{Dependency()}}
+{\footnotesize\ttfamily Dependency\+::\+Dependency (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor of a data dependency. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classDependency_aba3c43b4eb1e2429143cf297122f92ef}\label{classDependency_aba3c43b4eb1e2429143cf297122f92ef}} 
+\index{Dependency@{Dependency}!add\+\_\+transformation\+\_\+ids@{add\+\_\+transformation\+\_\+ids}}
+\index{add\+\_\+transformation\+\_\+ids@{add\+\_\+transformation\+\_\+ids}!Dependency@{Dependency}}
+\subsubsection{\texorpdfstring{add\+\_\+transformation\+\_\+ids()}{add\_transformation\_ids()}}
+{\footnotesize\ttfamily void Dependency\+::add\+\_\+transformation\+\_\+ids (\begin{DoxyParamCaption}\item[{vector$<$ int $>$}]{transformation\+\_\+ids }\end{DoxyParamCaption})}
+
+Add task identifiers to the set of task identifiers. 
+\begin{DoxyParams}{Parameters}
+{\em transformation\+\_\+ids} & a set of data transformation identifiers \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDependency_a2436d5c4e0363832d2f81163467de426}\label{classDependency_a2436d5c4e0363832d2f81163467de426}} 
+\index{Dependency@{Dependency}!add\+\_\+transformation\+\_\+tag@{add\+\_\+transformation\+\_\+tag}}
+\index{add\+\_\+transformation\+\_\+tag@{add\+\_\+transformation\+\_\+tag}!Dependency@{Dependency}}
+\subsubsection{\texorpdfstring{add\+\_\+transformation\+\_\+tag()}{add\_transformation\_tag()}}
+{\footnotesize\ttfamily void Dependency\+::add\+\_\+transformation\+\_\+tag (\begin{DoxyParamCaption}\item[{string}]{transformation\+\_\+tag }\end{DoxyParamCaption})}
+
+Add a data transformation tag. 
+\begin{DoxyParams}{Parameters}
+{\em transformation\+\_\+tag} & a data transformation tag \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDependency_adbff6153e89ab5a4143ee4f139a6f43a}\label{classDependency_adbff6153e89ab5a4143ee4f139a6f43a}} 
+\index{Dependency@{Dependency}!get\+\_\+specification@{get\+\_\+specification}}
+\index{get\+\_\+specification@{get\+\_\+specification}!Dependency@{Dependency}}
+\subsubsection{\texorpdfstring{get\+\_\+specification()}{get\_specification()}}
+{\footnotesize\ttfamily string Dependency\+::get\+\_\+specification (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get data dependency specification. \begin{DoxyReturn}{Returns}
+the data dependency specification 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDependency_a9854eb2da947e302cefa36d25a880208}\label{classDependency_a9854eb2da947e302cefa36d25a880208}} 
+\index{Dependency@{Dependency}!get\+\_\+transformation\+\_\+ids@{get\+\_\+transformation\+\_\+ids}}
+\index{get\+\_\+transformation\+\_\+ids@{get\+\_\+transformation\+\_\+ids}!Dependency@{Dependency}}
+\subsubsection{\texorpdfstring{get\+\_\+transformation\+\_\+ids()}{get\_transformation\_ids()}}
+{\footnotesize\ttfamily vector$<$ vector$<$ int $>$ $>$ \& Dependency\+::get\+\_\+transformation\+\_\+ids (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the tasks identifiers to the dependent data transformations. \begin{DoxyReturn}{Returns}
+the reference of the set of task identifiers 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDependency_ab83b7f76991bb3f0ae6a42631002c8f4}\label{classDependency_ab83b7f76991bb3f0ae6a42631002c8f4}} 
+\index{Dependency@{Dependency}!get\+\_\+transformation\+\_\+ids\+\_\+as\+\_\+string@{get\+\_\+transformation\+\_\+ids\+\_\+as\+\_\+string}}
+\index{get\+\_\+transformation\+\_\+ids\+\_\+as\+\_\+string@{get\+\_\+transformation\+\_\+ids\+\_\+as\+\_\+string}!Dependency@{Dependency}}
+\subsubsection{\texorpdfstring{get\+\_\+transformation\+\_\+ids\+\_\+as\+\_\+string()}{get\_transformation\_ids\_as\_string()}}
+{\footnotesize\ttfamily string Dependency\+::get\+\_\+transformation\+\_\+ids\+\_\+as\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the task identifiers to the dependent data transformation. \begin{DoxyReturn}{Returns}
+the set of task identifiers as a string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDependency_a89bbac105889b8fcf84a32f731a3a0b8}\label{classDependency_a89bbac105889b8fcf84a32f731a3a0b8}} 
+\index{Dependency@{Dependency}!get\+\_\+transformation\+\_\+tags@{get\+\_\+transformation\+\_\+tags}}
+\index{get\+\_\+transformation\+\_\+tags@{get\+\_\+transformation\+\_\+tags}!Dependency@{Dependency}}
+\subsubsection{\texorpdfstring{get\+\_\+transformation\+\_\+tags()}{get\_transformation\_tags()}}
+{\footnotesize\ttfamily vector$<$ string $>$ \& Dependency\+::get\+\_\+transformation\+\_\+tags (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the data transformation tags. \begin{DoxyReturn}{Returns}
+the reference of the set of data transformation tags 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDependency_a158cbadc3e5d8a2a062a0f70c130821f}\label{classDependency_a158cbadc3e5d8a2a062a0f70c130821f}} 
+\index{Dependency@{Dependency}!get\+\_\+transformation\+\_\+tags\+\_\+as\+\_\+string@{get\+\_\+transformation\+\_\+tags\+\_\+as\+\_\+string}}
+\index{get\+\_\+transformation\+\_\+tags\+\_\+as\+\_\+string@{get\+\_\+transformation\+\_\+tags\+\_\+as\+\_\+string}!Dependency@{Dependency}}
+\subsubsection{\texorpdfstring{get\+\_\+transformation\+\_\+tags\+\_\+as\+\_\+string()}{get\_transformation\_tags\_as\_string()}}
+{\footnotesize\ttfamily string Dependency\+::get\+\_\+transformation\+\_\+tags\+\_\+as\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the data transformation tags. \begin{DoxyReturn}{Returns}
+the data transformation tags as a string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDependency_ac942f51b05df8875957b99ce74b9baec}\label{classDependency_ac942f51b05df8875957b99ce74b9baec}} 
+\index{Dependency@{Dependency}!set\+\_\+transformation\+\_\+tags@{set\+\_\+transformation\+\_\+tags}}
+\index{set\+\_\+transformation\+\_\+tags@{set\+\_\+transformation\+\_\+tags}!Dependency@{Dependency}}
+\subsubsection{\texorpdfstring{set\+\_\+transformation\+\_\+tags()}{set\_transformation\_tags()}}
+{\footnotesize\ttfamily void Dependency\+::set\+\_\+transformation\+\_\+tags (\begin{DoxyParamCaption}\item[{vector$<$ string $>$}]{transformation\+\_\+tags }\end{DoxyParamCaption})}
+
+\hyperlink{classSet}{Set} a set of data transformation tags. 
+\begin{DoxyParams}{Parameters}
+{\em transformation\+\_\+tags} & a set of data transformation\+\_\+tags \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/dependency.\+h\item 
+src/dependency.\+cpp\end{DoxyCompactItemize}

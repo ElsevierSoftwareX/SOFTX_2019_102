@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['add_5fattribute',['add_attribute',['../classExtractor.html#ae82579657e380e26facb22dbf2c52966',1,'Extractor::add_attribute()'],['../classSet.html#ab4e7a2a958c8cfbac96f60c7c2b20c35',1,'Set::add_attribute()']]],
+  ['add_5fattributes',['add_attributes',['../classExtractor.html#a429e9f3ad4cfeb712b01c2617f2253e6',1,'Extractor::add_attributes()'],['../classSet.html#a90b6137ad3bbb7a34b50fa5e7842a685',1,'Set::add_attributes()']]],
+  ['add_5fdataset',['add_dataset',['../classTask.html#a618a7fb22a6e06cf918def06da96f777',1,'Task']]],
+  ['add_5fdataset_5fwith_5felement_5fvalue',['add_dataset_with_element_value',['../classTask.html#a052ec7c44c26ed666d327eb1b34451d8',1,'Task']]],
+  ['add_5fdataset_5fwith_5felement_5fvalues',['add_dataset_with_element_values',['../classTask.html#ad0eeaa007ee192d7866a101c93730ab7',1,'Task']]],
+  ['add_5fdependent_5ftransformation',['add_dependent_transformation',['../classTask.html#a5171db4ee3e3065b21fd8085debc5e7e',1,'Task::add_dependent_transformation(string transformation_tag, int transformation_id)'],['../classTask.html#a839d94a0d3191d6f6ca7caf4a92c140b',1,'Task::add_dependent_transformation(string transformation_tag, vector&lt; int &gt; transformation_ids)']]],
+  ['add_5fdependent_5ftransformation_5fid',['add_dependent_transformation_id',['../classTask.html#abe2b72a98501ca9554dd2aa18fad3245',1,'Task']]],
+  ['add_5fdependent_5ftransformation_5fids',['add_dependent_transformation_ids',['../classTask.html#ad549fad4fb70003b2f75bf3ae5a41d46',1,'Task']]],
+  ['add_5fdependent_5ftransformation_5ftag',['add_dependent_transformation_tag',['../classTask.html#a404469dca46fda1c94e819345bd478e3',1,'Task']]],
+  ['add_5fdependent_5ftransformation_5ftags',['add_dependent_transformation_tags',['../classTask.html#a861c0dc321a4b0e77f7cbe89dc7da75c',1,'Task']]],
+  ['add_5fdependent_5ftransformations',['add_dependent_transformations',['../classTask.html#a2307623af7ceb989b236a2c5dd0f715c',1,'Task::add_dependent_transformations(vector&lt; string &gt; transformation_tags, int transformation_id)'],['../classTask.html#a381ed34fcd5d4e429fde0bb56ae5553a',1,'Task::add_dependent_transformations(vector&lt; string &gt; transformation_tags, vector&lt; int &gt; transformation_ids)']]],
+  ['add_5felement_5fwith_5fvalue',['add_element_with_value',['../classDataset.html#a86a705d9b163d64e812a085acbfb0a81',1,'Dataset']]],
+  ['add_5felement_5fwith_5fvalues',['add_element_with_values',['../classDataset.html#af945e29692f141411302850b29d55bfa',1,'Dataset']]],
+  ['add_5fextractor',['add_extractor',['../classSet.html#a26deff7e7f3319a5a4324c7de3e7b7b9',1,'Set::add_extractor(string extractor_tag, method_type method, cartridge_type cartridge)'],['../classSet.html#a8d55de9a8a8f39dc567621d8640f90a2',1,'Set::add_extractor(string extractor_tag, method_type method, cartridge_type cartridge, string attribute_name, attribute_type attribute_type)'],['../classSet.html#acb3a45469bf84310d5d20e45118d772e',1,'Set::add_extractor(string extractor_tag, method_type method, cartridge_type cartridge, vector&lt; string &gt; attribute_names, vector&lt; attribute_type &gt; attribute_types)']]],
+  ['add_5finput_5fset',['add_input_set',['../classTransformation.html#a2a2af5b05352dd3d401c7af6027248d0',1,'Transformation']]],
+  ['add_5foutput_5fset',['add_output_set',['../classTransformation.html#a63b5bc7696a22e413d95540703738894',1,'Transformation']]],
+  ['add_5fset',['add_set',['../classDataflow.html#a1b30ee20329211e193b90e8f8f78242f',1,'Dataflow::add_set(string tag)'],['../classDataflow.html#abae00eba6d2eda469cba2391bd293915',1,'Dataflow::add_set(string tag, string attribute_name, attribute_type attribute_type)'],['../classDataflow.html#a8621d2a61fbc9ec4ce8b21662d5804b9',1,'Dataflow::add_set(string tag, vector&lt; string &gt; attribute_names, vector&lt; attribute_type &gt; attribute_types)']]],
+  ['add_5ftransformation',['add_transformation',['../classDataflow.html#ad0ad633cf3e23c76847e75ae388d29ea',1,'Dataflow::add_transformation(string tag, vector&lt; Set &gt; input_sets, vector&lt; Set &gt; output_sets)'],['../classDataflow.html#aad2e47f28cfdef9db53520328b88537a',1,'Dataflow::add_transformation(string tag, Set input_set, Set output_set)'],['../classDataflow.html#a36fad179e5f47f9a9ba1a598650c9b59',1,'Dataflow::add_transformation(string tag, vector&lt; Set &gt; input_sets, Set output_set)'],['../classDataflow.html#a777634e410ccfe677bf326858efd406f',1,'Dataflow::add_transformation(string tag, Set input_set, vector&lt; Set &gt; output_sets)']]],
+  ['add_5ftransformation_5fids',['add_transformation_ids',['../classDependency.html#aba3c43b4eb1e2429143cf297122f92ef',1,'Dependency']]],
+  ['add_5ftransformation_5ftag',['add_transformation_tag',['../classDependency.html#a2436d5c4e0363832d2f81163467de426',1,'Dependency']]],
+  ['add_5fvalue',['add_value',['../classElement.html#a67439f02d44fb2fa834d9a7b223709a8',1,'Element']]],
+  ['attribute',['Attribute',['../classAttribute.html',1,'Attribute'],['../classAttribute.html#af984b2d6d550fbfd05ebae632f1c2aac',1,'Attribute::Attribute()']]],
+  ['attribute_5fnames',['attribute_names',['../classRawDataExtractor.html#a23ce52343673f63a56c5c05cf15a3859',1,'RawDataExtractor::attribute_names()'],['../classRawDataIndexer.html#a6ebb8467c0e46140a87261ae569d1cec',1,'RawDataIndexer::attribute_names()']]],
+  ['attribute_5ftypes',['attribute_types',['../classRawDataExtractor.html#a0c5d6acb054f65891526b2fe1c5d1cf3',1,'RawDataExtractor::attribute_types()'],['../classRawDataIndexer.html#aa9b5a06fe603ed2e0b2c1b7cdf0b704a',1,'RawDataIndexer::attribute_types()']]],
+  ['attributes',['attributes',['../classExtractor.html#a16cd88e5932d56a8628af94df5af9cc4',1,'Extractor::attributes()'],['../classSet.html#ad95bfeca2b9cb7aecbdb01e8bfc860dd',1,'Set::attributes()']]]
+];

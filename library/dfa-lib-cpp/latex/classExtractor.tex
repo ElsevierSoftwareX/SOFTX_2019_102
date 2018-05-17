@@ -1,0 +1,162 @@
+\hypertarget{classExtractor}{}\section{Extractor Class Reference}
+\label{classExtractor}\index{Extractor@{Extractor}}
+
+
+{\ttfamily \#include $<$extractor.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classExtractor_ab1bbe102a4f6087831d6090bb7096c09}{Extractor} (string \hyperlink{classExtractor_a53f998b8d2fb1032f6c86f0d04a2ffc8}{tag}, string \hyperlink{classExtractor_acafbe087b3bae5259d6e6c7bb7999255}{set\+\_\+tag}, method\+\_\+type \hyperlink{classExtractor_a9167bf123b2164a89175253d64bdab43}{method}, cartridge\+\_\+type \hyperlink{classExtractor_a19cea477abf042cec1ad70cb56bbd973}{cartridge})
+\item 
+void \hyperlink{classExtractor_ae82579657e380e26facb22dbf2c52966}{add\+\_\+attribute} (string name, attribute\+\_\+type type)
+\item 
+void \hyperlink{classExtractor_a429e9f3ad4cfeb712b01c2617f2253e6}{add\+\_\+attributes} (vector$<$ string $>$ names, vector$<$ attribute\+\_\+type $>$ types)
+\item 
+string \hyperlink{classExtractor_ad23a148dddb5a78557b84baa00829fc4}{get\+\_\+tag} ()
+\item 
+string \hyperlink{classExtractor_a133d1cd6a2749254614d7cebd9832cea}{get\+\_\+set\+\_\+tag} ()
+\item 
+\hyperlink{classAttribute}{Attribute} \& \hyperlink{classExtractor_a56a4af532b92d7dbe7aa6f9db242e992}{get\+\_\+attribute\+\_\+by\+\_\+name} (string name)
+\item 
+string \hyperlink{classExtractor_ae76e664785cb63537295ce404e728191}{get\+\_\+method} ()
+\item 
+string \hyperlink{classExtractor_a44ed7358715318d58dc5246ab43fcd2b}{get\+\_\+cartridge} ()
+\item 
+string \hyperlink{classExtractor_ad2576ada89be5c806e8f0cbc319e8f19}{get\+\_\+specification} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classExtractor_a53f998b8d2fb1032f6c86f0d04a2ffc8}\label{classExtractor_a53f998b8d2fb1032f6c86f0d04a2ffc8}} 
+string \hyperlink{classExtractor_a53f998b8d2fb1032f6c86f0d04a2ffc8}{tag}
+\begin{DoxyCompactList}\small\item\em extractor tag \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classExtractor_acafbe087b3bae5259d6e6c7bb7999255}\label{classExtractor_acafbe087b3bae5259d6e6c7bb7999255}} 
+string \hyperlink{classExtractor_acafbe087b3bae5259d6e6c7bb7999255}{set\+\_\+tag}
+\begin{DoxyCompactList}\small\item\em dataset tag which extracted data will be loaded \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classExtractor_a9167bf123b2164a89175253d64bdab43}\label{classExtractor_a9167bf123b2164a89175253d64bdab43}} 
+method\+\_\+type \hyperlink{classExtractor_a9167bf123b2164a89175253d64bdab43}{method}
+\begin{DoxyCompactList}\small\item\em method of the raw data extractor, which can be E\+X\+T\+R\+A\+C\+T\+I\+ON or I\+N\+D\+E\+X\+I\+NG \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classExtractor_a19cea477abf042cec1ad70cb56bbd973}\label{classExtractor_a19cea477abf042cec1ad70cb56bbd973}} 
+cartridge\+\_\+type \hyperlink{classExtractor_a19cea477abf042cec1ad70cb56bbd973}{cartridge}
+\begin{DoxyCompactList}\small\item\em cartridge of the raw data extractor, which can be C\+SV (extraction or indexing), P\+R\+O\+G\+R\+AM (extraction), F\+A\+S\+T\+B\+IT, O\+P\+T\+I\+M\+I\+Z\+E\+D\+\_\+\+F\+A\+S\+T\+B\+IT, P\+O\+S\+T\+G\+R\+E\+S\+\_\+\+R\+AW (indexing) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classExtractor_a16cd88e5932d56a8628af94df5af9cc4}\label{classExtractor_a16cd88e5932d56a8628af94df5af9cc4}} 
+vector$<$ \hyperlink{classAttribute}{Attribute} $>$ \hyperlink{classExtractor_a16cd88e5932d56a8628af94df5af9cc4}{attributes}
+\begin{DoxyCompactList}\small\item\em set of attributes \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to represent a data extractor specification (prospective provenance). 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classExtractor_ab1bbe102a4f6087831d6090bb7096c09}\label{classExtractor_ab1bbe102a4f6087831d6090bb7096c09}} 
+\index{Extractor@{Extractor}!Extractor@{Extractor}}
+\index{Extractor@{Extractor}!Extractor@{Extractor}}
+\subsubsection{\texorpdfstring{Extractor()}{Extractor()}}
+{\footnotesize\ttfamily Extractor\+::\+Extractor (\begin{DoxyParamCaption}\item[{string}]{tag,  }\item[{string}]{set\+\_\+tag,  }\item[{method\+\_\+type}]{method,  }\item[{cartridge\+\_\+type}]{cartridge }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor of a raw data extractor. 
+\begin{DoxyParams}{Parameters}
+{\em tag} & an extractor tag \\
+\hline
+{\em set\+\_\+tag} & a dataset tag \\
+\hline
+{\em method\+\_\+type} & an extraction or indexing method \\
+\hline
+{\em cartridge\+\_\+type} & a cartridge to be executed by the extractor \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classExtractor_ae82579657e380e26facb22dbf2c52966}\label{classExtractor_ae82579657e380e26facb22dbf2c52966}} 
+\index{Extractor@{Extractor}!add\+\_\+attribute@{add\+\_\+attribute}}
+\index{add\+\_\+attribute@{add\+\_\+attribute}!Extractor@{Extractor}}
+\subsubsection{\texorpdfstring{add\+\_\+attribute()}{add\_attribute()}}
+{\footnotesize\ttfamily void Extractor\+::add\+\_\+attribute (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{attribute\+\_\+type}]{type }\end{DoxyParamCaption})}
+
+Add an attribute to be extracted. 
+\begin{DoxyParams}{Parameters}
+{\em name} & an attribute name \\
+\hline
+{\em type} & an attribute type \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classExtractor_a429e9f3ad4cfeb712b01c2617f2253e6}\label{classExtractor_a429e9f3ad4cfeb712b01c2617f2253e6}} 
+\index{Extractor@{Extractor}!add\+\_\+attributes@{add\+\_\+attributes}}
+\index{add\+\_\+attributes@{add\+\_\+attributes}!Extractor@{Extractor}}
+\subsubsection{\texorpdfstring{add\+\_\+attributes()}{add\_attributes()}}
+{\footnotesize\ttfamily void Extractor\+::add\+\_\+attributes (\begin{DoxyParamCaption}\item[{vector$<$ string $>$}]{names,  }\item[{vector$<$ attribute\+\_\+type $>$}]{types }\end{DoxyParamCaption})}
+
+Add a set of attributes 
+\begin{DoxyParams}{Parameters}
+{\em names} & a set of attribute names \\
+\hline
+{\em types} & a set of attribute types \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classExtractor_a56a4af532b92d7dbe7aa6f9db242e992}\label{classExtractor_a56a4af532b92d7dbe7aa6f9db242e992}} 
+\index{Extractor@{Extractor}!get\+\_\+attribute\+\_\+by\+\_\+name@{get\+\_\+attribute\+\_\+by\+\_\+name}}
+\index{get\+\_\+attribute\+\_\+by\+\_\+name@{get\+\_\+attribute\+\_\+by\+\_\+name}!Extractor@{Extractor}}
+\subsubsection{\texorpdfstring{get\+\_\+attribute\+\_\+by\+\_\+name()}{get\_attribute\_by\_name()}}
+{\footnotesize\ttfamily \hyperlink{classAttribute}{Attribute} \& Extractor\+::get\+\_\+attribute\+\_\+by\+\_\+name (\begin{DoxyParamCaption}\item[{string}]{name }\end{DoxyParamCaption})}
+
+Get the attribute given its name. 
+\begin{DoxyParams}{Parameters}
+{\em name} & an attribute name \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the reference of the attribute with the given name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classExtractor_a44ed7358715318d58dc5246ab43fcd2b}\label{classExtractor_a44ed7358715318d58dc5246ab43fcd2b}} 
+\index{Extractor@{Extractor}!get\+\_\+cartridge@{get\+\_\+cartridge}}
+\index{get\+\_\+cartridge@{get\+\_\+cartridge}!Extractor@{Extractor}}
+\subsubsection{\texorpdfstring{get\+\_\+cartridge()}{get\_cartridge()}}
+{\footnotesize\ttfamily string Extractor\+::get\+\_\+cartridge (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the cartridge implemented by the raw data extractor. \begin{DoxyReturn}{Returns}
+the extractor cartridge 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classExtractor_ae76e664785cb63537295ce404e728191}\label{classExtractor_ae76e664785cb63537295ce404e728191}} 
+\index{Extractor@{Extractor}!get\+\_\+method@{get\+\_\+method}}
+\index{get\+\_\+method@{get\+\_\+method}!Extractor@{Extractor}}
+\subsubsection{\texorpdfstring{get\+\_\+method()}{get\_method()}}
+{\footnotesize\ttfamily string Extractor\+::get\+\_\+method (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the method of raw data extractor. \begin{DoxyReturn}{Returns}
+the extraction or indexing method 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classExtractor_a133d1cd6a2749254614d7cebd9832cea}\label{classExtractor_a133d1cd6a2749254614d7cebd9832cea}} 
+\index{Extractor@{Extractor}!get\+\_\+set\+\_\+tag@{get\+\_\+set\+\_\+tag}}
+\index{get\+\_\+set\+\_\+tag@{get\+\_\+set\+\_\+tag}!Extractor@{Extractor}}
+\subsubsection{\texorpdfstring{get\+\_\+set\+\_\+tag()}{get\_set\_tag()}}
+{\footnotesize\ttfamily string Extractor\+::get\+\_\+set\+\_\+tag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the dataset tag. \begin{DoxyReturn}{Returns}
+the dataset tag 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classExtractor_ad2576ada89be5c806e8f0cbc319e8f19}\label{classExtractor_ad2576ada89be5c806e8f0cbc319e8f19}} 
+\index{Extractor@{Extractor}!get\+\_\+specification@{get\+\_\+specification}}
+\index{get\+\_\+specification@{get\+\_\+specification}!Extractor@{Extractor}}
+\subsubsection{\texorpdfstring{get\+\_\+specification()}{get\_specification()}}
+{\footnotesize\ttfamily string Extractor\+::get\+\_\+specification (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the specification of raw data extractor. \begin{DoxyReturn}{Returns}
+the extractor specification. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classExtractor_ad23a148dddb5a78557b84baa00829fc4}\label{classExtractor_ad23a148dddb5a78557b84baa00829fc4}} 
+\index{Extractor@{Extractor}!get\+\_\+tag@{get\+\_\+tag}}
+\index{get\+\_\+tag@{get\+\_\+tag}!Extractor@{Extractor}}
+\subsubsection{\texorpdfstring{get\+\_\+tag()}{get\_tag()}}
+{\footnotesize\ttfamily string Extractor\+::get\+\_\+tag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the raw data extractor tag. \begin{DoxyReturn}{Returns}
+the extractor tag 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/extractor.\+h\item 
+src/extractor.\+cpp\end{DoxyCompactItemize}

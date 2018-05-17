@@ -1,0 +1,469 @@
+\hypertarget{classTask}{}\section{Task Class Reference}
+\label{classTask}\index{Task@{Task}}
+
+
+{\ttfamily \#include $<$task.\+h$>$}
+
+
+
+Collaboration diagram for Task\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{classTask__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classTask_a27670d3d842b1c4ab38d2eacd5f5a920}{Task} (string \hyperlink{classTask_a7a3b3f194a78e928cd9a88420676cfa2}{dataflow\+\_\+tag}, string \hyperlink{classTask_a013314768d0b474bcc567f1cb98a1c01}{transformation\+\_\+tag}, int ID, int \hyperlink{classTask_aa5e5de369b641d4a6d66bd468d47b28b}{sub\+\_\+id}=0, string hostname=dfa\+\_\+hostname, int port=dfa\+\_\+port)
+\item 
+int \hyperlink{classTask_a8cb9bc9ccfc534b6cdd42edf15bad98e}{begin} ()
+\item 
+int \hyperlink{classTask_ad6acbe7ba8643e046513bf8d66e5f578}{end} ()
+\item 
+\hyperlink{classDataset}{Dataset} \& \hyperlink{classTask_a618a7fb22a6e06cf918def06da96f777}{add\+\_\+dataset} (string dataset\+\_\+tag)
+\item 
+\hyperlink{classDataset}{Dataset} \& \hyperlink{classTask_a052ec7c44c26ed666d327eb1b34451d8}{add\+\_\+dataset\+\_\+with\+\_\+element\+\_\+value} (string dataset\+\_\+tag, string value)
+\item 
+\hyperlink{classDataset}{Dataset} \& \hyperlink{classTask_ad0eeaa007ee192d7866a101c93730ab7}{add\+\_\+dataset\+\_\+with\+\_\+element\+\_\+values} (string dataset\+\_\+tag, vector$<$ string $>$ values)
+\item 
+void \hyperlink{classTask_a5171db4ee3e3065b21fd8085debc5e7e}{add\+\_\+dependent\+\_\+transformation} (string \hyperlink{classTask_a013314768d0b474bcc567f1cb98a1c01}{transformation\+\_\+tag}, int transformation\+\_\+id)
+\item 
+void \hyperlink{classTask_a839d94a0d3191d6f6ca7caf4a92c140b}{add\+\_\+dependent\+\_\+transformation} (string \hyperlink{classTask_a013314768d0b474bcc567f1cb98a1c01}{transformation\+\_\+tag}, vector$<$ int $>$ transformation\+\_\+ids)
+\item 
+void \hyperlink{classTask_a2307623af7ceb989b236a2c5dd0f715c}{add\+\_\+dependent\+\_\+transformations} (vector$<$ string $>$ transformation\+\_\+tags, int transformation\+\_\+id)
+\item 
+void \hyperlink{classTask_a381ed34fcd5d4e429fde0bb56ae5553a}{add\+\_\+dependent\+\_\+transformations} (vector$<$ string $>$ transformation\+\_\+tags, vector$<$ int $>$ transformation\+\_\+ids)
+\item 
+void \hyperlink{classTask_aba1111f932df1f306dc581b51350fcac}{set\+\_\+workspace} (string \hyperlink{classTask_a9827ffbb7019894dffd2c27350613634}{workspace})
+\item 
+void \hyperlink{classTask_a60c02d44aeaae258738b5e65e945736b}{set\+\_\+resource} (string \hyperlink{classTask_af5b241fe56a17e15d824ac7b57501f72}{resource})
+\item 
+void \hyperlink{classTask_ac89f5349a2b63b6362a30f2488b39ad9}{set\+\_\+status} (task\+\_\+status \hyperlink{classTask_ae814b4785e245eb50a6b5a745408a271}{status})
+\item 
+void \hyperlink{classTask_a943ea609e9e335120a40ed8b3d2adad8}{set\+\_\+sub\+\_\+id} (int \hyperlink{classTask_aa5e5de369b641d4a6d66bd468d47b28b}{sub\+\_\+id})
+\item 
+int \hyperlink{classTask_a40694bba7094fa408d1bd2f6ffb1c2ae}{get\+\_\+id} ()
+\item 
+int \hyperlink{classTask_ac614b1c136949a316a3a18253df0121d}{get\+\_\+sub\+\_\+id} ()
+\item 
+string \hyperlink{classTask_a7ec0e1dbe84fcb2fd338d29efe22012f}{get\+\_\+dataflow\+\_\+tag} ()
+\item 
+string \hyperlink{classTask_ac0821d83651e5702218f7cb414888915}{get\+\_\+transformation\+\_\+tag} ()
+\item 
+string \hyperlink{classTask_a19596eec4c5c3d12b4bba38a66bf21c2}{get\+\_\+workspace} ()
+\item 
+string \hyperlink{classTask_a1275490d93daa52ade635a9121e0a5dd}{get\+\_\+resource} ()
+\item 
+\hyperlink{classDataset}{Dataset} \& \hyperlink{classTask_af540b03cc9ed9910200895bbc080e911}{get\+\_\+dataset\+\_\+by\+\_\+tag} (string tag)
+\item 
+string \hyperlink{classTask_ae350debd8a8397e2923a164af6508010}{get\+\_\+status} ()
+\item 
+\hyperlink{classDependency}{Dependency} \& \hyperlink{classTask_ae69363e2ebfc402468ea97d29c89653a}{get\+\_\+dependency} ()
+\item 
+string \hyperlink{classTask_a80fb64595e226c3501313e85290fcaf2}{get\+\_\+specification} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classTask_a404469dca46fda1c94e819345bd478e3}{add\+\_\+dependent\+\_\+transformation\+\_\+tag} (string \hyperlink{classTask_a013314768d0b474bcc567f1cb98a1c01}{transformation\+\_\+tag})
+\item 
+void \hyperlink{classTask_a861c0dc321a4b0e77f7cbe89dc7da75c}{add\+\_\+dependent\+\_\+transformation\+\_\+tags} (vector$<$ string $>$ transformation\+\_\+tags)
+\item 
+void \hyperlink{classTask_abe2b72a98501ca9554dd2aa18fad3245}{add\+\_\+dependent\+\_\+transformation\+\_\+id} (int task\+\_\+id)
+\item 
+void \hyperlink{classTask_ad549fad4fb70003b2f75bf3ae5a41d46}{add\+\_\+dependent\+\_\+transformation\+\_\+ids} (vector$<$ int $>$ task\+\_\+ids)
+\item 
+void \hyperlink{classTask_ad84f8f6e846b853c5e6b35ba3f0c470f}{insert\+\_\+dataset} (string dataset\+\_\+tag)
+\item 
+string \hyperlink{classTask_ae9ca005a8b6d0d3d794a7037f517ea20}{get\+\_\+post\+\_\+message} ()
+\item 
+void \hyperlink{classTask_a139cdf67c69c188c1a3ccc259d01da33}{save} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTask_a4b37b74b87a4419297e52180e715152c}\label{classTask_a4b37b74b87a4419297e52180e715152c}} 
+\hyperlink{structDfA__Config}{Df\+A\+\_\+\+Config} \hyperlink{classTask_a4b37b74b87a4419297e52180e715152c}{config}
+\begin{DoxyCompactList}\small\item\em Df\+Analyzer configurations. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTask_a1bdc8139dd647f9701e9f43e588749d7}\label{classTask_a1bdc8139dd647f9701e9f43e588749d7}} 
+int \hyperlink{classTask_a1bdc8139dd647f9701e9f43e588749d7}{id}
+\begin{DoxyCompactList}\small\item\em task identifier \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTask_aa5e5de369b641d4a6d66bd468d47b28b}\label{classTask_aa5e5de369b641d4a6d66bd468d47b28b}} 
+int \hyperlink{classTask_aa5e5de369b641d4a6d66bd468d47b28b}{sub\+\_\+id}
+\begin{DoxyCompactList}\small\item\em task subidentifier \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTask_a7a3b3f194a78e928cd9a88420676cfa2}\label{classTask_a7a3b3f194a78e928cd9a88420676cfa2}} 
+string \hyperlink{classTask_a7a3b3f194a78e928cd9a88420676cfa2}{dataflow\+\_\+tag}
+\begin{DoxyCompactList}\small\item\em dataflow tag \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTask_a013314768d0b474bcc567f1cb98a1c01}\label{classTask_a013314768d0b474bcc567f1cb98a1c01}} 
+string \hyperlink{classTask_a013314768d0b474bcc567f1cb98a1c01}{transformation\+\_\+tag}
+\begin{DoxyCompactList}\small\item\em transformation tag \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTask_a9827ffbb7019894dffd2c27350613634}\label{classTask_a9827ffbb7019894dffd2c27350613634}} 
+string \hyperlink{classTask_a9827ffbb7019894dffd2c27350613634}{workspace}
+\begin{DoxyCompactList}\small\item\em workspace \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTask_a531bf480558a3ee2d9554fc0d91bafd3}\label{classTask_a531bf480558a3ee2d9554fc0d91bafd3}} 
+map$<$ string, \hyperlink{classDataset}{Dataset} $>$ \hyperlink{classTask_a531bf480558a3ee2d9554fc0d91bafd3}{datasets}
+\begin{DoxyCompactList}\small\item\em map of dataset tag with its object derived from \hyperlink{classDataset}{Dataset} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTask_af5b241fe56a17e15d824ac7b57501f72}\label{classTask_af5b241fe56a17e15d824ac7b57501f72}} 
+string \hyperlink{classTask_af5b241fe56a17e15d824ac7b57501f72}{resource}
+\begin{DoxyCompactList}\small\item\em resource \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTask_ae814b4785e245eb50a6b5a745408a271}\label{classTask_ae814b4785e245eb50a6b5a745408a271}} 
+task\+\_\+status \hyperlink{classTask_ae814b4785e245eb50a6b5a745408a271}{status}
+\begin{DoxyCompactList}\small\item\em task status, which can be R\+E\+A\+DY, R\+U\+N\+N\+I\+NG, or F\+I\+N\+I\+S\+H\+ED \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTask_a3646beab5c494e230601630dc5ffe27d}\label{classTask_a3646beab5c494e230601630dc5ffe27d}} 
+\hyperlink{classDependency}{Dependency} \hyperlink{classTask_a3646beab5c494e230601630dc5ffe27d}{dependency}
+\begin{DoxyCompactList}\small\item\em data dependency \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to represent a task (retrospective provenance). 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTask_a27670d3d842b1c4ab38d2eacd5f5a920}\label{classTask_a27670d3d842b1c4ab38d2eacd5f5a920}} 
+\index{Task@{Task}!Task@{Task}}
+\index{Task@{Task}!Task@{Task}}
+\subsubsection{\texorpdfstring{Task()}{Task()}}
+{\footnotesize\ttfamily Task\+::\+Task (\begin{DoxyParamCaption}\item[{string}]{dataflow\+\_\+tag,  }\item[{string}]{transformation\+\_\+tag,  }\item[{int}]{ID,  }\item[{int}]{sub\+\_\+id = {\ttfamily 0},  }\item[{string}]{hostname = {\ttfamily dfa\+\_\+hostname},  }\item[{int}]{port = {\ttfamily dfa\+\_\+port} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor of a task. 
+\begin{DoxyParams}{Parameters}
+{\em dataflow\+\_\+tag} & a dataflow tag \\
+\hline
+{\em transformation\+\_\+tag} & a transformation tag \\
+\hline
+{\em ID} & a task identifier \\
+\hline
+{\em sub\+\_\+id} & a task subidentifier (optional) \\
+\hline
+{\em hostname} & a hostname to the Df\+Analyzer server (optional) \\
+\hline
+{\em port} & a port to the Df\+Analyzer server (optional) \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classTask_a618a7fb22a6e06cf918def06da96f777}\label{classTask_a618a7fb22a6e06cf918def06da96f777}} 
+\index{Task@{Task}!add\+\_\+dataset@{add\+\_\+dataset}}
+\index{add\+\_\+dataset@{add\+\_\+dataset}!Task@{Task}}
+\subsubsection{\texorpdfstring{add\+\_\+dataset()}{add\_dataset()}}
+{\footnotesize\ttfamily \hyperlink{classDataset}{Dataset} \& Task\+::add\+\_\+dataset (\begin{DoxyParamCaption}\item[{string}]{dataset\+\_\+tag }\end{DoxyParamCaption})}
+
+Add a dataset to the task. 
+\begin{DoxyParams}{Parameters}
+{\em dataset\+\_\+tag} & a dataset tag \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTask_a052ec7c44c26ed666d327eb1b34451d8}\label{classTask_a052ec7c44c26ed666d327eb1b34451d8}} 
+\index{Task@{Task}!add\+\_\+dataset\+\_\+with\+\_\+element\+\_\+value@{add\+\_\+dataset\+\_\+with\+\_\+element\+\_\+value}}
+\index{add\+\_\+dataset\+\_\+with\+\_\+element\+\_\+value@{add\+\_\+dataset\+\_\+with\+\_\+element\+\_\+value}!Task@{Task}}
+\subsubsection{\texorpdfstring{add\+\_\+dataset\+\_\+with\+\_\+element\+\_\+value()}{add\_dataset\_with\_element\_value()}}
+{\footnotesize\ttfamily \hyperlink{classDataset}{Dataset} \& Task\+::add\+\_\+dataset\+\_\+with\+\_\+element\+\_\+value (\begin{DoxyParamCaption}\item[{string}]{dataset\+\_\+tag,  }\item[{string}]{value }\end{DoxyParamCaption})}
+
+Add a dataset to the task with a single attribute value. 
+\begin{DoxyParams}{Parameters}
+{\em dataset\+\_\+tag} & a dataset tag \\
+\hline
+{\em value} & a single attribute value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTask_ad0eeaa007ee192d7866a101c93730ab7}\label{classTask_ad0eeaa007ee192d7866a101c93730ab7}} 
+\index{Task@{Task}!add\+\_\+dataset\+\_\+with\+\_\+element\+\_\+values@{add\+\_\+dataset\+\_\+with\+\_\+element\+\_\+values}}
+\index{add\+\_\+dataset\+\_\+with\+\_\+element\+\_\+values@{add\+\_\+dataset\+\_\+with\+\_\+element\+\_\+values}!Task@{Task}}
+\subsubsection{\texorpdfstring{add\+\_\+dataset\+\_\+with\+\_\+element\+\_\+values()}{add\_dataset\_with\_element\_values()}}
+{\footnotesize\ttfamily \hyperlink{classDataset}{Dataset} \& Task\+::add\+\_\+dataset\+\_\+with\+\_\+element\+\_\+values (\begin{DoxyParamCaption}\item[{string}]{dataset\+\_\+tag,  }\item[{vector$<$ string $>$}]{values }\end{DoxyParamCaption})}
+
+Add a dataset to the task with multiple attribute values. 
+\begin{DoxyParams}{Parameters}
+{\em dataset\+\_\+tag} & a dataset tag \\
+\hline
+{\em values} & a set of attribute values \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTask_a5171db4ee3e3065b21fd8085debc5e7e}\label{classTask_a5171db4ee3e3065b21fd8085debc5e7e}} 
+\index{Task@{Task}!add\+\_\+dependent\+\_\+transformation@{add\+\_\+dependent\+\_\+transformation}}
+\index{add\+\_\+dependent\+\_\+transformation@{add\+\_\+dependent\+\_\+transformation}!Task@{Task}}
+\subsubsection{\texorpdfstring{add\+\_\+dependent\+\_\+transformation()}{add\_dependent\_transformation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Task\+::add\+\_\+dependent\+\_\+transformation (\begin{DoxyParamCaption}\item[{string}]{transformation\+\_\+tag,  }\item[{int}]{transformation\+\_\+id }\end{DoxyParamCaption})}
+
+Add a dependent transformation to the task with a single dependent task. 
+\begin{DoxyParams}{Parameters}
+{\em transformation\+\_\+tag} & a transformation tag \\
+\hline
+{\em transformation\+\_\+id} & a transformation identifier \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTask_a839d94a0d3191d6f6ca7caf4a92c140b}\label{classTask_a839d94a0d3191d6f6ca7caf4a92c140b}} 
+\index{Task@{Task}!add\+\_\+dependent\+\_\+transformation@{add\+\_\+dependent\+\_\+transformation}}
+\index{add\+\_\+dependent\+\_\+transformation@{add\+\_\+dependent\+\_\+transformation}!Task@{Task}}
+\subsubsection{\texorpdfstring{add\+\_\+dependent\+\_\+transformation()}{add\_dependent\_transformation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Task\+::add\+\_\+dependent\+\_\+transformation (\begin{DoxyParamCaption}\item[{string}]{transformation\+\_\+tag,  }\item[{vector$<$ int $>$}]{transformation\+\_\+ids }\end{DoxyParamCaption})}
+
+Add a dependent transformation to the task with multiple dependent tasks. 
+\begin{DoxyParams}{Parameters}
+{\em transformation\+\_\+tag} & a transformation tag \\
+\hline
+{\em transformation\+\_\+ids} & a set of transformation identifiers \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTask_abe2b72a98501ca9554dd2aa18fad3245}\label{classTask_abe2b72a98501ca9554dd2aa18fad3245}} 
+\index{Task@{Task}!add\+\_\+dependent\+\_\+transformation\+\_\+id@{add\+\_\+dependent\+\_\+transformation\+\_\+id}}
+\index{add\+\_\+dependent\+\_\+transformation\+\_\+id@{add\+\_\+dependent\+\_\+transformation\+\_\+id}!Task@{Task}}
+\subsubsection{\texorpdfstring{add\+\_\+dependent\+\_\+transformation\+\_\+id()}{add\_dependent\_transformation\_id()}}
+{\footnotesize\ttfamily void Task\+::add\+\_\+dependent\+\_\+transformation\+\_\+id (\begin{DoxyParamCaption}\item[{int}]{task\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Add a dependent task identifier to the dependent transformation tag. 
+\begin{DoxyParams}{Parameters}
+{\em task\+\_\+id} & a task identifier \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTask_ad549fad4fb70003b2f75bf3ae5a41d46}\label{classTask_ad549fad4fb70003b2f75bf3ae5a41d46}} 
+\index{Task@{Task}!add\+\_\+dependent\+\_\+transformation\+\_\+ids@{add\+\_\+dependent\+\_\+transformation\+\_\+ids}}
+\index{add\+\_\+dependent\+\_\+transformation\+\_\+ids@{add\+\_\+dependent\+\_\+transformation\+\_\+ids}!Task@{Task}}
+\subsubsection{\texorpdfstring{add\+\_\+dependent\+\_\+transformation\+\_\+ids()}{add\_dependent\_transformation\_ids()}}
+{\footnotesize\ttfamily void Task\+::add\+\_\+dependent\+\_\+transformation\+\_\+ids (\begin{DoxyParamCaption}\item[{vector$<$ int $>$}]{task\+\_\+ids }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Add a set of dependent task identifiers to the dependent transformation tags. 
+\begin{DoxyParams}{Parameters}
+{\em task\+\_\+ids} & a set of task identifiers \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTask_a404469dca46fda1c94e819345bd478e3}\label{classTask_a404469dca46fda1c94e819345bd478e3}} 
+\index{Task@{Task}!add\+\_\+dependent\+\_\+transformation\+\_\+tag@{add\+\_\+dependent\+\_\+transformation\+\_\+tag}}
+\index{add\+\_\+dependent\+\_\+transformation\+\_\+tag@{add\+\_\+dependent\+\_\+transformation\+\_\+tag}!Task@{Task}}
+\subsubsection{\texorpdfstring{add\+\_\+dependent\+\_\+transformation\+\_\+tag()}{add\_dependent\_transformation\_tag()}}
+{\footnotesize\ttfamily void Task\+::add\+\_\+dependent\+\_\+transformation\+\_\+tag (\begin{DoxyParamCaption}\item[{string}]{transformation\+\_\+tag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Add a dependent transformation tag. 
+\begin{DoxyParams}{Parameters}
+{\em transformation\+\_\+tag} & a transformation tag \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTask_a861c0dc321a4b0e77f7cbe89dc7da75c}\label{classTask_a861c0dc321a4b0e77f7cbe89dc7da75c}} 
+\index{Task@{Task}!add\+\_\+dependent\+\_\+transformation\+\_\+tags@{add\+\_\+dependent\+\_\+transformation\+\_\+tags}}
+\index{add\+\_\+dependent\+\_\+transformation\+\_\+tags@{add\+\_\+dependent\+\_\+transformation\+\_\+tags}!Task@{Task}}
+\subsubsection{\texorpdfstring{add\+\_\+dependent\+\_\+transformation\+\_\+tags()}{add\_dependent\_transformation\_tags()}}
+{\footnotesize\ttfamily void Task\+::add\+\_\+dependent\+\_\+transformation\+\_\+tags (\begin{DoxyParamCaption}\item[{vector$<$ string $>$}]{transformation\+\_\+tags }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Add a set of dependent transformation tags. 
+\begin{DoxyParams}{Parameters}
+{\em transformation\+\_\+tags} & a set of dependent transformation tags \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTask_a2307623af7ceb989b236a2c5dd0f715c}\label{classTask_a2307623af7ceb989b236a2c5dd0f715c}} 
+\index{Task@{Task}!add\+\_\+dependent\+\_\+transformations@{add\+\_\+dependent\+\_\+transformations}}
+\index{add\+\_\+dependent\+\_\+transformations@{add\+\_\+dependent\+\_\+transformations}!Task@{Task}}
+\subsubsection{\texorpdfstring{add\+\_\+dependent\+\_\+transformations()}{add\_dependent\_transformations()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Task\+::add\+\_\+dependent\+\_\+transformations (\begin{DoxyParamCaption}\item[{vector$<$ string $>$}]{transformation\+\_\+tags,  }\item[{int}]{transformation\+\_\+id }\end{DoxyParamCaption})}
+
+Add a set of dependent transformations to the task with a single dependent task. 
+\begin{DoxyParams}{Parameters}
+{\em transformation\+\_\+tags} & a set of transformation tags \\
+\hline
+{\em transformation\+\_\+id} & a transformation identifier \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTask_a381ed34fcd5d4e429fde0bb56ae5553a}\label{classTask_a381ed34fcd5d4e429fde0bb56ae5553a}} 
+\index{Task@{Task}!add\+\_\+dependent\+\_\+transformations@{add\+\_\+dependent\+\_\+transformations}}
+\index{add\+\_\+dependent\+\_\+transformations@{add\+\_\+dependent\+\_\+transformations}!Task@{Task}}
+\subsubsection{\texorpdfstring{add\+\_\+dependent\+\_\+transformations()}{add\_dependent\_transformations()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Task\+::add\+\_\+dependent\+\_\+transformations (\begin{DoxyParamCaption}\item[{vector$<$ string $>$}]{transformation\+\_\+tags,  }\item[{vector$<$ int $>$}]{transformation\+\_\+ids }\end{DoxyParamCaption})}
+
+Add a set of dependent transformations to the task with multiple dependent tasks. 
+\begin{DoxyParams}{Parameters}
+{\em transformation\+\_\+tags} & a set of transformation tags \\
+\hline
+{\em transformation\+\_\+ids} & a set of transformation identifiers \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTask_a8cb9bc9ccfc534b6cdd42edf15bad98e}\label{classTask_a8cb9bc9ccfc534b6cdd42edf15bad98e}} 
+\index{Task@{Task}!begin@{begin}}
+\index{begin@{begin}!Task@{Task}}
+\subsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily int Task\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Save a task with the status R\+U\+N\+N\+I\+NG. \begin{DoxyReturn}{Returns}
+the exit status code of the H\+T\+TP request sent using curl. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTask_ad6acbe7ba8643e046513bf8d66e5f578}\label{classTask_ad6acbe7ba8643e046513bf8d66e5f578}} 
+\index{Task@{Task}!end@{end}}
+\index{end@{end}!Task@{Task}}
+\subsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily int Task\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Save a task with the status F\+I\+N\+I\+S\+H\+ED. \begin{DoxyReturn}{Returns}
+the exit status code of the H\+T\+TP request sent using curl. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTask_a7ec0e1dbe84fcb2fd338d29efe22012f}\label{classTask_a7ec0e1dbe84fcb2fd338d29efe22012f}} 
+\index{Task@{Task}!get\+\_\+dataflow\+\_\+tag@{get\+\_\+dataflow\+\_\+tag}}
+\index{get\+\_\+dataflow\+\_\+tag@{get\+\_\+dataflow\+\_\+tag}!Task@{Task}}
+\subsubsection{\texorpdfstring{get\+\_\+dataflow\+\_\+tag()}{get\_dataflow\_tag()}}
+{\footnotesize\ttfamily string Task\+::get\+\_\+dataflow\+\_\+tag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get dataflow tag. \begin{DoxyReturn}{Returns}
+the dataflow tag 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTask_af540b03cc9ed9910200895bbc080e911}\label{classTask_af540b03cc9ed9910200895bbc080e911}} 
+\index{Task@{Task}!get\+\_\+dataset\+\_\+by\+\_\+tag@{get\+\_\+dataset\+\_\+by\+\_\+tag}}
+\index{get\+\_\+dataset\+\_\+by\+\_\+tag@{get\+\_\+dataset\+\_\+by\+\_\+tag}!Task@{Task}}
+\subsubsection{\texorpdfstring{get\+\_\+dataset\+\_\+by\+\_\+tag()}{get\_dataset\_by\_tag()}}
+{\footnotesize\ttfamily \hyperlink{classDataset}{Dataset} \& Task\+::get\+\_\+dataset\+\_\+by\+\_\+tag (\begin{DoxyParamCaption}\item[{string}]{tag }\end{DoxyParamCaption})}
+
+Get dataset given a tag. 
+\begin{DoxyParams}{Parameters}
+{\em tag} & a dataset tag. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the reference of the dataset given a tag 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTask_ae69363e2ebfc402468ea97d29c89653a}\label{classTask_ae69363e2ebfc402468ea97d29c89653a}} 
+\index{Task@{Task}!get\+\_\+dependency@{get\+\_\+dependency}}
+\index{get\+\_\+dependency@{get\+\_\+dependency}!Task@{Task}}
+\subsubsection{\texorpdfstring{get\+\_\+dependency()}{get\_dependency()}}
+{\footnotesize\ttfamily \hyperlink{classDependency}{Dependency} \& Task\+::get\+\_\+dependency (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the data dependency. \begin{DoxyReturn}{Returns}
+the data dependency 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTask_a40694bba7094fa408d1bd2f6ffb1c2ae}\label{classTask_a40694bba7094fa408d1bd2f6ffb1c2ae}} 
+\index{Task@{Task}!get\+\_\+id@{get\+\_\+id}}
+\index{get\+\_\+id@{get\+\_\+id}!Task@{Task}}
+\subsubsection{\texorpdfstring{get\+\_\+id()}{get\_id()}}
+{\footnotesize\ttfamily int Task\+::get\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get task identifier. \begin{DoxyReturn}{Returns}
+the task identifier 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTask_ae9ca005a8b6d0d3d794a7037f517ea20}\label{classTask_ae9ca005a8b6d0d3d794a7037f517ea20}} 
+\index{Task@{Task}!get\+\_\+post\+\_\+message@{get\+\_\+post\+\_\+message}}
+\index{get\+\_\+post\+\_\+message@{get\+\_\+post\+\_\+message}!Task@{Task}}
+\subsubsection{\texorpdfstring{get\+\_\+post\+\_\+message()}{get\_post\_message()}}
+{\footnotesize\ttfamily string Task\+::get\+\_\+post\+\_\+message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Get message to be sent to Df\+Analyzer server using an H\+T\+TP request with P\+O\+ST method. \begin{DoxyReturn}{Returns}
+the message in H\+T\+TP request 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTask_a1275490d93daa52ade635a9121e0a5dd}\label{classTask_a1275490d93daa52ade635a9121e0a5dd}} 
+\index{Task@{Task}!get\+\_\+resource@{get\+\_\+resource}}
+\index{get\+\_\+resource@{get\+\_\+resource}!Task@{Task}}
+\subsubsection{\texorpdfstring{get\+\_\+resource()}{get\_resource()}}
+{\footnotesize\ttfamily string Task\+::get\+\_\+resource (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the resource \begin{DoxyReturn}{Returns}
+the resource 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTask_a80fb64595e226c3501313e85290fcaf2}\label{classTask_a80fb64595e226c3501313e85290fcaf2}} 
+\index{Task@{Task}!get\+\_\+specification@{get\+\_\+specification}}
+\index{get\+\_\+specification@{get\+\_\+specification}!Task@{Task}}
+\subsubsection{\texorpdfstring{get\+\_\+specification()}{get\_specification()}}
+{\footnotesize\ttfamily string Task\+::get\+\_\+specification (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get task specification. \begin{DoxyReturn}{Returns}
+the task specification as a string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTask_ae350debd8a8397e2923a164af6508010}\label{classTask_ae350debd8a8397e2923a164af6508010}} 
+\index{Task@{Task}!get\+\_\+status@{get\+\_\+status}}
+\index{get\+\_\+status@{get\+\_\+status}!Task@{Task}}
+\subsubsection{\texorpdfstring{get\+\_\+status()}{get\_status()}}
+{\footnotesize\ttfamily string Task\+::get\+\_\+status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the task status. \begin{DoxyReturn}{Returns}
+the task status 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTask_ac614b1c136949a316a3a18253df0121d}\label{classTask_ac614b1c136949a316a3a18253df0121d}} 
+\index{Task@{Task}!get\+\_\+sub\+\_\+id@{get\+\_\+sub\+\_\+id}}
+\index{get\+\_\+sub\+\_\+id@{get\+\_\+sub\+\_\+id}!Task@{Task}}
+\subsubsection{\texorpdfstring{get\+\_\+sub\+\_\+id()}{get\_sub\_id()}}
+{\footnotesize\ttfamily int Task\+::get\+\_\+sub\+\_\+id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get task subidentifier. \begin{DoxyReturn}{Returns}
+the task subidentifier 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTask_ac0821d83651e5702218f7cb414888915}\label{classTask_ac0821d83651e5702218f7cb414888915}} 
+\index{Task@{Task}!get\+\_\+transformation\+\_\+tag@{get\+\_\+transformation\+\_\+tag}}
+\index{get\+\_\+transformation\+\_\+tag@{get\+\_\+transformation\+\_\+tag}!Task@{Task}}
+\subsubsection{\texorpdfstring{get\+\_\+transformation\+\_\+tag()}{get\_transformation\_tag()}}
+{\footnotesize\ttfamily string Task\+::get\+\_\+transformation\+\_\+tag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get transformation tag. \begin{DoxyReturn}{Returns}
+the transformation tag 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTask_a19596eec4c5c3d12b4bba38a66bf21c2}\label{classTask_a19596eec4c5c3d12b4bba38a66bf21c2}} 
+\index{Task@{Task}!get\+\_\+workspace@{get\+\_\+workspace}}
+\index{get\+\_\+workspace@{get\+\_\+workspace}!Task@{Task}}
+\subsubsection{\texorpdfstring{get\+\_\+workspace()}{get\_workspace()}}
+{\footnotesize\ttfamily string Task\+::get\+\_\+workspace (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the workspace. \begin{DoxyReturn}{Returns}
+the workspace 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTask_ad84f8f6e846b853c5e6b35ba3f0c470f}\label{classTask_ad84f8f6e846b853c5e6b35ba3f0c470f}} 
+\index{Task@{Task}!insert\+\_\+dataset@{insert\+\_\+dataset}}
+\index{insert\+\_\+dataset@{insert\+\_\+dataset}!Task@{Task}}
+\subsubsection{\texorpdfstring{insert\+\_\+dataset()}{insert\_dataset()}}
+{\footnotesize\ttfamily void Task\+::insert\+\_\+dataset (\begin{DoxyParamCaption}\item[{string}]{dataset\+\_\+tag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Insert dataset consumed/produced by the task. 
+\begin{DoxyParams}{Parameters}
+{\em dataset\+\_\+tag} & a dataset tag \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTask_a139cdf67c69c188c1a3ccc259d01da33}\label{classTask_a139cdf67c69c188c1a3ccc259d01da33}} 
+\index{Task@{Task}!save@{save}}
+\index{save@{save}!Task@{Task}}
+\subsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void Task\+::save (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Save a task in Df\+Analyzer database. \mbox{\Hypertarget{classTask_a60c02d44aeaae258738b5e65e945736b}\label{classTask_a60c02d44aeaae258738b5e65e945736b}} 
+\index{Task@{Task}!set\+\_\+resource@{set\+\_\+resource}}
+\index{set\+\_\+resource@{set\+\_\+resource}!Task@{Task}}
+\subsubsection{\texorpdfstring{set\+\_\+resource()}{set\_resource()}}
+{\footnotesize\ttfamily void Task\+::set\+\_\+resource (\begin{DoxyParamCaption}\item[{string}]{resource }\end{DoxyParamCaption})}
+
+\hyperlink{classSet}{Set} resource. 
+\begin{DoxyParams}{Parameters}
+{\em resource} & a resource \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTask_ac89f5349a2b63b6362a30f2488b39ad9}\label{classTask_ac89f5349a2b63b6362a30f2488b39ad9}} 
+\index{Task@{Task}!set\+\_\+status@{set\+\_\+status}}
+\index{set\+\_\+status@{set\+\_\+status}!Task@{Task}}
+\subsubsection{\texorpdfstring{set\+\_\+status()}{set\_status()}}
+{\footnotesize\ttfamily void Task\+::set\+\_\+status (\begin{DoxyParamCaption}\item[{task\+\_\+status}]{status }\end{DoxyParamCaption})}
+
+\hyperlink{classSet}{Set} task status. 
+\begin{DoxyParams}{Parameters}
+{\em status} & a task status \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTask_a943ea609e9e335120a40ed8b3d2adad8}\label{classTask_a943ea609e9e335120a40ed8b3d2adad8}} 
+\index{Task@{Task}!set\+\_\+sub\+\_\+id@{set\+\_\+sub\+\_\+id}}
+\index{set\+\_\+sub\+\_\+id@{set\+\_\+sub\+\_\+id}!Task@{Task}}
+\subsubsection{\texorpdfstring{set\+\_\+sub\+\_\+id()}{set\_sub\_id()}}
+{\footnotesize\ttfamily void Task\+::set\+\_\+sub\+\_\+id (\begin{DoxyParamCaption}\item[{int}]{sub\+\_\+id }\end{DoxyParamCaption})}
+
+\hyperlink{classSet}{Set} task subidentifier. 
+\begin{DoxyParams}{Parameters}
+{\em sub\+\_\+id} & a task subidentifier \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTask_aba1111f932df1f306dc581b51350fcac}\label{classTask_aba1111f932df1f306dc581b51350fcac}} 
+\index{Task@{Task}!set\+\_\+workspace@{set\+\_\+workspace}}
+\index{set\+\_\+workspace@{set\+\_\+workspace}!Task@{Task}}
+\subsubsection{\texorpdfstring{set\+\_\+workspace()}{set\_workspace()}}
+{\footnotesize\ttfamily void Task\+::set\+\_\+workspace (\begin{DoxyParamCaption}\item[{string}]{workspace }\end{DoxyParamCaption})}
+
+\hyperlink{classSet}{Set} workspace. 
+\begin{DoxyParams}{Parameters}
+{\em workspace} & a workspace \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/task.\+h\item 
+src/task.\+cpp\end{DoxyCompactItemize}

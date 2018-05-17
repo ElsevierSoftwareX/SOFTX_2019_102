@@ -1,0 +1,112 @@
+\hypertarget{classElement}{}\section{Element Class Reference}
+\label{classElement}\index{Element@{Element}}
+
+
+{\ttfamily \#include $<$element.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classElement_ab0d0e20be9a36ae676202db753faeec9}{Element} ()
+\item 
+\hyperlink{classElement_ac5749aba608dc8bfb68c7e996d159cb7}{Element} (string value)
+\item 
+\hyperlink{classElement_a628516fcaf54458e35ffbcb3a9082e99}{Element} (vector$<$ string $>$ \hyperlink{classElement_ae2b88bc22f391bc263521096c2613897}{values})
+\item 
+void \hyperlink{classElement_a67439f02d44fb2fa834d9a7b223709a8}{add\+\_\+value} (string value)
+\item 
+void \hyperlink{classElement_aa962031ba982f58e7bd5caceb5b8d058}{set\+\_\+values} (vector$<$ string $>$ \hyperlink{classElement_ae2b88bc22f391bc263521096c2613897}{values})
+\item 
+vector$<$ string $>$ \& \hyperlink{classElement_ae1c0e14049aaa6b7a9c047039038de3a}{get\+\_\+values} ()
+\item 
+string \hyperlink{classElement_a50b58de922a1cb1ee1dea8abf789bb64}{get\+\_\+values\+\_\+as\+\_\+string} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classElement_ae2b88bc22f391bc263521096c2613897}\label{classElement_ae2b88bc22f391bc263521096c2613897}} 
+vector$<$ string $>$ \hyperlink{classElement_ae2b88bc22f391bc263521096c2613897}{values}
+\begin{DoxyCompactList}\small\item\em set of attribute values \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to represent a data element (retrospective provenance). 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classElement_ab0d0e20be9a36ae676202db753faeec9}\label{classElement_ab0d0e20be9a36ae676202db753faeec9}} 
+\index{Element@{Element}!Element@{Element}}
+\index{Element@{Element}!Element@{Element}}
+\subsubsection{\texorpdfstring{Element()}{Element()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Element\+::\+Element (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor of a data element. \mbox{\Hypertarget{classElement_ac5749aba608dc8bfb68c7e996d159cb7}\label{classElement_ac5749aba608dc8bfb68c7e996d159cb7}} 
+\index{Element@{Element}!Element@{Element}}
+\index{Element@{Element}!Element@{Element}}
+\subsubsection{\texorpdfstring{Element()}{Element()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Element\+::\+Element (\begin{DoxyParamCaption}\item[{string}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor of a data element. 
+\begin{DoxyParams}{Parameters}
+{\em value} & a single attribute value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classElement_a628516fcaf54458e35ffbcb3a9082e99}\label{classElement_a628516fcaf54458e35ffbcb3a9082e99}} 
+\index{Element@{Element}!Element@{Element}}
+\index{Element@{Element}!Element@{Element}}
+\subsubsection{\texorpdfstring{Element()}{Element()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Element\+::\+Element (\begin{DoxyParamCaption}\item[{vector$<$ string $>$}]{values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor of a data element. 
+\begin{DoxyParams}{Parameters}
+{\em values} & a set of attribute values \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classElement_a67439f02d44fb2fa834d9a7b223709a8}\label{classElement_a67439f02d44fb2fa834d9a7b223709a8}} 
+\index{Element@{Element}!add\+\_\+value@{add\+\_\+value}}
+\index{add\+\_\+value@{add\+\_\+value}!Element@{Element}}
+\subsubsection{\texorpdfstring{add\+\_\+value()}{add\_value()}}
+{\footnotesize\ttfamily void Element\+::add\+\_\+value (\begin{DoxyParamCaption}\item[{string}]{value }\end{DoxyParamCaption})}
+
+Add attribute value to a data element in an ordered manner. Each invocation of this member function will add the attribute value at the end of the set of attribute values. 
+\begin{DoxyParams}{Parameters}
+{\em value} & attribute value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classElement_ae1c0e14049aaa6b7a9c047039038de3a}\label{classElement_ae1c0e14049aaa6b7a9c047039038de3a}} 
+\index{Element@{Element}!get\+\_\+values@{get\+\_\+values}}
+\index{get\+\_\+values@{get\+\_\+values}!Element@{Element}}
+\subsubsection{\texorpdfstring{get\+\_\+values()}{get\_values()}}
+{\footnotesize\ttfamily vector$<$ string $>$ \& Element\+::get\+\_\+values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get attribute values \begin{DoxyReturn}{Returns}
+the attribute values 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classElement_a50b58de922a1cb1ee1dea8abf789bb64}\label{classElement_a50b58de922a1cb1ee1dea8abf789bb64}} 
+\index{Element@{Element}!get\+\_\+values\+\_\+as\+\_\+string@{get\+\_\+values\+\_\+as\+\_\+string}}
+\index{get\+\_\+values\+\_\+as\+\_\+string@{get\+\_\+values\+\_\+as\+\_\+string}!Element@{Element}}
+\subsubsection{\texorpdfstring{get\+\_\+values\+\_\+as\+\_\+string()}{get\_values\_as\_string()}}
+{\footnotesize\ttfamily string Element\+::get\+\_\+values\+\_\+as\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get attribute values. \begin{DoxyReturn}{Returns}
+the attribute values as string. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classElement_aa962031ba982f58e7bd5caceb5b8d058}\label{classElement_aa962031ba982f58e7bd5caceb5b8d058}} 
+\index{Element@{Element}!set\+\_\+values@{set\+\_\+values}}
+\index{set\+\_\+values@{set\+\_\+values}!Element@{Element}}
+\subsubsection{\texorpdfstring{set\+\_\+values()}{set\_values()}}
+{\footnotesize\ttfamily void Element\+::set\+\_\+values (\begin{DoxyParamCaption}\item[{vector$<$ string $>$}]{values }\end{DoxyParamCaption})}
+
+\hyperlink{classSet}{Set} attribute values. 
+\begin{DoxyParams}{Parameters}
+{\em a} & set of attribute values \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/element.\+h\item 
+src/element.\+cpp\end{DoxyCompactItemize}

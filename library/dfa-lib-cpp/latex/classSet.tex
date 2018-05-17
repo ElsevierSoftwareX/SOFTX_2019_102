@@ -1,0 +1,194 @@
+\hypertarget{classSet}{}\section{Set Class Reference}
+\label{classSet}\index{Set@{Set}}
+
+
+{\ttfamily \#include $<$set.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSet_ac47789261e41ac7aff516db5ea9e0095}{Set} (string \hyperlink{classSet_a35ba1a3d7f2fd99f7b98985b97cdd95d}{tag})
+\item 
+void \hyperlink{classSet_ab4e7a2a958c8cfbac96f60c7c2b20c35}{add\+\_\+attribute} (string name, attribute\+\_\+type type)
+\item 
+void \hyperlink{classSet_a90b6137ad3bbb7a34b50fa5e7842a685}{add\+\_\+attributes} (vector$<$ string $>$ names, vector$<$ attribute\+\_\+type $>$ types)
+\item 
+\hyperlink{classExtractor}{Extractor} \& \hyperlink{classSet_a26deff7e7f3319a5a4324c7de3e7b7b9}{add\+\_\+extractor} (string extractor\+\_\+tag, method\+\_\+type method, cartridge\+\_\+type cartridge)
+\item 
+\hyperlink{classExtractor}{Extractor} \& \hyperlink{classSet_a8d55de9a8a8f39dc567621d8640f90a2}{add\+\_\+extractor} (string extractor\+\_\+tag, method\+\_\+type method, cartridge\+\_\+type cartridge, string attribute\+\_\+name, attribute\+\_\+type attribute\+\_\+type)
+\item 
+\hyperlink{classExtractor}{Extractor} \& \hyperlink{classSet_acb3a45469bf84310d5d20e45118d772e}{add\+\_\+extractor} (string extractor\+\_\+tag, method\+\_\+type method, cartridge\+\_\+type cartridge, vector$<$ string $>$ attribute\+\_\+names, vector$<$ attribute\+\_\+type $>$ attribute\+\_\+types)
+\item 
+string \hyperlink{classSet_af7ed351b5ee2bd4f2b8c306ce16ba0a9}{get\+\_\+tag} ()
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ an attribute name}\par
+{\em Get attribute given a name.
+
+\begin{DoxyReturn}{Returns}
+the reference of the attribute with the given name 
+\end{DoxyReturn}
+}\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSet_a6ddd20a1f9068ca0963d9c67dbdef8c4}\label{classSet_a6ddd20a1f9068ca0963d9c67dbdef8c4}} 
+\hyperlink{classAttribute}{Attribute} \& {\bfseries get\+\_\+attribute\+\_\+by\+\_\+name} (string name)
+\item 
+\hyperlink{classExtractor}{Extractor} \& \hyperlink{classSet_a06405b0e497db65bf526a6be9a589523}{get\+\_\+extractor\+\_\+by\+\_\+tag} (string \hyperlink{classSet_a35ba1a3d7f2fd99f7b98985b97cdd95d}{tag})
+\item 
+map$<$ string, \hyperlink{classExtractor}{Extractor} $>$ \& \hyperlink{classSet_a8638f2a95600d52c334414723afc414d}{get\+\_\+extractors} ()
+\item 
+string \hyperlink{classSet_aaa0aca15b56a82a4bcf803aeeb27c842}{get\+\_\+specification} ()
+\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSet_a35ba1a3d7f2fd99f7b98985b97cdd95d}\label{classSet_a35ba1a3d7f2fd99f7b98985b97cdd95d}} 
+string \hyperlink{classSet_a35ba1a3d7f2fd99f7b98985b97cdd95d}{tag}
+\begin{DoxyCompactList}\small\item\em dataset tag \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSet_ad95bfeca2b9cb7aecbdb01e8bfc860dd}\label{classSet_ad95bfeca2b9cb7aecbdb01e8bfc860dd}} 
+vector$<$ \hyperlink{classAttribute}{Attribute} $>$ \hyperlink{classSet_ad95bfeca2b9cb7aecbdb01e8bfc860dd}{attributes}
+\begin{DoxyCompactList}\small\item\em set of attributes \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSet_a99bb877788be2f6afe24d8f775a64e33}\label{classSet_a99bb877788be2f6afe24d8f775a64e33}} 
+map$<$ string, \hyperlink{classExtractor}{Extractor} $>$ \hyperlink{classSet_a99bb877788be2f6afe24d8f775a64e33}{extractors}
+\begin{DoxyCompactList}\small\item\em map of extractor tag and its object (i.\+e., \hyperlink{classExtractor}{Extractor}) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to represent a dataset specification (prospective provenance). 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSet_ac47789261e41ac7aff516db5ea9e0095}\label{classSet_ac47789261e41ac7aff516db5ea9e0095}} 
+\index{Set@{Set}!Set@{Set}}
+\index{Set@{Set}!Set@{Set}}
+\subsubsection{\texorpdfstring{Set()}{Set()}}
+{\footnotesize\ttfamily Set\+::\+Set (\begin{DoxyParamCaption}\item[{string}]{tag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor of a dataset specification. 
+\begin{DoxyParams}{Parameters}
+{\em tag} & a dataset tag \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classSet_ab4e7a2a958c8cfbac96f60c7c2b20c35}\label{classSet_ab4e7a2a958c8cfbac96f60c7c2b20c35}} 
+\index{Set@{Set}!add\+\_\+attribute@{add\+\_\+attribute}}
+\index{add\+\_\+attribute@{add\+\_\+attribute}!Set@{Set}}
+\subsubsection{\texorpdfstring{add\+\_\+attribute()}{add\_attribute()}}
+{\footnotesize\ttfamily void Set\+::add\+\_\+attribute (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{attribute\+\_\+type}]{type }\end{DoxyParamCaption})}
+
+Add a single attribute to the dataset specification. 
+\begin{DoxyParams}{Parameters}
+{\em name} & an attribute name \\
+\hline
+{\em type} & an attribute type \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSet_a90b6137ad3bbb7a34b50fa5e7842a685}\label{classSet_a90b6137ad3bbb7a34b50fa5e7842a685}} 
+\index{Set@{Set}!add\+\_\+attributes@{add\+\_\+attributes}}
+\index{add\+\_\+attributes@{add\+\_\+attributes}!Set@{Set}}
+\subsubsection{\texorpdfstring{add\+\_\+attributes()}{add\_attributes()}}
+{\footnotesize\ttfamily void Set\+::add\+\_\+attributes (\begin{DoxyParamCaption}\item[{vector$<$ string $>$}]{names,  }\item[{vector$<$ attribute\+\_\+type $>$}]{types }\end{DoxyParamCaption})}
+
+Add multiple attributes to the dataset specification. 
+\begin{DoxyParams}{Parameters}
+{\em names} & a set of attribute names \\
+\hline
+{\em types} & a set of attribute types \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSet_a26deff7e7f3319a5a4324c7de3e7b7b9}\label{classSet_a26deff7e7f3319a5a4324c7de3e7b7b9}} 
+\index{Set@{Set}!add\+\_\+extractor@{add\+\_\+extractor}}
+\index{add\+\_\+extractor@{add\+\_\+extractor}!Set@{Set}}
+\subsubsection{\texorpdfstring{add\+\_\+extractor()}{add\_extractor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \hyperlink{classExtractor}{Extractor} \& Set\+::add\+\_\+extractor (\begin{DoxyParamCaption}\item[{string}]{extractor\+\_\+tag,  }\item[{method\+\_\+type}]{method,  }\item[{cartridge\+\_\+type}]{cartridge }\end{DoxyParamCaption})}
+
+Add extractor to the dataset specification. 
+\begin{DoxyParams}{Parameters}
+{\em extractor\+\_\+tag} & an extractor tag \\
+\hline
+{\em method} & an extractor method \\
+\hline
+{\em cartridge} & an extractor cartridge \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSet_a8d55de9a8a8f39dc567621d8640f90a2}\label{classSet_a8d55de9a8a8f39dc567621d8640f90a2}} 
+\index{Set@{Set}!add\+\_\+extractor@{add\+\_\+extractor}}
+\index{add\+\_\+extractor@{add\+\_\+extractor}!Set@{Set}}
+\subsubsection{\texorpdfstring{add\+\_\+extractor()}{add\_extractor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \hyperlink{classExtractor}{Extractor} \& Set\+::add\+\_\+extractor (\begin{DoxyParamCaption}\item[{string}]{extractor\+\_\+tag,  }\item[{method\+\_\+type}]{method,  }\item[{cartridge\+\_\+type}]{cartridge,  }\item[{string}]{attribute\+\_\+name,  }\item[{attribute\+\_\+type}]{attribute\+\_\+type }\end{DoxyParamCaption})}
+
+Add extractor to the dataset specification with a single attribute. 
+\begin{DoxyParams}{Parameters}
+{\em extractor\+\_\+tag} & an extractor tag \\
+\hline
+{\em method} & an extractor method \\
+\hline
+{\em cartridge} & an extractor cartridge \\
+\hline
+{\em attribute\+\_\+name} & an attribute name \\
+\hline
+{\em attribute\+\_\+type} & an attribute type \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSet_acb3a45469bf84310d5d20e45118d772e}\label{classSet_acb3a45469bf84310d5d20e45118d772e}} 
+\index{Set@{Set}!add\+\_\+extractor@{add\+\_\+extractor}}
+\index{add\+\_\+extractor@{add\+\_\+extractor}!Set@{Set}}
+\subsubsection{\texorpdfstring{add\+\_\+extractor()}{add\_extractor()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \hyperlink{classExtractor}{Extractor} \& Set\+::add\+\_\+extractor (\begin{DoxyParamCaption}\item[{string}]{extractor\+\_\+tag,  }\item[{method\+\_\+type}]{method,  }\item[{cartridge\+\_\+type}]{cartridge,  }\item[{vector$<$ string $>$}]{attribute\+\_\+names,  }\item[{vector$<$ attribute\+\_\+type $>$}]{attribute\+\_\+types }\end{DoxyParamCaption})}
+
+Add extractor to the dataset specification with multiple attributes. 
+\begin{DoxyParams}{Parameters}
+{\em extractor\+\_\+tag} & an extractor tag \\
+\hline
+{\em method} & an extractor method \\
+\hline
+{\em cartridge} & an extractor cartridge \\
+\hline
+{\em attribute\+\_\+names} & a set of attribute names \\
+\hline
+{\em attribute\+\_\+types} & a set of attribute types \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSet_a06405b0e497db65bf526a6be9a589523}\label{classSet_a06405b0e497db65bf526a6be9a589523}} 
+\index{Set@{Set}!get\+\_\+extractor\+\_\+by\+\_\+tag@{get\+\_\+extractor\+\_\+by\+\_\+tag}}
+\index{get\+\_\+extractor\+\_\+by\+\_\+tag@{get\+\_\+extractor\+\_\+by\+\_\+tag}!Set@{Set}}
+\subsubsection{\texorpdfstring{get\+\_\+extractor\+\_\+by\+\_\+tag()}{get\_extractor\_by\_tag()}}
+{\footnotesize\ttfamily \hyperlink{classExtractor}{Extractor} \& Set\+::get\+\_\+extractor\+\_\+by\+\_\+tag (\begin{DoxyParamCaption}\item[{string}]{tag }\end{DoxyParamCaption})}
+
+Get extractor given a tag.  an extractor tag \begin{DoxyReturn}{Returns}
+the reference of the extractor with the given tag 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSet_a8638f2a95600d52c334414723afc414d}\label{classSet_a8638f2a95600d52c334414723afc414d}} 
+\index{Set@{Set}!get\+\_\+extractors@{get\+\_\+extractors}}
+\index{get\+\_\+extractors@{get\+\_\+extractors}!Set@{Set}}
+\subsubsection{\texorpdfstring{get\+\_\+extractors()}{get\_extractors()}}
+{\footnotesize\ttfamily map$<$ string, \hyperlink{classExtractor}{Extractor} $>$ \& Set\+::get\+\_\+extractors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get data extractors. \begin{DoxyReturn}{Returns}
+the map with extractor name and its object derived from \hyperlink{classExtractor}{Extractor} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSet_aaa0aca15b56a82a4bcf803aeeb27c842}\label{classSet_aaa0aca15b56a82a4bcf803aeeb27c842}} 
+\index{Set@{Set}!get\+\_\+specification@{get\+\_\+specification}}
+\index{get\+\_\+specification@{get\+\_\+specification}!Set@{Set}}
+\subsubsection{\texorpdfstring{get\+\_\+specification()}{get\_specification()}}
+{\footnotesize\ttfamily string Set\+::get\+\_\+specification (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get dataset specification. \begin{DoxyReturn}{Returns}
+the dataset specification 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSet_af7ed351b5ee2bd4f2b8c306ce16ba0a9}\label{classSet_af7ed351b5ee2bd4f2b8c306ce16ba0a9}} 
+\index{Set@{Set}!get\+\_\+tag@{get\+\_\+tag}}
+\index{get\+\_\+tag@{get\+\_\+tag}!Set@{Set}}
+\subsubsection{\texorpdfstring{get\+\_\+tag()}{get\_tag()}}
+{\footnotesize\ttfamily string Set\+::get\+\_\+tag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get dataset tag. \begin{DoxyReturn}{Returns}
+the dataset tag 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/set.\+h\item 
+src/set.\+cpp\end{DoxyCompactItemize}

@@ -8,6 +8,9 @@
 #ifndef TASK_STATUS_ENUM_H
 #define TASK_STATUS_ENUM_H
 
+/*!
+ Task status
+ */
 enum task_status {READY, RUNNING, FINISHED};
 
 #endif /* TASK_STATUS_ENUM_H */

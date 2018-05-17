@@ -1,0 +1,151 @@
+\hypertarget{classTransformation}{}\section{Transformation Class Reference}
+\label{classTransformation}\index{Transformation@{Transformation}}
+
+
+{\ttfamily \#include $<$transformation.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classTransformation_a7d309ec7b7e612c941982b0b3a484f70}{Transformation} (string \hyperlink{classTransformation_aae5fa5db90050f8bd2f24cce6864fb14}{tag})
+\item 
+void \hyperlink{classTransformation_a2a2af5b05352dd3d401c7af6027248d0}{add\+\_\+input\+\_\+set} (\hyperlink{classSet}{Set} set)
+\item 
+void \hyperlink{classTransformation_a63b5bc7696a22e413d95540703738894}{add\+\_\+output\+\_\+set} (\hyperlink{classSet}{Set} set)
+\item 
+string \hyperlink{classTransformation_a5ad25a244c9506d5bb89cfed8a3667b0}{get\+\_\+tag} ()
+\item 
+string \hyperlink{classTransformation_adfe87345cdc0ebff5a6212dd9779ec87}{get\+\_\+specification} ()
+\item 
+vector$<$ string $>$ \hyperlink{classTransformation_a96a5923535ff3663c478fdc0cd7ddc34}{get\+\_\+input\+\_\+sets} ()
+\item 
+vector$<$ string $>$ \hyperlink{classTransformation_a309852a4fbb5db261a1a6d564c7147c8}{get\+\_\+output\+\_\+sets} ()
+\item 
+void \hyperlink{classTransformation_a015a16690d152a99ddf482cb56c05e07}{set\+\_\+input\+\_\+sets} (vector$<$ \hyperlink{classSet}{Set} $>$ \hyperlink{classTransformation_a5cff8880aed2eaf0ad3bdc9ad1c86148}{input\+\_\+sets})
+\item 
+void \hyperlink{classTransformation_a10b3128bcb16deae76746a3179e8e315}{set\+\_\+output\+\_\+sets} (vector$<$ \hyperlink{classSet}{Set} $>$ \hyperlink{classTransformation_ac1a61ff0d71f8ceb2d4338d2abd04f24}{output\+\_\+sets})
+\item 
+bool \hyperlink{classTransformation_a86424a75814c92796a3dbd5530df7598}{has\+\_\+output\+\_\+set} (vector$<$ string $>$ dataset\+\_\+tags)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classTransformation_aae5fa5db90050f8bd2f24cce6864fb14}\label{classTransformation_aae5fa5db90050f8bd2f24cce6864fb14}} 
+string \hyperlink{classTransformation_aae5fa5db90050f8bd2f24cce6864fb14}{tag}
+\begin{DoxyCompactList}\small\item\em data transformation tag \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTransformation_a5cff8880aed2eaf0ad3bdc9ad1c86148}\label{classTransformation_a5cff8880aed2eaf0ad3bdc9ad1c86148}} 
+vector$<$ \hyperlink{classSet}{Set} $>$ \hyperlink{classTransformation_a5cff8880aed2eaf0ad3bdc9ad1c86148}{input\+\_\+sets}
+\begin{DoxyCompactList}\small\item\em input datasets \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classTransformation_ac1a61ff0d71f8ceb2d4338d2abd04f24}\label{classTransformation_ac1a61ff0d71f8ceb2d4338d2abd04f24}} 
+vector$<$ \hyperlink{classSet}{Set} $>$ \hyperlink{classTransformation_ac1a61ff0d71f8ceb2d4338d2abd04f24}{output\+\_\+sets}
+\begin{DoxyCompactList}\small\item\em output datasets \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to represent a data transformation specification (prospective provenance). 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTransformation_a7d309ec7b7e612c941982b0b3a484f70}\label{classTransformation_a7d309ec7b7e612c941982b0b3a484f70}} 
+\index{Transformation@{Transformation}!Transformation@{Transformation}}
+\index{Transformation@{Transformation}!Transformation@{Transformation}}
+\subsubsection{\texorpdfstring{Transformation()}{Transformation()}}
+{\footnotesize\ttfamily Transformation\+::\+Transformation (\begin{DoxyParamCaption}\item[{string}]{tag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor of a data transformation specification. 
+\begin{DoxyParams}{Parameters}
+{\em tag} & a data transformation specification. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classTransformation_a2a2af5b05352dd3d401c7af6027248d0}\label{classTransformation_a2a2af5b05352dd3d401c7af6027248d0}} 
+\index{Transformation@{Transformation}!add\+\_\+input\+\_\+set@{add\+\_\+input\+\_\+set}}
+\index{add\+\_\+input\+\_\+set@{add\+\_\+input\+\_\+set}!Transformation@{Transformation}}
+\subsubsection{\texorpdfstring{add\+\_\+input\+\_\+set()}{add\_input\_set()}}
+{\footnotesize\ttfamily void Transformation\+::add\+\_\+input\+\_\+set (\begin{DoxyParamCaption}\item[{\hyperlink{classSet}{Set}}]{set }\end{DoxyParamCaption})}
+
+Add an input dataset to data transformation specification. 
+\begin{DoxyParams}{Parameters}
+{\em set} & an input dataset specification. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTransformation_a63b5bc7696a22e413d95540703738894}\label{classTransformation_a63b5bc7696a22e413d95540703738894}} 
+\index{Transformation@{Transformation}!add\+\_\+output\+\_\+set@{add\+\_\+output\+\_\+set}}
+\index{add\+\_\+output\+\_\+set@{add\+\_\+output\+\_\+set}!Transformation@{Transformation}}
+\subsubsection{\texorpdfstring{add\+\_\+output\+\_\+set()}{add\_output\_set()}}
+{\footnotesize\ttfamily void Transformation\+::add\+\_\+output\+\_\+set (\begin{DoxyParamCaption}\item[{\hyperlink{classSet}{Set}}]{set }\end{DoxyParamCaption})}
+
+Add an output dataset to data transformation specification. 
+\begin{DoxyParams}{Parameters}
+{\em set} & an output dataset specification. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTransformation_a96a5923535ff3663c478fdc0cd7ddc34}\label{classTransformation_a96a5923535ff3663c478fdc0cd7ddc34}} 
+\index{Transformation@{Transformation}!get\+\_\+input\+\_\+sets@{get\+\_\+input\+\_\+sets}}
+\index{get\+\_\+input\+\_\+sets@{get\+\_\+input\+\_\+sets}!Transformation@{Transformation}}
+\subsubsection{\texorpdfstring{get\+\_\+input\+\_\+sets()}{get\_input\_sets()}}
+{\footnotesize\ttfamily vector$<$ string $>$ Transformation\+::get\+\_\+input\+\_\+sets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the input datasets (specifications). \begin{DoxyReturn}{Returns}
+the input datasets 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTransformation_a309852a4fbb5db261a1a6d564c7147c8}\label{classTransformation_a309852a4fbb5db261a1a6d564c7147c8}} 
+\index{Transformation@{Transformation}!get\+\_\+output\+\_\+sets@{get\+\_\+output\+\_\+sets}}
+\index{get\+\_\+output\+\_\+sets@{get\+\_\+output\+\_\+sets}!Transformation@{Transformation}}
+\subsubsection{\texorpdfstring{get\+\_\+output\+\_\+sets()}{get\_output\_sets()}}
+{\footnotesize\ttfamily vector$<$ string $>$ Transformation\+::get\+\_\+output\+\_\+sets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the output datasets (specification). \begin{DoxyReturn}{Returns}
+the output datasets 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTransformation_adfe87345cdc0ebff5a6212dd9779ec87}\label{classTransformation_adfe87345cdc0ebff5a6212dd9779ec87}} 
+\index{Transformation@{Transformation}!get\+\_\+specification@{get\+\_\+specification}}
+\index{get\+\_\+specification@{get\+\_\+specification}!Transformation@{Transformation}}
+\subsubsection{\texorpdfstring{get\+\_\+specification()}{get\_specification()}}
+{\footnotesize\ttfamily string Transformation\+::get\+\_\+specification (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the data transformation specification. \begin{DoxyReturn}{Returns}
+the transformation specification 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTransformation_a5ad25a244c9506d5bb89cfed8a3667b0}\label{classTransformation_a5ad25a244c9506d5bb89cfed8a3667b0}} 
+\index{Transformation@{Transformation}!get\+\_\+tag@{get\+\_\+tag}}
+\index{get\+\_\+tag@{get\+\_\+tag}!Transformation@{Transformation}}
+\subsubsection{\texorpdfstring{get\+\_\+tag()}{get\_tag()}}
+{\footnotesize\ttfamily string Transformation\+::get\+\_\+tag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the data transformation tag. \begin{DoxyReturn}{Returns}
+the transformation tag 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTransformation_a86424a75814c92796a3dbd5530df7598}\label{classTransformation_a86424a75814c92796a3dbd5530df7598}} 
+\index{Transformation@{Transformation}!has\+\_\+output\+\_\+set@{has\+\_\+output\+\_\+set}}
+\index{has\+\_\+output\+\_\+set@{has\+\_\+output\+\_\+set}!Transformation@{Transformation}}
+\subsubsection{\texorpdfstring{has\+\_\+output\+\_\+set()}{has\_output\_set()}}
+{\footnotesize\ttfamily bool Transformation\+::has\+\_\+output\+\_\+set (\begin{DoxyParamCaption}\item[{vector$<$ string $>$}]{dataset\+\_\+tags }\end{DoxyParamCaption})}
+
+Verify if we have output datasets with the specified dataset tags. 
+\begin{DoxyParams}{Parameters}
+{\em dataset\+\_\+tags} & a list of dataset tags \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a boolean to inform if we have or not the specified dataset tags. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classTransformation_a015a16690d152a99ddf482cb56c05e07}\label{classTransformation_a015a16690d152a99ddf482cb56c05e07}} 
+\index{Transformation@{Transformation}!set\+\_\+input\+\_\+sets@{set\+\_\+input\+\_\+sets}}
+\index{set\+\_\+input\+\_\+sets@{set\+\_\+input\+\_\+sets}!Transformation@{Transformation}}
+\subsubsection{\texorpdfstring{set\+\_\+input\+\_\+sets()}{set\_input\_sets()}}
+{\footnotesize\ttfamily void Transformation\+::set\+\_\+input\+\_\+sets (\begin{DoxyParamCaption}\item[{vector$<$ \hyperlink{classSet}{Set} $>$}]{input\+\_\+sets }\end{DoxyParamCaption})}
+
+\hyperlink{classSet}{Set} a set of input datasets.  a set of input datasets \mbox{\Hypertarget{classTransformation_a10b3128bcb16deae76746a3179e8e315}\label{classTransformation_a10b3128bcb16deae76746a3179e8e315}} 
+\index{Transformation@{Transformation}!set\+\_\+output\+\_\+sets@{set\+\_\+output\+\_\+sets}}
+\index{set\+\_\+output\+\_\+sets@{set\+\_\+output\+\_\+sets}!Transformation@{Transformation}}
+\subsubsection{\texorpdfstring{set\+\_\+output\+\_\+sets()}{set\_output\_sets()}}
+{\footnotesize\ttfamily void Transformation\+::set\+\_\+output\+\_\+sets (\begin{DoxyParamCaption}\item[{vector$<$ \hyperlink{classSet}{Set} $>$}]{output\+\_\+sets }\end{DoxyParamCaption})}
+
+\hyperlink{classSet}{Set} a set of output datasets.  a set of output datasets 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/transformation.\+h\item 
+src/transformation.\+cpp\end{DoxyCompactItemize}

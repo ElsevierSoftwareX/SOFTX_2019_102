@@ -196,8 +196,8 @@ void Task::add_dependent_transformation_id(int task_id){
     this->dependency.add_transformation_ids({task_id});
 }
 
-void Task::add_dependent_transformation_ids(vector<int> transformation_ids){
-    this->dependency.add_transformation_ids(transformation_ids);
+void Task::add_dependent_transformation_ids(vector<int> task_ids){
+    this->dependency.add_transformation_ids(task_ids);
 }
 
 void Task::add_dependent_transformation(string transformation_tag, int transformation_id){

@@ -12,11 +12,17 @@
 
 using namespace std;
 
+/*
+ Extraction or indexing method.
+ */
 enum method_type {
     EXTRACTION,
     INDEXING
 };
 
+/*
+ Cartridge implemented by the raw data extractor.
+ */
 enum cartridge_type {
     CSV,
     PROGRAM,

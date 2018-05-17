@@ -10,6 +10,6 @@
 using namespace std;
 
 struct DfA_Config{
-    string hostname;
-    int port;
+    string hostname; //!< hostname of dfanalyzer server
+    int port; //!< port of dfanalyzer server
 };

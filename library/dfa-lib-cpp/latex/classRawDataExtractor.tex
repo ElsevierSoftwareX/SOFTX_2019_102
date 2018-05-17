@@ -1,0 +1,127 @@
+\hypertarget{classRawDataExtractor}{}\section{Raw\+Data\+Extractor Class Reference}
+\label{classRawDataExtractor}\index{Raw\+Data\+Extractor@{Raw\+Data\+Extractor}}
+
+
+{\ttfamily \#include $<$raw\+\_\+data\+\_\+extractor.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classRawDataExtractor_a5152ed0ab55f6324964cd718572fcb31}{Raw\+Data\+Extractor} (string \hyperlink{classRawDataExtractor_a17902ee3cae7c15061ef208b11b0d300}{command\+\_\+line}, vector$<$ string $>$ \hyperlink{classRawDataExtractor_a23ce52343673f63a56c5c05cf15a3859}{attribute\+\_\+names}, vector$<$ attribute\+\_\+type $>$ \hyperlink{classRawDataExtractor_a0c5d6acb054f65891526b2fe1c5d1cf3}{attribute\+\_\+types})
+\item 
+void \hyperlink{classRawDataExtractor_aab89e89463d22ed6289f3193aa22ce59}{set\+\_\+attribute\+\_\+names} (vector$<$ string $>$ \hyperlink{classRawDataExtractor_a23ce52343673f63a56c5c05cf15a3859}{attribute\+\_\+names})
+\item 
+void \hyperlink{classRawDataExtractor_aaaacbf7cd1b5bbf93fec979f570e0c69}{set\+\_\+attribute\+\_\+types} (vector$<$ attribute\+\_\+type $>$ \hyperlink{classRawDataExtractor_a0c5d6acb054f65891526b2fe1c5d1cf3}{attribute\+\_\+types})
+\item 
+int \hyperlink{classRawDataExtractor_a6833aa2286e27341b88c5db94ee9f4b2}{run} ()
+\item 
+string \hyperlink{classRawDataExtractor_a176053837936f059d1f7702ebe21c44d}{get\+\_\+command\+\_\+line} ()
+\item 
+string \hyperlink{classRawDataExtractor_a8f789de8730ba2d733353b94feac5a11}{get\+\_\+attributes\+\_\+as\+\_\+string} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classRawDataExtractor_a1c6ab051ef5c78971bdd908380e1c93f}\label{classRawDataExtractor_a1c6ab051ef5c78971bdd908380e1c93f}} 
+string \hyperlink{classRawDataExtractor_a1c6ab051ef5c78971bdd908380e1c93f}{cartridge} = \char`\"{}P\+R\+O\+G\+R\+AM\char`\"{}
+\begin{DoxyCompactList}\small\item\em constant cartridge equals to P\+R\+O\+G\+R\+AM \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRawDataExtractor_a4c8121100a25e9546fca9b11f890efd5}\label{classRawDataExtractor_a4c8121100a25e9546fca9b11f890efd5}} 
+string \hyperlink{classRawDataExtractor_a4c8121100a25e9546fca9b11f890efd5}{method} = \char`\"{}E\+X\+T\+R\+A\+CT\char`\"{}
+\begin{DoxyCompactList}\small\item\em constant method to be performed by R\+DE, which is named as E\+X\+T\+R\+A\+CT \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRawDataExtractor_a74009c047e7981c6a8afbaad0dc34859}\label{classRawDataExtractor_a74009c047e7981c6a8afbaad0dc34859}} 
+string \hyperlink{classRawDataExtractor_a74009c047e7981c6a8afbaad0dc34859}{extractor\+\_\+tag} = \char`\"{}extractor\char`\"{}
+\begin{DoxyCompactList}\small\item\em default extractor tag \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRawDataExtractor_acc960f88abf7c6d64a7bf10a8ec31698}\label{classRawDataExtractor_acc960f88abf7c6d64a7bf10a8ec31698}} 
+string \hyperlink{classRawDataExtractor_acc960f88abf7c6d64a7bf10a8ec31698}{path} = \char`\"{}.\char`\"{}
+\begin{DoxyCompactList}\small\item\em path of raw data extractor component \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRawDataExtractor_a17902ee3cae7c15061ef208b11b0d300}\label{classRawDataExtractor_a17902ee3cae7c15061ef208b11b0d300}} 
+string \hyperlink{classRawDataExtractor_a17902ee3cae7c15061ef208b11b0d300}{command\+\_\+line}
+\begin{DoxyCompactList}\small\item\em command line to be executed by R\+DE \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRawDataExtractor_a23ce52343673f63a56c5c05cf15a3859}\label{classRawDataExtractor_a23ce52343673f63a56c5c05cf15a3859}} 
+vector$<$ string $>$ \hyperlink{classRawDataExtractor_a23ce52343673f63a56c5c05cf15a3859}{attribute\+\_\+names}
+\begin{DoxyCompactList}\small\item\em set of attribute names \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRawDataExtractor_a0c5d6acb054f65891526b2fe1c5d1cf3}\label{classRawDataExtractor_a0c5d6acb054f65891526b2fe1c5d1cf3}} 
+vector$<$ attribute\+\_\+type $>$ \hyperlink{classRawDataExtractor_a0c5d6acb054f65891526b2fe1c5d1cf3}{attribute\+\_\+types}
+\begin{DoxyCompactList}\small\item\em set of attribute types \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classRawDataExtractor_afb4acd3c79f7027051324457cae0bd81}\label{classRawDataExtractor_afb4acd3c79f7027051324457cae0bd81}} 
+vector$<$ string $>$ \hyperlink{classRawDataExtractor_afb4acd3c79f7027051324457cae0bd81}{values\+\_\+of\+\_\+attribute\+\_\+types} = \{\char`\"{}T\+E\+XT\char`\"{}, \char`\"{}N\+U\+M\+E\+R\+IC\char`\"{}, \char`\"{}R\+D\+F\+I\+LE\char`\"{}\}
+\begin{DoxyCompactList}\small\item\em set of attribute types as a vector of string \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to represent the component Raw Data \hyperlink{classExtractor}{Extractor} or R\+DE (retrospective provenance). 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classRawDataExtractor_a5152ed0ab55f6324964cd718572fcb31}\label{classRawDataExtractor_a5152ed0ab55f6324964cd718572fcb31}} 
+\index{Raw\+Data\+Extractor@{Raw\+Data\+Extractor}!Raw\+Data\+Extractor@{Raw\+Data\+Extractor}}
+\index{Raw\+Data\+Extractor@{Raw\+Data\+Extractor}!Raw\+Data\+Extractor@{Raw\+Data\+Extractor}}
+\subsubsection{\texorpdfstring{Raw\+Data\+Extractor()}{RawDataExtractor()}}
+{\footnotesize\ttfamily Raw\+Data\+Extractor\+::\+Raw\+Data\+Extractor (\begin{DoxyParamCaption}\item[{string}]{command\+\_\+line,  }\item[{vector$<$ string $>$}]{attribute\+\_\+names,  }\item[{vector$<$ attribute\+\_\+type $>$}]{attribute\+\_\+types }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor of a R\+DE instance 
+\begin{DoxyParams}{Parameters}
+{\em command\+\_\+line} & a command line to be executed by R\+DE \\
+\hline
+{\em atrtibute\+\_\+names} & a set of attribute names that will be extracted \\
+\hline
+{\em attribute\+\_\+types} & a set of attribute types \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classRawDataExtractor_a8f789de8730ba2d733353b94feac5a11}\label{classRawDataExtractor_a8f789de8730ba2d733353b94feac5a11}} 
+\index{Raw\+Data\+Extractor@{Raw\+Data\+Extractor}!get\+\_\+attributes\+\_\+as\+\_\+string@{get\+\_\+attributes\+\_\+as\+\_\+string}}
+\index{get\+\_\+attributes\+\_\+as\+\_\+string@{get\+\_\+attributes\+\_\+as\+\_\+string}!Raw\+Data\+Extractor@{Raw\+Data\+Extractor}}
+\subsubsection{\texorpdfstring{get\+\_\+attributes\+\_\+as\+\_\+string()}{get\_attributes\_as\_string()}}
+{\footnotesize\ttfamily string Raw\+Data\+Extractor\+::get\+\_\+attributes\+\_\+as\+\_\+string (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get attributes to be extracted. \begin{DoxyReturn}{Returns}
+the attributes to be extracted as a string. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRawDataExtractor_a176053837936f059d1f7702ebe21c44d}\label{classRawDataExtractor_a176053837936f059d1f7702ebe21c44d}} 
+\index{Raw\+Data\+Extractor@{Raw\+Data\+Extractor}!get\+\_\+command\+\_\+line@{get\+\_\+command\+\_\+line}}
+\index{get\+\_\+command\+\_\+line@{get\+\_\+command\+\_\+line}!Raw\+Data\+Extractor@{Raw\+Data\+Extractor}}
+\subsubsection{\texorpdfstring{get\+\_\+command\+\_\+line()}{get\_command\_line()}}
+{\footnotesize\ttfamily string Raw\+Data\+Extractor\+::get\+\_\+command\+\_\+line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get command line. \begin{DoxyReturn}{Returns}
+the command line. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRawDataExtractor_a6833aa2286e27341b88c5db94ee9f4b2}\label{classRawDataExtractor_a6833aa2286e27341b88c5db94ee9f4b2}} 
+\index{Raw\+Data\+Extractor@{Raw\+Data\+Extractor}!run@{run}}
+\index{run@{run}!Raw\+Data\+Extractor@{Raw\+Data\+Extractor}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily int Raw\+Data\+Extractor\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Run the component Raw Data \hyperlink{classExtractor}{Extractor}. \begin{DoxyReturn}{Returns}
+the exit status code of running R\+DE 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classRawDataExtractor_aab89e89463d22ed6289f3193aa22ce59}\label{classRawDataExtractor_aab89e89463d22ed6289f3193aa22ce59}} 
+\index{Raw\+Data\+Extractor@{Raw\+Data\+Extractor}!set\+\_\+attribute\+\_\+names@{set\+\_\+attribute\+\_\+names}}
+\index{set\+\_\+attribute\+\_\+names@{set\+\_\+attribute\+\_\+names}!Raw\+Data\+Extractor@{Raw\+Data\+Extractor}}
+\subsubsection{\texorpdfstring{set\+\_\+attribute\+\_\+names()}{set\_attribute\_names()}}
+{\footnotesize\ttfamily void Raw\+Data\+Extractor\+::set\+\_\+attribute\+\_\+names (\begin{DoxyParamCaption}\item[{vector$<$ string $>$}]{attribute\+\_\+names }\end{DoxyParamCaption})}
+
+\hyperlink{classSet}{Set} attribute names. 
+\begin{DoxyParams}{Parameters}
+{\em attribute\+\_\+names} & a set of attribute names \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classRawDataExtractor_aaaacbf7cd1b5bbf93fec979f570e0c69}\label{classRawDataExtractor_aaaacbf7cd1b5bbf93fec979f570e0c69}} 
+\index{Raw\+Data\+Extractor@{Raw\+Data\+Extractor}!set\+\_\+attribute\+\_\+types@{set\+\_\+attribute\+\_\+types}}
+\index{set\+\_\+attribute\+\_\+types@{set\+\_\+attribute\+\_\+types}!Raw\+Data\+Extractor@{Raw\+Data\+Extractor}}
+\subsubsection{\texorpdfstring{set\+\_\+attribute\+\_\+types()}{set\_attribute\_types()}}
+{\footnotesize\ttfamily void Raw\+Data\+Extractor\+::set\+\_\+attribute\+\_\+types (\begin{DoxyParamCaption}\item[{vector$<$ attribute\+\_\+type $>$}]{attribute\+\_\+types }\end{DoxyParamCaption})}
+
+\hyperlink{classSet}{Set} attribute types. 
+\begin{DoxyParams}{Parameters}
+{\em attribute\+\_\+types} & a set of attribute types \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/raw\+\_\+data\+\_\+extractor.\+h\item 
+src/raw\+\_\+data\+\_\+extractor.\+cpp\end{DoxyCompactItemize}

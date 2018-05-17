@@ -1,0 +1,113 @@
+\hypertarget{classDataset}{}\section{Dataset Class Reference}
+\label{classDataset}\index{Dataset@{Dataset}}
+
+
+{\ttfamily \#include $<$dataset.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDataset_a6eb00c4455a2d16ca5100996fd28ddf8}{Dataset} (string \hyperlink{classDataset_ae5a301fd4abf5979447bf16fc9775758}{tag})
+\item 
+void \hyperlink{classDataset_a86a705d9b163d64e812a085acbfb0a81}{add\+\_\+element\+\_\+with\+\_\+value} (string value)
+\item 
+void \hyperlink{classDataset_af945e29692f141411302850b29d55bfa}{add\+\_\+element\+\_\+with\+\_\+values} (vector$<$ string $>$ values)
+\item 
+void \hyperlink{classDataset_ac39864fdc124fe2893a42bbbd4a7ecc2}{clear\+\_\+elements} ()
+\item 
+string \hyperlink{classDataset_a6cb814dbc1aaa07d1a24d326de529302}{get\+\_\+tag} ()
+\item 
+vector$<$ \hyperlink{classElement}{Element} $>$ \& \hyperlink{classDataset_ad2048268e3dcbbcb8695daaadb00cc65}{get\+\_\+elements} ()
+\item 
+string \hyperlink{classDataset_a0d41185e47cb27299a46dec2d3717cb4}{get\+\_\+specification} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDataset_ae5a301fd4abf5979447bf16fc9775758}\label{classDataset_ae5a301fd4abf5979447bf16fc9775758}} 
+string \hyperlink{classDataset_ae5a301fd4abf5979447bf16fc9775758}{tag}
+\begin{DoxyCompactList}\small\item\em dataset tag \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDataset_a455ba8659783cb68146cb914a33f652b}\label{classDataset_a455ba8659783cb68146cb914a33f652b}} 
+vector$<$ \hyperlink{classElement}{Element} $>$ \hyperlink{classDataset_a455ba8659783cb68146cb914a33f652b}{elements}
+\begin{DoxyCompactList}\small\item\em set of data elements \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to represent a dataset (retrospective provenance). 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDataset_a6eb00c4455a2d16ca5100996fd28ddf8}\label{classDataset_a6eb00c4455a2d16ca5100996fd28ddf8}} 
+\index{Dataset@{Dataset}!Dataset@{Dataset}}
+\index{Dataset@{Dataset}!Dataset@{Dataset}}
+\subsubsection{\texorpdfstring{Dataset()}{Dataset()}}
+{\footnotesize\ttfamily Dataset\+::\+Dataset (\begin{DoxyParamCaption}\item[{string}]{tag }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor of a dataset. 
+\begin{DoxyParams}{Parameters}
+{\em tag} & a dataset tag \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classDataset_a86a705d9b163d64e812a085acbfb0a81}\label{classDataset_a86a705d9b163d64e812a085acbfb0a81}} 
+\index{Dataset@{Dataset}!add\+\_\+element\+\_\+with\+\_\+value@{add\+\_\+element\+\_\+with\+\_\+value}}
+\index{add\+\_\+element\+\_\+with\+\_\+value@{add\+\_\+element\+\_\+with\+\_\+value}!Dataset@{Dataset}}
+\subsubsection{\texorpdfstring{add\+\_\+element\+\_\+with\+\_\+value()}{add\_element\_with\_value()}}
+{\footnotesize\ttfamily void Dataset\+::add\+\_\+element\+\_\+with\+\_\+value (\begin{DoxyParamCaption}\item[{string}]{value }\end{DoxyParamCaption})}
+
+Add a data element with a single value to dataset. 
+\begin{DoxyParams}{Parameters}
+{\em value} & an attribute value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDataset_af945e29692f141411302850b29d55bfa}\label{classDataset_af945e29692f141411302850b29d55bfa}} 
+\index{Dataset@{Dataset}!add\+\_\+element\+\_\+with\+\_\+values@{add\+\_\+element\+\_\+with\+\_\+values}}
+\index{add\+\_\+element\+\_\+with\+\_\+values@{add\+\_\+element\+\_\+with\+\_\+values}!Dataset@{Dataset}}
+\subsubsection{\texorpdfstring{add\+\_\+element\+\_\+with\+\_\+values()}{add\_element\_with\_values()}}
+{\footnotesize\ttfamily void Dataset\+::add\+\_\+element\+\_\+with\+\_\+values (\begin{DoxyParamCaption}\item[{vector$<$ string $>$}]{values }\end{DoxyParamCaption})}
+
+Add a data element with multiple attribute values. 
+\begin{DoxyParams}{Parameters}
+{\em values} & set of attribute values \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDataset_ac39864fdc124fe2893a42bbbd4a7ecc2}\label{classDataset_ac39864fdc124fe2893a42bbbd4a7ecc2}} 
+\index{Dataset@{Dataset}!clear\+\_\+elements@{clear\+\_\+elements}}
+\index{clear\+\_\+elements@{clear\+\_\+elements}!Dataset@{Dataset}}
+\subsubsection{\texorpdfstring{clear\+\_\+elements()}{clear\_elements()}}
+{\footnotesize\ttfamily void Dataset\+::clear\+\_\+elements (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Clear the set of data elements. \mbox{\Hypertarget{classDataset_ad2048268e3dcbbcb8695daaadb00cc65}\label{classDataset_ad2048268e3dcbbcb8695daaadb00cc65}} 
+\index{Dataset@{Dataset}!get\+\_\+elements@{get\+\_\+elements}}
+\index{get\+\_\+elements@{get\+\_\+elements}!Dataset@{Dataset}}
+\subsubsection{\texorpdfstring{get\+\_\+elements()}{get\_elements()}}
+{\footnotesize\ttfamily vector$<$ \hyperlink{classElement}{Element} $>$ \& Dataset\+::get\+\_\+elements (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the data elements. \begin{DoxyReturn}{Returns}
+the reference of the set of data elements 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDataset_a0d41185e47cb27299a46dec2d3717cb4}\label{classDataset_a0d41185e47cb27299a46dec2d3717cb4}} 
+\index{Dataset@{Dataset}!get\+\_\+specification@{get\+\_\+specification}}
+\index{get\+\_\+specification@{get\+\_\+specification}!Dataset@{Dataset}}
+\subsubsection{\texorpdfstring{get\+\_\+specification()}{get\_specification()}}
+{\footnotesize\ttfamily string Dataset\+::get\+\_\+specification (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get dataset specification. \begin{DoxyReturn}{Returns}
+the dataset specification 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDataset_a6cb814dbc1aaa07d1a24d326de529302}\label{classDataset_a6cb814dbc1aaa07d1a24d326de529302}} 
+\index{Dataset@{Dataset}!get\+\_\+tag@{get\+\_\+tag}}
+\index{get\+\_\+tag@{get\+\_\+tag}!Dataset@{Dataset}}
+\subsubsection{\texorpdfstring{get\+\_\+tag()}{get\_tag()}}
+{\footnotesize\ttfamily string Dataset\+::get\+\_\+tag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Get the dataset tag. \begin{DoxyReturn}{Returns}
+the dataset tag 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/dataset.\+h\item 
+src/dataset.\+cpp\end{DoxyCompactItemize}

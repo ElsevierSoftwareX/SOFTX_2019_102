@@ -14,18 +14,36 @@ using namespace std;
 
 #include "attribute_enum.h"
 
-class Attribute{
+/*!
+Class to represent an attribute specification of the dataset schema (prospective provenance).
+*/ 
+
+class Attribute {
 protected:
-    string name;
-    attribute_type type;
-    
+    string name; //!< attribute name
+    attribute_type type; //!< attribute type, which can be TEXT, NUMERIC or RDFILE
+
 public:
+    /*!
+     Constructor of an attribute.
+     \param name an attribute name
+     \param type an attribute type
+    */
     Attribute(string name, attribute_type type){
         this->name = name;
         this->type = type;
-    }
+    } 
     
+    /*!
+     * Get the attribute name
+     * \return the attribute name
+     */
     string get_name();
+
+    /*!
+     * Get the attribute type
+     * \return the attribute type
+     */
     string get_type();
 };
 
