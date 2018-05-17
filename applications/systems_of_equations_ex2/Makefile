@@ -1,7 +1,6 @@
 ######################################################################
 #
 # Template libMesh application Makefile
-MACOS			?= 0
 DFANALYZER_DIR 	?= ../../library/dfa-lib-cpp
 
 # include the library options determined by configure
