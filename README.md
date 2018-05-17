@@ -44,6 +44,10 @@ make
 
 Then, a static compiled library file, named as *libdfanalyzer.so*, is generated at the directory *./library/dfa-lib-cpp/lib*.
 
+## DfA-lib documentation
+
+The documentation of dfa-lib in C++ can be found in `library/dfa-lib-cpp/html/index.html`.
+
 ## Use in scientific applications
 
 ### C++ library

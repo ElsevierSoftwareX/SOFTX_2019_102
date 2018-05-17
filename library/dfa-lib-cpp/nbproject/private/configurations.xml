@@ -2,60 +2,8 @@
 <configurationDescriptor version="100">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <df root="." name="0">
-      <df name="bin">
-        <df name="data">
-          <df name="dataflow_analyzer">
-            <df name="bat">
-              <df name="01">
-              </df>
-              <df name="02">
-              </df>
-              <df name="03">
-              </df>
-              <df name="04">
-              </df>
-              <df name="05">
-              </df>
-              <df name="06">
-              </df>
-              <df name="07">
-              </df>
-              <df name="10">
-              </df>
-              <df name="11">
-              </df>
-              <df name="12">
-              </df>
-              <df name="13">
-              </df>
-              <df name="14">
-              </df>
-              <df name="15">
-              </df>
-              <df name="16">
-              </df>
-              <df name="17">
-              </df>
-              <df name="20">
-              </df>
-              <df name="BACKUP">
-              </df>
-              <df name="LEFTOVERS">
-              </df>
-            </df>
-            <df name="sql_logs">
-              <df name="sql">
-              </df>
-            </df>
-          </df>
-        </df>
-        <df name="dfa">
-          <df name="backup">
-          </df>
-        </df>
-        <df name="provenance">
-          <df name="systems_of_equations_ex2">
-          </df>
+      <df name="html">
+        <df name="search">
         </df>
       </df>
       <df name="include">
@@ -76,6 +24,8 @@
         <in>task.h</in>
         <in>task_status_enum.h</in>
         <in>transformation.h</in>
+      </df>
+      <df name="latex">
       </df>
       <df name="lib">
       </df>
