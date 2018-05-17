@@ -1,7 +1,7 @@
 ######################################################################
 # Environment variables
 
-MACOS 		   ?= 1
+MACOS 		   ?= 0
 DFANALYZER_DIR ?= ./dfanalyzer
 target     := lib/libdfanalyzer.so
 
@@ -20,7 +20,7 @@ endif
 
 LDFLAGS  := -lcurl -shared -fPIC
 
-CXX      := g++
+CXX      := gcc
 
 #
 # object files

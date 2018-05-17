@@ -10,14 +10,15 @@ The following softwares have to be configured / installed for running this appli
 
 ### RESTful services
 
-1. [Java](https://www.oracle.com/java/index.html) as the main programming language.
-2. [Apache Maven](https://maven.apache.org/), the software project management and comprehension tool.
-3. [MonetDB](https://www.monetdb.org) as the open-source column-store database system.
+1. [Java](https://www.oracle.com/java/index.html) as the main programming language. (Please read the [tutorials](http://www.oracle.com/technetwork/java/javase/downloads/index.html) provided by Oracle Technology)
+2. [Apache Maven](https://maven.apache.org/), the software project management and comprehension tool. 
+3. [MonetDB](https://www.monetdb.org) as the open-source column-store database system. (Please follow their [user guide](https://www.monetdb.org/Documentation/UserGuide))
 
 ### C++ library
 
-1. [GCC](https://gcc.gnu.org/), the GNU Compiler Collection.
-2. [curl](https://curl.haxx.se/), a command line tool and library for transferring data with URLs.
+1. [GCC](https://gcc.gnu.org/), the GNU Compiler Collection. (Please consider their [installation guide](https://gcc.gnu.org/install/))
+2. [curl](https://curl.haxx.se/), a command line tool and library for transferring data with URLs. (Please read their [installation instructions](https://curl.haxx.se/download.html))
+3. [boost](https://www.boost.org/), a package of free peer-reviewed portable C++ source libraries.
 
 ## Installation
 
