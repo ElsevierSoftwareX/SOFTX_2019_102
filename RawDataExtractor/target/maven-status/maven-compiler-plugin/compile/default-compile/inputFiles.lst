@@ -1,0 +1,9 @@
+/home/vitor/Documents/dev/dataflow_analyzer/RawDataExtractor/src/main/java/main/RawDataExtractor.java
+/home/vitor/Documents/dev/dataflow_analyzer/RawDataExtractor/src/main/java/rde/utils/Utils.java
+/home/vitor/Documents/dev/dataflow_analyzer/RawDataExtractor/src/main/java/extractor/ExternalProgram.java
+/home/vitor/Documents/dev/dataflow_analyzer/RawDataExtractor/src/main/java/extractor/Extractor.java
+/home/vitor/Documents/dev/dataflow_analyzer/RawDataExtractor/src/main/java/enumeration/extractor/ExtensionType.java
+/home/vitor/Documents/dev/dataflow_analyzer/RawDataExtractor/src/main/java/enumeration/extractor/AttributeType.java
+/home/vitor/Documents/dev/dataflow_analyzer/RawDataExtractor/src/main/java/enumeration/extractor/OperationType.java
+/home/vitor/Documents/dev/dataflow_analyzer/RawDataExtractor/src/main/java/main/UnitTest.java
+/home/vitor/Documents/dev/dataflow_analyzer/RawDataExtractor/src/main/java/extractor/CSVExtractor.java

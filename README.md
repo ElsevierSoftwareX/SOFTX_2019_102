@@ -8,7 +8,7 @@ This repository presents DfAnalyzer, a dataflow tool for monitoring, debugging, 
 
 The following softwares have to be configured / installed for running this application.
 
-### RESTful services
+### RESTful services, Raw Data Extractor (RDE), and Raw Data Indexer (RDI)
 
 1. [Java](https://www.oracle.com/java/index.html) as the main programming language. (Please read the [tutorials](http://www.oracle.com/technetwork/java/javase/downloads/index.html) provided by Oracle Technology)
 2. [Apache Maven](https://maven.apache.org/), the software project management and comprehension tool. 
@@ -32,6 +32,8 @@ mvn clean package
 ```
 
 Then, the package file JAR is generated for DfAnalyzer project. It allows Java runtimes to efficiently deploy our tool. This JAR file is named as *DfAnalyzer-v2.jar* and it can be found in *./DfAnalyzer/target*.
+
+**Important note**: The components *Provenance Data Extractor* (PDE), *Dataflow Viewer* (DfViewer), *Query Interface* (QI), and *Query Dashboard* (QP) are implemented as RESTful services in DfAnalyzer project.
 
 ### C++ library
 

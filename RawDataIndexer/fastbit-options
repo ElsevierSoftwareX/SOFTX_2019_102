@@ -1,0 +1,22 @@
+binning options
++ default
++ none
+x nbins=xxx, binFile="xxx"
+x nbins=xxx, equal-weight
++ precision=dd
++ start=xxx, end=xxx, nbins=xxx, scale=linear|log|simple
+x (start, end, nbins, scale)(start, end, nbins, scale)...
+
+encoding options
++ equality
++ range
++ interval
++ ncomp=ddd
++ equality-equality
++ interval-equality
++ range-equality
+
+compression
++ uncompressdensebitmaps density > ddd
++ uncompresslargebitmaps compration > ddd
++ uncompressall

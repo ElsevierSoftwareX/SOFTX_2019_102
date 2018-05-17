@@ -1,0 +1,16 @@
+indexer/OptimizedFastBitIndexer.class
+indexer/FITSIndexer.class
+indexer/Indexer.class
+indexer/PostgresRAWIndexer.class
+indexer/FastBitIndexer$1.class
+indexer/Indexer$1.class
+indexer/PostgresRAWIndexer$1.class
+enumeration/indexer/ExtensionType.class
+indexer/FastBitIndexer.class
+enumeration/indexer/OperationType.class
+main/UnitTest.class
+main/RDI.class
+enumeration/indexer/AttributeType.class
+indexer/OptimizedFastBitIndexer$1.class
+indexer/CSVIndexer.class
+rdi/utils/Utils.class

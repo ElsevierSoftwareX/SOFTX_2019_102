@@ -1,0 +1,23 @@
+{
+    "output": "2",
+    "identifier": "2",
+    "workspace": "\/Users\/vitor\/Desktop\/listCustomers",
+    "invocation": "spark.flatMap.call(String)",
+    "dataflow": "example",
+    "sets": [{
+            "elements": ["\/Users\/vitor\/Documents\/Repository\/Thesis\/DataflowAnalyzer\/exp\/2\/file-1.csv"],
+            "tag": "ilistcustomers"
+        }, {
+            "elements": ["\/Users\/vitor\/Documents\/Repository\/Thesis\/DataflowAnalyzer\/exp\/2\/dl1.data;\/Users\/vitor\/Documents\/Repository\/Thesis\/DataflowAnalyzer\/exp\/2\/dl2.data"],
+            "tag": "olistcustomers"
+        }],
+    "resource": "local",
+    "files": [{
+            "path": "\/Users\/vitor\/Documents\/Repository\/Thesis\/DataflowAnalyzer\/Spark-Dataflow-Example\/file",
+            "name": "input.txt"
+        }],
+    "transformation": "listcustomers",
+    "error": "",
+    "dependencies": [],
+    "status": "FINISHED"
+}

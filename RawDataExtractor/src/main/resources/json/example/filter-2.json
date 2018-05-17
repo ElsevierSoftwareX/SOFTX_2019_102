@@ -1,0 +1,19 @@
+{
+    "output": "false",
+    "identifier": "2",
+    "workspace": "\/Users\/vitor\/Desktop\/filter",
+    "invocation": "spark.filter.call(Customer)",
+    "dataflow": "example",
+    "sets": [{
+            "elements": ["\/Users\/vitor\/Documents\/Repository\/Thesis\/DataflowAnalyzer\/exp\/2\/dl1.data;\/Users\/vitor\/Documents\/Repository\/Thesis\/DataflowAnalyzer\/exp\/2\/dl2.data"],
+            "tag": "ofilter"
+        }],
+    "resource": "-resource",
+    "transformation": "filter",
+    "error": "",
+    "dependencies": [{
+            "identifier": 2,
+            "tag": "listCustomers"
+        }],
+    "status": "FINISHED"
+}

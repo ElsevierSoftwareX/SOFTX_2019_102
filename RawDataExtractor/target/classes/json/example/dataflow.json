@@ -1,0 +1,108 @@
+{
+    "transformations": [{
+            "sets": [{
+                    "attributes": [{
+                            "name": "csvrow",
+                            "type": "FILE"
+                        }],
+                    "tag": "ilistcustomers",
+                    "type": "INPUT"
+                }, {
+                    "extractors": [{
+                            "cartridge": "LOADING",
+                            "extension": "PROGRAM",
+                            "tag": "dl1"
+                        }, {
+                            "cartridge": "LOADING",
+                            "extension": "PROGRAM",
+                            "tag": "dl2"
+                        }],
+                    "attributes": [{
+                            "name": "customerid",
+                            "extractor": "dl1",
+                            "type": "NUMERIC"
+                        }, {
+                            "name": "country",
+                            "extractor": "dl1",
+                            "type": "TEXT"
+                        }, {
+                            "name": "continent",
+                            "extractor": "dl1",
+                            "type": "TEXT"
+                        }, {
+                            "name": "age",
+                            "extractor": "dl2",
+                            "type": "NUMERIC"
+                        }, {
+                            "name": "gender",
+                            "extractor": "dl2",
+                            "type": "TEXT"
+                        }, {
+                            "name": "children",
+                            "extractor": "dl2",
+                            "type": "NUMERIC"
+                        }, {
+                            "name": "status",
+                            "extractor": "dl2",
+                            "type": "TEXT"
+                        }],
+                    "tag": "olistcustomers",
+                    "type": "OUTPUT",
+                    "extractor.combinations": [{
+                            "key_types": "numeric",
+                            "keys": "customerid",
+                            "outer": "dl1",
+                            "inner": "dl2"
+                        }]
+                }],
+            "tag": "listcustomers",
+            "programs": [{
+                    "path": "\/Users\/vitor\/Desktop\/progA.sh",
+                    "name": "progA"
+                }]
+        }, {
+            "sets": [{
+                    "dependency": "listcustomers",
+                    "tag": "olistcustomers",
+                    "type": "INPUT"
+                }, {
+                    "attributes": [{
+                            "name": "customerid",
+                            "extractor": "dl1",
+                            "type": "NUMERIC"
+                        }, {
+                            "name": "country",
+                            "extractor": "dl1",
+                            "type": "TEXT"
+                        }, {
+                            "name": "continent",
+                            "extractor": "dl1",
+                            "type": "TEXT"
+                        }, {
+                            "name": "age",
+                            "extractor": "dl2",
+                            "type": "NUMERIC"
+                        }, {
+                            "name": "gender",
+                            "extractor": "dl2",
+                            "type": "TEXT"
+                        }, {
+                            "name": "children",
+                            "extractor": "dl2",
+                            "type": "NUMERIC"
+                        }, {
+                            "name": "status",
+                            "extractor": "dl2",
+                            "type": "TEXT"
+                        }],
+                    "tag": "ofilter",
+                    "type": "OUTPUT"
+                }],
+            "tag": "filter",
+            "programs": [{
+                    "path": "\/Users\/vitor\/Desktop\/progB.sh",
+                    "name": "progB"
+                }]
+        }],
+    "tag": "example"
+}

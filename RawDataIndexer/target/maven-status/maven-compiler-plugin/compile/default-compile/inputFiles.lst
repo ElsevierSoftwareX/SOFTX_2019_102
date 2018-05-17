@@ -1,0 +1,12 @@
+/home/vitor/Documents/dev/dataflow_analyzer/RawDataIndexer/src/main/java/indexer/CSVIndexer.java
+/home/vitor/Documents/dev/dataflow_analyzer/RawDataIndexer/src/main/java/indexer/FastBitIndexer.java
+/home/vitor/Documents/dev/dataflow_analyzer/RawDataIndexer/src/main/java/indexer/Indexer.java
+/home/vitor/Documents/dev/dataflow_analyzer/RawDataIndexer/src/main/java/enumeration/indexer/OperationType.java
+/home/vitor/Documents/dev/dataflow_analyzer/RawDataIndexer/src/main/java/main/UnitTest.java
+/home/vitor/Documents/dev/dataflow_analyzer/RawDataIndexer/src/main/java/enumeration/indexer/AttributeType.java
+/home/vitor/Documents/dev/dataflow_analyzer/RawDataIndexer/src/main/java/enumeration/indexer/ExtensionType.java
+/home/vitor/Documents/dev/dataflow_analyzer/RawDataIndexer/src/main/java/indexer/FITSIndexer.java
+/home/vitor/Documents/dev/dataflow_analyzer/RawDataIndexer/src/main/java/indexer/PostgresRAWIndexer.java
+/home/vitor/Documents/dev/dataflow_analyzer/RawDataIndexer/src/main/java/rdi/utils/Utils.java
+/home/vitor/Documents/dev/dataflow_analyzer/RawDataIndexer/src/main/java/indexer/OptimizedFastBitIndexer.java
+/home/vitor/Documents/dev/dataflow_analyzer/RawDataIndexer/src/main/java/main/RDI.java

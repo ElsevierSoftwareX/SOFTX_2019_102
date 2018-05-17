@@ -1,0 +1,10 @@
+extractor/CSVExtractor.class
+main/RawDataExtractor.class
+enumeration/extractor/OperationType.class
+extractor/Extractor$1.class
+enumeration/extractor/ExtensionType.class
+main/UnitTest.class
+extractor/Extractor.class
+enumeration/extractor/AttributeType.class
+rde/utils/Utils.class
+extractor/ExternalProgram.class
