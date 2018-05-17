@@ -3,12 +3,7 @@
 # Template libMesh application Makefile
 MACOS			?= 0
 DFANALYZER_DIR 	?= ../../library/dfa-lib-cpp
-
-ifeq (${MACOS}, 1) 
-	LIBMESH_DIR 	?= $(PROGRAM)/libmesh_apr_2018
-else
-	LIBMESH_DIR 	?= $(PROGRAM)/libmesh
-endif
+LIBMESH_DIR ?= $$(LIBMESH)
 
 # include the library options determined by configure
 include $(LIBMESH_DIR)/Make.common
