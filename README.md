@@ -41,8 +41,12 @@ Then, the package file JAR is generated for DfAnalyzer project. It allows Java r
 RDE and RDI can also be compiled in the same way of RESTful services, as follows:
 
 ```bash
+# Install maven libraries
+cd maven
+./install_libraries.sh
+
 # RDE
-cd RawDataExtractor
+cd ../RawDataExtractor
 mvn clean package
 
 # RDI
