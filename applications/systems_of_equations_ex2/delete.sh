@@ -1,3 +1,4 @@
 #!/bin/bash
 rm -rf out.e
-rm -rf rde/*
+rm -rf rde
+mkdir rde
