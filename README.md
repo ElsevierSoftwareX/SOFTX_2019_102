@@ -4,7 +4,7 @@
 
 This repository presents DfAnalyzer, a dataflow tool for monitoring, debugging, steering, and analyzing dataflow paths of scientific applications.
 
-**Important note**: The components *Provenance Data Extractor* (PDE), *Dataflow Viewer* (DfViewer), *Query Interface* (QI), and *Query Dashboard* (QP) are implemented as RESTful services in DfAnalyzer project.
+**Important note**: The components *Provenance Data Extractor* (PDE), *Dataflow Viewer* (DfViewer), *Query Interface* (QI), and *Query Dashboard* (QP) are implemented as Web applications and RESTful services in DfAnalyzer project.
 
 ## Software requirements
 
@@ -15,6 +15,7 @@ The following softwares have to be configured / installed for running this appli
 1. [Java](https://www.oracle.com/java/index.html) as the main programming language. (Please read the [tutorials](http://www.oracle.com/technetwork/java/javase/downloads/index.html) provided by Oracle Technology)
 2. [Apache Maven](https://maven.apache.org/), the software project management and comprehension tool. 
 3. [MonetDB](https://www.monetdb.org) as the open-source column-store database system. (Please follow their [user guide](https://www.monetdb.org/Documentation/UserGuide))
+4. [FastBit](https://sdm.lbl.gov/fastbit/), an efficient compressed bitmap index technology.
 
 ### C++ library
 
@@ -49,7 +50,7 @@ cd ../RawDataIndexer
 mvn clean package
 ```
 
-### C++ library
+### C++ library: *dfa-lib-cpp*
 
 The DfAnalyzer library for the programming language C++ can be built with the following command lines:
 
@@ -64,21 +65,119 @@ Then, a static compiled library file, named as *libdfanalyzer.so*, is generated 
 
 ### RESTful services
 
+#### Initialization
+
+The project DfAnalyzer at `dfanalyzer` contains all web applications and RESTful services provided by our tool. Therefore, the following components are present in this project: *Provenance Data Extractor* (PDE), *Dataflow Viewer* (DfViewer), *Query Interface* (QI), and *Query Dashboard* (QP).
+
+We provide a compressed file of our MonetDB database (to DfAnalyzer) for a local execution of the project DfAnalyzer. Therefore, users only need to run the script `start-dfanalyzer.sh` at the path `application/dfanalyzer`. We assume the execution of these steps in an Unix-based operating system, as follows:
+
+```bash
+cd application/dfanalyzer
+./start-dfanalyzer.sh
+```
+
+Then, a similar output message should be displayed in the terminal tab:
+
+```
+--------------------------------------------
+Restoring MonetDB database...
+--------------------------------------------
+Starting database system...
+property            value
+hostname         localhost
+dbfarm           /dfanalyzer/applications/dfanalyzer/data
+status           monetdbd[3068] 1.7 (Jul2017-SP1) is serving this dbfarm
+mserver          /program/monetdb/bin/mserver5
+logfile          /dfanalyzer/applications/dfanalyzer/data/merovingian.log
+pidfile          /dfanalyzer/applications/dfanalyzer/data/merovingian.pid
+sockdir          /tmp
+listenaddr       localhost
+port             50000
+exittimeout      60
+forward          proxy
+discovery        true
+discoveryttl     600
+control          no
+passphrase       <unknown>
+mapisock         /tmp/.s.monetdb.50000
+controlsock      /tmp/.s.merovingian.50000
+starting database 'dataflow_analyzer'... done
+      name         state   health                       remarks
+dataflow_analyzer  R  0s  100% 11s  mapi:monetdb://localhost:50000/dataflow_analyzer
+--------------------------------------------
+Starting DfA RESTful API
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v1.5.8.RELEASE)
+
+2017-11-09 09:12:44.451  INFO 3073 --- [           main] rest.server.WebApplication               : Starting WebApplication v1.0 on mercedes with PID 3073 (/dfanalyzer/applications/dfa/DfA-1.0 started by vitor in /dfanalyzer/applications/dfanalyzer)
+...
+2017-11-09 09:12:55.397  INFO 3073 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-11-09 09:12:55.419  INFO 3073 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 0
+2017-11-09 09:12:55.815  INFO 3073 --- [           main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 22000 (http)
+2017-11-09 09:12:55.833  INFO 3073 --- [           main] rest.server.WebApplication               : Started WebApplication in 12.433 seconds (JVM running for 13.257)
+```
+
+#### Provenance Data Extractor (PDE)
+
+Provenance Data Extractor (PDE) is a DfAnalyzer component responsible for extracting provenance and scientific data from scientific applications. With this purpose, PDE delivers a RESTful API that users can send HTTP request with POST method in order to register data extracted from their applications. These extracted data follows a dataflow abstraction, considering file and data element flow monitoring. Then, PDE stores these extracted data into a provenance database to enable online query processing.
+
+Since our RESTful application has been initialized, users can submit HTTP requests with POST method to PDE for extracting provenance and scientific data. Then, considering the dataflow abstraction followed by DfAnalyzer, users have to introduce a message according to this abstraction. Therefore, PDE provides a set of methods to be present in the HTTP message, as follows:
+
+![PDE RESTful services](./img/dfa-docs-pde.png)
+
+This web page (http://localhost:22000/dfview/help) can be accessed using a browser after the initialization of DfAnalyzer.
+
+**Example**
+
+**Dataflow specification**
+
+As an example of dataflow specification to be included in our provenance database, users submit the following HTTP request to PDE, considering a dataflow with one data transformation of our libMesh application (systems_of_equations_ex2):
+
+HTTP message send to the URL `http://localhost:22000/pde/dataflow`
+
+```bash
+dataflow(systems_of_equations_ex2)
+
+program(systems_of_equations_ex2::solver.solve(), /root/systems_of_equations_ex2)
+
+dataset(ocreate_equation_systems, {n_dofs}, {NUMERIC})
+dataset(isolve_equation_systems, 
+            {dt, timesteps, nonlinear_steps, nonlinear_tolerance, nu},
+            {NUMERIC, NUMERIC, NUMERIC, NUMERIC, NUMERIC})
+dataset(osolve_equation_systems, 
+            {timestep, time, nonlinear_steps, linear_iterations, final_linear_residual, norm_delta, converged},
+            {NUMERIC, NUMERIC, NUMERIC, NUMERIC, NUMERIC, NUMERIC, TEXT})
+
+transformation(solve_equation_systems, {ocreate_equation_systems, isolve_equation_systems}, {odeduplication}, )
+```
+
+**Task record**
+
+After the dataflow specification, provenance and scientific data generated during the execution of scientific applications can be registered in our provenance database. In this case, PDE has to capture HTTP request in the task level (*i.e.*, execution of a data transformation).
+
+For example, the following message should be sent in an HTTP request to the URL
+
+`http://localhost:22000/pde/task`
+
+```bash
+task(systems_of_equations,  solve_equation_systems, 1, RUNNING)
+
+collection(ocreate_equation_systems, {{ dofs }})
+collection(isolve_equation_systems, {{ timestep, time, nonlinear_steps, 
+            linear_iterations, final_linear_residual, norm_delta, converged }})
+
+dependency({create_equation_systems}, {1})
+```
+
 More details about DfAnalyzer RESTful services can be found [here](https://hpcdb.github.io/armful/dfanalyzer.html).
 
-### DfA-lib in C++
-
-The documentation of dfa-lib in C++ can be found in [here](https://dfa-lib-cpp-docs.herokuapp.com/).
-
-### RDE and RDI
-
-The user guide of RDE and RDI can be found in their respective directories, as follows:
-
-`RawDataExtractor` ([easy access with this link](./RawDataExtractor))
-
-`RawDataIndexer` ([easy access with this link](./RawDataIndexer))
-
-### Dataflow Viewer (DfViewer)
+#### Dataflow Viewer (DfViewer)
 
 After the provenance and domain data capture, users can also analyze dataflow specifications stored in our provenance database using DfViewer. DfViewer is a feature provided by our Web application.
 
@@ -95,6 +194,18 @@ Then, they have access to a list of dataflow specifications stored in DfAnalyzer
 Since users have decided to view a specific dataflow by clicking on the button with the name *View* (*e.g.*, to analyze dataflow specification with tag *systems_of_equations_ex2*), then the following web page will be provided to them. This visualization consists of a dataset perspective view of the dataflow specification, where users can investigate the schema (*i.e.*, attributes of each dataset).
 
 ![List of dataflow specifications](./img/dfviewer-libmesh-app.png)
+
+### DfA-lib in C++
+
+Since the most of our computational scientists use the programming language C++, we develop a library to make easier the addition of DfAnalyzer calls in scientific applications, named as dfa-lib-cpp. In this regard, we also deliver a documentation of dfa-lib in C++, which can be found in [here](https://dfa-lib-cpp-docs.herokuapp.com/).
+
+### RDE and RDI
+
+The user guide of RDE and RDI can be found in their respective directories, as follows:
+
+`RawDataExtractor` ([easy access with this link](./RawDataExtractor))
+
+`RawDataIndexer` ([easy access with this link](./RawDataIndexer))
 
 ## Use in scientific applications
 
@@ -145,8 +256,8 @@ Here we present the software requirements and how to run CSE applications *syste
 
 There are also some optional software requirements, if raw data extraction and indexing capabilities are enabled, as follows.
 
-4. [ParaView](https://www.paraview.org/), an open-source, multi-platform data analysis and visualization application.
-5. [FastBit](https://sdm.lbl.gov/fastbit/), an efficient compressed bitmap index technology.
+1. [ParaView](https://www.paraview.org/), an open-source, multi-platform data analysis and visualization application.
+2. [FastBit](https://sdm.lbl.gov/fastbit/), an efficient compressed bitmap index technology.
 
 ## How to run applications
 
