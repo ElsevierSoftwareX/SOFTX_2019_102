@@ -7,6 +7,7 @@ var app = new Vue({
     el: '#app',
     data: {
         attMap: {},
+        graph: {},
         selectedElemet: null
     }, methods: {
         loadGraph: function () {
@@ -17,6 +18,7 @@ var app = new Vue({
                 type: 'GET',
                 success: function (result) {
                     context.attMap = result["allAttrsMap"];
+                    context.graph = result["graph"];
                     context.plotGraph(result["graph"]);
                 }
             });
@@ -27,9 +29,20 @@ var app = new Vue({
             var context = this;
             network = new vis.Network(container, data, options);
             network.on("click", function (params) {
+                $('#saved').css("display","none");
+                context.selectedElemet = app.attMap[params.nodes[0]];
+                if (dataset.$data.dataSetSelectedAtt[context.selectedElemet.name]){
+                    selectedAttr = dataset.$data.dataSetSelectedAtt[context.selectedElemet.name];                        
+                    dataset.$data.CheckedAtt = selectedAttr;        
+                }
+                else {
+                    dataset.$data.CheckedAtt = [];   
+                }
+                    
                 if (params.nodes.length > 0) {
                     var id = params.nodes[0];
                     context.selectedElemet = app.attMap[id];
+                    dataset.$data.Conditions = '';                    
                 }
             });
         }

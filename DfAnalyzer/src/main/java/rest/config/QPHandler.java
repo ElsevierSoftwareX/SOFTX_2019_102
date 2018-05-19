@@ -24,7 +24,7 @@ public class QPHandler {
         Dataflow dataflow = db.loadDataflow(spec);
         //generate query
         QueryProcessor qp = new QueryProcessor(db, dataflow);
-        Stopwatch stopwatch1 = Stopwatch.createStarted();        
+        Stopwatch stopwatch1 = Stopwatch.createStarted();    
         MonetDbSqlQuery query = qp.runSqlQuery(spec);
         //answer
         StringBuilder answer = new StringBuilder();
@@ -32,6 +32,8 @@ public class QPHandler {
         answer.append("\n================================================");        
         answer.append("\nQuery elapsed time (generation + execution): " + stopwatch1);
         answer.append("\n================================================");
+        String currentPath = System.getProperty("user.dir");
+        answer.append("\nCurrentPath:" + currentPath);
         return answer.toString();
     }
     

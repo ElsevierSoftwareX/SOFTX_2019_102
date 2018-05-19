@@ -59,5 +59,4 @@ public class VisualizationController {
         modelAndView.addObject("dataflow", dao.findDataflowById(dfId));
         return modelAndView;
     }
-
 }

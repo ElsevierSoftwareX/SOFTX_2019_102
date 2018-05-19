@@ -9,7 +9,7 @@ import di.enumeration.dbms.DBMS;
 public class EnvironmentConfiguration {
     
     private String DataIngestorDirectory = null;
-    private int port = 54321;
+    private int port = 50000;
     private String server = "localhost";
     private String databaseName = "dataflow_analyzer";
     private String user = "monetdb";

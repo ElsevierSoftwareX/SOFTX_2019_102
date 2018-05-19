@@ -16,7 +16,7 @@ sleep 5
 rm -rf data
 rm prov-db.dump
 # killing previous processes
-killall java
+#killall java
 echo "--------------------------------------------"
 echo "Configuring DfA.properties file"
 echo "di_dir="$SIMULATION_DIR >> $DFA_PROPERTIES
@@ -37,5 +37,5 @@ DATAPATH=$SIMULATION_DIR/data
 $SIMULATION_DIR/dfa/database_starter.sh database.conf $SIMULATION_DIR $DATAPATH
 echo "--------------------------------------------"
 echo "Starting DfA RESTful API"
-$SIMULATION_DIR/dfa/DfA-1.0
+$SIMULATION_DIR/dfa/DfA-2.0
 

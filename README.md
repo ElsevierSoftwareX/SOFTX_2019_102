@@ -263,6 +263,12 @@ selection(oextract_data.u > 0.01)
 
 As a result, our RESTful API returns a CSV-format file with the selected content after the query processing.
 
+#### Query Dashboard (QD)
+
+Besides the query processing capabilities provided by QI, users can also develop their queries using our graphical interface, as follows:
+
+![Query specification using our graphical interface](./img/query-dashboard.png)
+
 ### DfA-lib in C++
 
 Since the most of our computational scientists use the programming language C++, we develop a library to make easier the addition of DfAnalyzer calls in scientific applications, named as dfa-lib-cpp. In this regard, we also deliver a [documentation of dfa-lib in C++ or **dfa-lib-cpp**](https://dfa-lib-cpp-docs.herokuapp.com/).

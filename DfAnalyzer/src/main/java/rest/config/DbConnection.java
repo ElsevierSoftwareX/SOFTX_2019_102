@@ -72,7 +72,6 @@ public class DbConnection {
 
     public Dataflow loadDataflow(QuerySpecification querySpec) {
         Dataflow dataflow = getDataflow(querySpec.getDataflowTag(), querySpec.getDataflowVersion());
-
         dataflow.addTransformations(getTransformations(dataflow.getId(), dataflow.getVersion()));
         dataflow.addDatasets(getDatasets(dataflow.getId(), dataflow.getVersion()));
         // dataflow.addPrograms(getPrograms(dataflow.getId(), dataflow.getVersion()));
@@ -83,7 +82,6 @@ public class DbConnection {
             ds.addAttributes(getAttributes(ds));
             updateDependencies(dataflow, ds);
         }
-
         return dataflow;
     }
 
@@ -331,7 +329,7 @@ public class DbConnection {
 
     public void runMonetDBQuery(MonetDbSqlQuery query) {
         try {
-            String currentPath = System.getProperty("user.dir");
+            String currentPath = System.getProperty("user.dir").replace('\\', '/');
             String filePath = currentPath + "/query_result.csv";
             Files.deleteIfExists((new java.io.File(filePath)).toPath());
             String querySQL = query.getCopyOperation(filePath);
