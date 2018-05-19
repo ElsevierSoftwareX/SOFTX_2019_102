@@ -265,7 +265,7 @@ As a result, our RESTful API returns a CSV-format file with the selected content
 
 #### Query Dashboard (QD)
 
-Besides the query processing capabilities provided by QI, users can also develop their queries using our graphical interface, as follows:
+Besides the query processing capabilities provided by QI, users can develop their queries using our graphical interface, as follows:
 
 ![Query specification using our graphical interface](./img/query-dashboard.png)
 
