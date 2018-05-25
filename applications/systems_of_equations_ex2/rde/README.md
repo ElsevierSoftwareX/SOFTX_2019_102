@@ -1,0 +1,1 @@
+Directory with the extracted data based on the usage of RDE.
