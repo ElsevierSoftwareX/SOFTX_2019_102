@@ -19,14 +19,14 @@ public class DownloadController {
     
 @GetMapping("/downloadCSV")
     public void downloadCSV(HttpServletResponse response) throws IOException{
-        String fileName = "query_result.csv";
+        String fileName = "/query_result.csv";
        
         response.setHeader("Content-Type", "aplication/xls");
         response.setHeader("Content-Disposition","attachment;filename=\"query_result.csv\"");
         
         URL url = null;
         //String completePath = url.getPath() + fileName;
-        String currentPath = System.getProperty("user.dir");
+        String currentPath = System.getProperty("user.dir").replace('\\', '/');
         String completePath = currentPath + fileName;
         OutputStream out = response.getOutputStream();
         try (InputStream in = new FileInputStream(completePath)) {

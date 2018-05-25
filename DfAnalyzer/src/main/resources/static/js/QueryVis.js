@@ -62,18 +62,17 @@ var dataset = new Vue({
         if (conds !== ""){
             conds = conds.split(" ");
             for (var i=0; i<conds.length; i++){
-                if (this.$data.s_projections.indexOf(selectedDataset + "." + conds[i]) === -1){
-                    this.$data.s_projections += selectedDataset + "." + conds[i] + ";";
+                if (this.$data.s_selections.indexOf(conds[i]) === -1){
+                    this.$data.s_selections += conds[i] + ";";
                 }
             }   
         }
 
         sels = this.dataSetSelectedAtt[selectedDataset] || "";
-        console.log(sels);
         if (sels !== ""){
             for (var i=0; i<sels.length; i++){
-                if (this.$data.s_selections.indexOf(selectedDataset + "." + sels[i]) === -1){
-                    this.$data.s_selections += selectedDataset + "." + sels[i] + ";";
+                if (this.$data.s_projections.indexOf(selectedDataset + "." + sels[i]) === -1){
+                    this.$data.s_projections += selectedDataset + "." + sels[i] + ";";
                 }
             }
         }  
@@ -186,11 +185,11 @@ var dataset = new Vue({
             q += 'target(' + this.$data.s_target.substr(0,this.$data.s_target.length-1) +')\n';
         }        
         
-        if (this.$data.s_selections !== ""){ 
-            q += 'selection(' + this.$data.s_selections + ')\n';
-        }
         if (this.$data.s_projections !== ""){ 
-            q += 'projection(' + this.$data.s_projections +')';
+            q += 'projection(' + this.$data.s_projections.substr(0,this.$data.s_projections.length-1) + ')\n';
+        }
+        if (this.$data.s_selections !== ""){ 
+            q += 'selection(' + this.$data.s_selections.substr(0,this.$data.s_selections.length-1) +')';
         }
         
         $.ajax({
