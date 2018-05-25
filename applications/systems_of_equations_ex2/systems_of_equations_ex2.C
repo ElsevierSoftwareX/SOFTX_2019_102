@@ -79,7 +79,7 @@
 // DfAnalyzer
 #define DFANALYZER
 #define RAW_DATA_EXTRACTION
-//#define RAW_DATA_INDEXING
+#define RAW_DATA_INDEXING
 #include "dfanalyzer.h"
 
 // Bring in everything from the libMesh namespace
@@ -480,10 +480,9 @@ int main(int argc, char** argv) {
                         << "/bin/pvpython script/exodus_data_extraction.py "  << to_string(t_step);
                 vector<string> attribute_names = {"u","v","w","p","x","y","z"};
                 vector<attribute_type> attribute_types = {NUMERIC, NUMERIC, NUMERIC, NUMERIC, NUMERIC, NUMERIC, NUMERIC};
-                
+
                 RawDataExtractor* extractor = new RawDataExtractor(command_line.str(), attribute_names, attribute_types);
                 extractor->run();
-                
 #ifdef RAW_DATA_INDEXING
                 command_line.str(string());
                 stringstream extra_arguments;

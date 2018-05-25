@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #set -x
-
+export DFANALYZER_DIR=../dfanalyzer/dfa
 source $LIBMESH_DIR/examples/run_common.sh
 
 example_name=systems_of_equations_ex2

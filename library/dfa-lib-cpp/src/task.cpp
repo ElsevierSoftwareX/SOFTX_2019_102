@@ -167,6 +167,7 @@ void Task::save() {
     curl_easy_setopt(hnd, CURLOPT_HTTPHEADER, headers);
     curl_easy_setopt(hnd, CURLOPT_POSTFIELDS, message.c_str());
     curl_easy_setopt(hnd, CURLOPT_VERBOSE, 0L); //0 disable messages
+    curl_easy_setopt(hnd, CURLOPT_WRITEFUNCTION, 0L);
 
     curl_easy_perform(hnd); //send request
     curl_easy_cleanup(hnd);
