@@ -333,6 +333,17 @@ There are also some optional software requirements, if raw data extraction and i
 1. [ParaView](https://www.paraview.org/), an open-source, multi-platform data analysis and visualization application.
 2. [FastBit](https://sdm.lbl.gov/fastbit/), an efficient compressed bitmap index technology.
 
+### Prototype of Multiphysics Application
+
+1. [FEniCS](https://fenicsproject.org/) as a framework for the numerical simulation of partial differential equations using arbitrary unstructured discretizations on serial and parallel platforms.
+2. [DfA-lib-Python](https://dfa-lib-python-docs.herokuapp.com/) A DfAnalyzer library implemented in Python for extracting provenance data, extracting raw data from data sources, and generating indexes of extracted data at runtime based on the usage of DfAnalyzer RESTful services. 
+3. [noWorkflow](https://github.com/gems-uff/noworkflow), a Tool for Collecting, Analyzing, and Managing Provenance from Python Scripts.
+
+<a href="https://fenicsproject.org/" target="_blank">
+    <img src="./img/fenics.png" width="110" align="middle">
+</a>
+
+
 ## How to run applications
 
 ### Systems of Equations - Example 2
@@ -374,4 +385,46 @@ Command lines to the second terminal connection (*CSE application*):
 ```bash
 cd applications/systems_of_equations_ex2
 ./run.sh
+```
+
+### Prototype of Multiphysics Application
+
+#### Source code
+
+Application files are stored in directory `applications/prototype_multiphysics_application` divided in three folders each one specific for one execution type, are they: `baseline`, `dfa` and `noWorkflow`. It's necessary to install the necessary dependencies and for that pourpouse the following command lines must be executed:
+
+```bash
+cd applications/prototype_multiphysics_application
+make init
+```
+
+#### Run application
+
+Then, the prototype multiphysics application application can be executed using DfAnalyzer or noWorkflow as extraction provenance tool.
+
+##### DfAnalyzer
+
+In this case, two terminal connections have to be initialized. In the first terminal connection, we will initialize DfAnalyzer RESTful services by running the script `start-dfanalyzer.sh` at `applications/dfanalyzer`. After that, we start the CSE application by executing the command line `make run-dfa` at `applications/prototype_multiphysics_application`.
+
+Command lines to the first terminal connection (*DfAnalyzer*):
+
+```bash
+cd applications/dfanalyzer
+./start-dfanalyzer.sh
+```
+
+Command lines to the second terminal connection (*CSE application*):
+
+```bash
+cd applications/prototype_multiphysics_application
+make run-dfa
+```
+
+##### noWorkflow
+
+In this case we execute the following commandline:
+
+```bash
+cd applications/prototype_multiphysics_application
+make run-noworkflow
 ```
