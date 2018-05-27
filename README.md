@@ -23,6 +23,10 @@ The following softwares have to be configured / installed for running this appli
 2. [curl](https://curl.haxx.se/), a command line tool and library for transferring data with URLs. (Please read their [installation instructions](https://curl.haxx.se/download.html))
 3. [boost](https://www.boost.org/), a package of free peer-reviewed portable C++ source libraries.
 
+### Python library
+
+1. [Python](https://www.python.org/), Python language interpreter version >= 3.5.2
+
 ## Installation
 
 ### RESTful services
@@ -64,6 +68,15 @@ make
 ```
 
 Then, a static compiled library file, named as *libdfanalyzer.so*, is generated at the directory *library/dfa-lib-cpp/lib*.
+
+### Python library: *dfa-lib-python*
+
+The DfAnalyzer library for the programming language Python can be built with the following command lines:
+
+```bash
+cd library/dfa-lib-python
+make install
+```
 
 ## An overview of DfAnalyzer components and their documentations
 
