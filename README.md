@@ -282,9 +282,9 @@ Besides the query processing capabilities provided by QI, users can develop thei
 
 ![Query specification using our graphical interface](./img/query-dashboard.png)
 
-### DfA-lib in C++
+### DfA-lib in C++ and Python
 
-Since the most of our computational scientists use the programming language C++, we develop a library to make easier the addition of DfAnalyzer calls in scientific applications, named as dfa-lib-cpp. In this regard, we also deliver a [documentation of dfa-lib in C++ or **dfa-lib-cpp**](https://dfa-lib-cpp-docs.herokuapp.com/).
+Since the most of our computational scientists use the programming languages C++ and Python , we develop two libraries to make easier the addition of DfAnalyzer calls in scientific applications, named as dfa-lib-cpp and dfa-lib-python. In this regard, we also deliver a [documentation of dfa-lib in C++ or **dfa-lib-cpp**](https://dfa-lib-cpp-docs.herokuapp.com/) and a [documentation of dfa-lib in Python or **dfa-lib-python**](https://dfa-lib-python-docs.herokuapp.com/).
 
 ### RDE and RDI
 
