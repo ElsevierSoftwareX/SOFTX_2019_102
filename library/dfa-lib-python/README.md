@@ -22,12 +22,7 @@ Or clone the repo:
     $ git clone https://github.com/viniciusscampos/dfa_lib_python.git
     $ python setup.py install
     
-Contributing
+Documentation
 ------------
 
-TBD
-
-Example
--------
-
-TBD
+More information can be found at [https://dfa-lib-python-docs.herokuapp.com/](https://dfa-lib-python-docs.herokuapp.com/)
