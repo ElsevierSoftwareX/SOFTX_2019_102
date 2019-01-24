@@ -420,7 +420,7 @@ make init
 
 #### Run application
 
-Then, the prototype multiphysics application application can be executed using DfAnalyzer or noWorkflow as extraction provenance tool.
+Then, the prototype multiphysics application application can be executed using DfAnalyzer.
 
 ##### DfAnalyzer
 
@@ -439,14 +439,4 @@ Command lines to the second terminal connection (*CSE application*):
 cd applications/prototype_multiphysics_application
 source activate prototype_multiphysics_application
 make run-dfa
-```
-
-##### noWorkflow
-
-In this case we execute the following commandline:
-
-```bash
-cd applications/prototype_multiphysics_application
-source activate prototype_multiphysics_application
-make run-noworkflow
 ```
