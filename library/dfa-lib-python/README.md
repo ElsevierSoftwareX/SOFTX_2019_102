@@ -19,7 +19,8 @@ To install use pip:
 
 Or clone the repo:
 
-    $ git clone https://github.com/viniciusscampos/dfa_lib_python.git
+    $ git clone https://gitlab.com/ssvitor/dataflow_analyzer.git
+    $ cd library/dfa-lib-python
     $ python setup.py install
     
 Documentation
