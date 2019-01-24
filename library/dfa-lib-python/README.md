@@ -21,6 +21,7 @@ Or clone the repo:
 
     $ git clone https://gitlab.com/ssvitor/dataflow_analyzer.git
     $ cd library/dfa-lib-python
+    $ pip install -r requirements.txt
     $ python setup.py install
     
 Documentation
