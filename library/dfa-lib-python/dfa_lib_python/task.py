@@ -99,6 +99,7 @@ class Task(ProvenanceObject):
         self.set_status(TaskStatus.RUNNING)
         self.start_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         self.save()
+        self._sets = []
 
     def end(self):
         """ Send a post request to the Dataflow Analyzer API to store the Task.
@@ -108,6 +109,7 @@ class Task(ProvenanceObject):
         performance = Performance(self.start_time, self.end_time)
         self._performances.append(performance.get_specification())
         self.save()
+        self._sets = []
 
     def save(self):
         """ Send a post request to the Dataflow Analyzer API to store the Task.
