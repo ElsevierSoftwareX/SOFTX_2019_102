@@ -59,7 +59,7 @@ class Task(ProvenanceObject):
         assert isinstance(dependency, Dependency), \
             "The dependency must be valid."
         self._dependency = dependency.get_specification()
-        self.save()
+        #self.save()
 
     def set_datasets(self, datasets):
         """ Set the Task DataSets.
@@ -71,7 +71,7 @@ class Task(ProvenanceObject):
             "The parameter must be a list."
         for dataset in datasets:
             self.add_dataset(dataset)
-        self.save()
+        #self.save()
 
     def add_dataset(self, dataset):
         """ Add a dataset to the Task.
@@ -81,7 +81,7 @@ class Task(ProvenanceObject):
         """
         assert isinstance(dataset, DataSet), "The dataset must be valid."
         self._sets.append(dataset.get_specification())
-        self.save()
+        #self.save()
 
     def set_status(self, status):
         """ Change the Task Status.
