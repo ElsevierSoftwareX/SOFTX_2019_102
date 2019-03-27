@@ -392,7 +392,7 @@ Command lines to the first terminal connection (*DfAnalyzer*):
 
 ```bash
 cd applications/dfanalyzer
-./start-dfanalyzer.sh
+./start-dfanalyzer.sh &
 ```
 
 Command lines to the second terminal connection (*CSE application*):
@@ -429,7 +429,7 @@ Command lines to the first terminal connection (*DfAnalyzer*):
 
 ```bash
 cd applications/dfanalyzer
-./start-dfanalyzer.sh
+./start-dfanalyzer.sh &
 ```
 
 Command lines to the second terminal connection (*CSE application*):
