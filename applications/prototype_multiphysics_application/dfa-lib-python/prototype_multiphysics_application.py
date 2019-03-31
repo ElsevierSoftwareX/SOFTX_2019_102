@@ -12,7 +12,7 @@ from dfa_lib_python.task import Task
 from dfa_lib_python.dataset import DataSet
 from dfa_lib_python.element import Element
 from dfa_lib_python.task_status import TaskStatus
-from dfa_lib_python.extractor_cartridge import ExtractorCartridge
+from dfa_lib_python.extractor_extension import ExtractorExtension
 
 
 # Class representing the intial conditions
@@ -79,6 +79,7 @@ tf2_input = Set("iFunctionSpace", SetType.INPUT,
 tf2_output = Set("oFunctionSpace", SetType.OUTPUT, 
     [Attribute("DIMENSION", AttributeType.NUMERIC)])
 tf1_output.set_type(SetType.INPUT)
+tf1_output.dependency=tf1._tag
 tf2.set_sets([tf1_output, tf2_input, tf2_output])
 df.add_transformation(tf2)
 # Transformation NewtonSolver
@@ -92,6 +93,7 @@ tf3_output = Set("oNewtonSolver", SetType.OUTPUT,
     Attribute("CONVERGENCE_CRITETION", AttributeType.TEXT),
     Attribute("RELATIVE_TOLERANCE", AttributeType.NUMERIC)])
 tf2_output.set_type(SetType.INPUT)
+tf2_output.dependency=tf2._tag
 tf3.set_sets([tf2_output, tf3_input, tf3_output])
 df.add_transformation(tf3)
 # Transformation TimeStep
@@ -104,6 +106,7 @@ tf4_output = Set("oTimeStep", SetType.OUTPUT,
     Attribute("ITERATION", AttributeType.NUMERIC),
     Attribute("RESIDUAL", AttributeType.NUMERIC)])
 tf3_output.set_type(SetType.INPUT)
+tf3_output.dependency=tf3._tag
 tf4.set_sets([tf3_output, tf4_input, tf4_output])
 df.add_transformation(tf4)
 # Transformation Visualization
@@ -115,6 +118,7 @@ tf5_output = Set("oVisualization", SetType.OUTPUT,
     Attribute("FILE", AttributeType.FILE),
     Attribute("PART", AttributeType.TEXT)])
 tf4_output.set_type(SetType.INPUT)
+tf4_output.dependency=tf4._tag
 tf5.set_sets([tf4_output, tf5_input, tf5_output])
 df.add_transformation(tf5)
 df.save()
@@ -249,7 +253,7 @@ while (t < T):
     file << (u.split()[0], t)
     #--------------------------------------------------------------
     # Raw data extraction
-    extracted_data = Extractor(ExtractorCartridge.PROGRAM, "output.pvd")
+    extracted_data = Extractor(ExtractorExtension.PROGRAM, "output.pvd")
     #--------------------------------------------------------------
     visualization_output = DataSet("oVisualization", [Element(extracted_data[i-1])])
     visualization.add_dataset(visualization_output)

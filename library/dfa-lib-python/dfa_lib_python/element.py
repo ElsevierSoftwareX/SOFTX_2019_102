@@ -12,9 +12,7 @@ class Element(object):
     @property
     def values(self):
         """Get or set the element values."""
-        separator = ";"
-        result = [str(x) for x in self._values]
-        return separator.join(result)
+        return self._values
 
     @values.setter
     def values(self, values):

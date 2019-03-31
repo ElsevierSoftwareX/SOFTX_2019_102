@@ -1,5 +1,5 @@
-from ..attribute import Attribute
-from ..attribute_type import AttributeType
+from dfa_lib_python.attribute import Attribute
+from dfa_lib_python.attribute_type import AttributeType
 
 
 def test_get_name_pass():

@@ -28,8 +28,7 @@ class Task(ProvenanceObject):
     def __init__(self, id, dataflow_tag, transformation_tag,
                  sub_id="", dependency=None, workspace="", resource="",
                  output="", error=""):
-        ProvenanceObject.__init__(self, "{0}_{1}".format(dataflow_tag,
-                                                         transformation_tag))
+        ProvenanceObject.__init__(self, transformation_tag)
         self._workspace = workspace
         self._resource = resource
         self._dependency = ""
@@ -59,7 +58,6 @@ class Task(ProvenanceObject):
         assert isinstance(dependency, Dependency), \
             "The dependency must be valid."
         self._dependency = dependency.get_specification()
-        #self.save()
 
     def set_datasets(self, datasets):
         """ Set the Task DataSets.
@@ -71,7 +69,6 @@ class Task(ProvenanceObject):
             "The parameter must be a list."
         for dataset in datasets:
             self.add_dataset(dataset)
-        #self.save()
 
     def add_dataset(self, dataset):
         """ Add a dataset to the Task.
@@ -81,7 +78,6 @@ class Task(ProvenanceObject):
         """
         assert isinstance(dataset, DataSet), "The dataset must be valid."
         self._sets.append(dataset.get_specification())
-        #self.save()
 
     def set_status(self, status):
         """ Change the Task Status.
@@ -99,7 +95,6 @@ class Task(ProvenanceObject):
         self.set_status(TaskStatus.RUNNING)
         self.start_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         self.save()
-        self._sets = []
 
     def end(self):
         """ Send a post request to the Dataflow Analyzer API to store the Task.
@@ -109,7 +104,6 @@ class Task(ProvenanceObject):
         performance = Performance(self.start_time, self.end_time)
         self._performances.append(performance.get_specification())
         self.save()
-        self._sets = []
 
     def save(self):
         """ Send a post request to the Dataflow Analyzer API to store the Task.

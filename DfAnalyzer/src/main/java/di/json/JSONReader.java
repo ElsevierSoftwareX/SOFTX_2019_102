@@ -48,11 +48,12 @@ public class JSONReader {
             return null;
         }
     }
+
     public static JSONObject readDataflowFromRequest(String df_string) {
         try {
             JSONParser parser = new JSONParser();
             return (JSONObject) parser.parse(df_string);
-        } catch ( ParseException ex) {
+        } catch (ParseException ex) {
             Logger.getLogger(JSONReader.class.getName()).log(Level.SEVERE, null, ex);
         }
 
@@ -139,25 +140,24 @@ public class JSONReader {
 
         return null;
     }
-    
+
     public static JSONObject getTaskFromRequest(String request) {
 
           // Notar que nesta abordagem, não sabemos a que workflow pertence este json
-
-          try {
-              JSONParser parser = new JSONParser();
+        try {
+            JSONParser parser = new JSONParser();
               //FileReader fr = new FileReader(Utils.getTaskFilePath(dataflowAnalyzerDirectory, dataflowTag, transformationTag, taskID));
-              //JSONObject obj = (JSONObject) parser.parse(fr);
-              //fr.close();
-              JSONObject obj = (JSONObject) parser.parse(request);
-              return obj;
-          } catch (ParseException ex) {
-              Logger.getLogger(JSONReader.class.getName()).log(Level.SEVERE, null, ex);
-          }
+            //JSONObject obj = (JSONObject) parser.parse(fr);
+            //fr.close();
+            JSONObject obj = (JSONObject) parser.parse(request);
+            return obj;
+        } catch (ParseException ex) {
+            Logger.getLogger(JSONReader.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
-          return null;
+        return null;
     }
-    
+
     public static Transaction generationDataflowTransaction(String fileName, String path, JSONObject dfJSON, DBMS dbms) {
         Transaction t = new Transaction(TransactionType.DATAFLOW, fileName, path, dbms);
 
@@ -477,8 +477,15 @@ public class JSONReader {
 
                 JSONArray elements = (JSONArray) setJSON.get("elements");
                 if (elements != null) {
-                    for (Object o : elements.toArray()) {
-                        e.values.add((String) o);
+                    for (Object element : elements.toArray()) {
+                        if (element instanceof JSONArray) {
+                            JSONArray values = (JSONArray) element;
+                            for (Object value : values) {
+                                e.values.add((String) value);
+                            }
+                        } else {
+                            e.values.add((String) element);
+                        }
                     }
                 }
 
