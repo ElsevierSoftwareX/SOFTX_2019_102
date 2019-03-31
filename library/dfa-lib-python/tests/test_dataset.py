@@ -1,5 +1,5 @@
-from ..dataset import DataSet
-from ..element import Element
+from dfa_lib_python.dataset import DataSet
+from dfa_lib_python.element import Element
 
 
 def test_get_elements_pass():

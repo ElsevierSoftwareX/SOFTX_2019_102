@@ -1,4 +1,4 @@
-from ..dependency import Dependency
+from dfa_lib_python.dependency import Dependency
 
 
 def test_get_tags_pass():

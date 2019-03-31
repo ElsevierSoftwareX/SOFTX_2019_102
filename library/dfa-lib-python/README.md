@@ -1,7 +1,7 @@
 Dataflow Analyzer Python Library
 ===============================
 
-version number: 0.0.1
+version number: 1.0.0
 author: Vinícius Campos
 
 Overview
@@ -19,11 +19,9 @@ To install use pip:
 
 Or clone the repo:
 
-    $ git clone https://gitlab.com/ssvitor/dataflow_analyzer.git
-    $ cd library/dfa-lib-python
-    $ pip install -r requirements.txt
+    $ git clone https://github.com/viniciusscampos/dfa_lib_python.git
     $ python setup.py install
-    
+
 Documentation
 ------------
 

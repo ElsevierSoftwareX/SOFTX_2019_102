@@ -1,8 +1,8 @@
-from ..transformation import Transformation
-from ..set import Set
-from ..set_type import SetType
-from ..attribute import Attribute
-from ..attribute_type import AttributeType
+from dfa_lib_python.transformation import Transformation
+from dfa_lib_python.set import Set
+from dfa_lib_python.set_type import SetType
+from dfa_lib_python.attribute import Attribute
+from dfa_lib_python.attribute_type import AttributeType
 
 
 def test_get_sets_pass():

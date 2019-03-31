@@ -1,6 +1,6 @@
 from datetime import datetime
-from ..performance import Performance
-from ..method_type import MethodType
+from dfa_lib_python.performance import Performance
+from dfa_lib_python.method_type import MethodType
 
 
 def test_get_start_time_pass():
