@@ -20,7 +20,7 @@ The CSE application *systems_of_equations_ex2* was downloaded from [an example i
 DfAnalyzer, its libraries, and CSE applications are stored in directories `DfAnalyzer`, `library`, and `applications` at the path `/dfanalyzer`. 
 
 <a href="https://hub.docker.com/r/vitorss/dataflow_analyzer" target="_blank">
-    <img src="./img/docker.png" width="120">
+    <img src="../img/docker.png" width="120">
 </a>
 
 # Computational Science and Engineering (CSE) applications
@@ -36,13 +36,13 @@ Here we present the software requirements and how to run CSE applications *syste
 3. [libMesh](http://libmesh.github.io/) as a framework for the numerical simulation of partial differential equations using arbitrary unstructured discretizations on serial and parallel platforms.
 
 <a href="https://support.hdfgroup.org/HDF5/" target="_blank">
-    <img src="./img/hdf5.jpeg" width="110" align="middle">
+    <img src="../img/hdf5.jpeg" width="110" align="middle">
 </a>
 <a href="https://www.mcs.anl.gov/petsc/" target="_blank">
-    <img src="./img/petsc.png" width="150" align="middle">
+    <img src="../img/petsc.png" width="150" align="middle">
 </a>
 <a href="http://libmesh.github.io/" target="_blank">
-    <img src="./img/libmesh.jpeg" width="150" align="middle">
+    <img src="../img/libmesh.jpeg" width="150" align="middle">
 </a>
 
 There are also some optional software requirements, if raw data extraction and indexing capabilities are enabled, as follows.
@@ -57,10 +57,10 @@ There are also some optional software requirements, if raw data extraction and i
 3. [Conda](https://conda.io/docs/index.html), a package dependency and environment management for Python.
 
 <a href="https://fenicsproject.org/" target="_blank">
-    <img src="./img/fenics.png" width="110" align="middle">
+    <img src="../img/fenics.png" width="110" align="middle">
 </a>
 <a href="https://conda.io/docs/index.html" target="_blank">
-    <img src="./img/conda.png" width="60" align="middle">
+    <img src="../img/conda.png" width="60" align="middle">
 </a>
 
 ## How to run applications
