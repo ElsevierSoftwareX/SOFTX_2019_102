@@ -79,7 +79,7 @@ Provenance Data Extractor (PDE) is a DfAnalyzer component responsible for extrac
 
 Since our RESTful application has been initialized, users can submit HTTP requests with POST method to PDE for extracting provenance and scientific data. Then, considering the dataflow abstraction followed by DfAnalyzer, users have to introduce a message according to this abstraction. Therefore, PDE provides a set of methods to be present in the HTTP message, as follows:
 
-![PDE RESTful services](./img/dfa-docs-pde.png)
+![PDE RESTful services](../img/dfa-docs-pde.png)
 
 This web page (http://localhost:22000/dfview/help) can be accessed using a browser after the initialization of DfAnalyzer.
 
@@ -137,11 +137,11 @@ http://localhost:22000 # users can also use the hostname for external connection
 
 Then, they have access to a list of dataflow specifications stored in DfAnalyzer's database.
 
-![List of dataflow specifications](./img/dfa-webpage.png)
+![List of dataflow specifications](../img/dfa-webpage.png)
 
 Since users have decided to view a specific dataflow by clicking on the button with the name *View* (*e.g.*, to analyze dataflow specification with tag *systems_of_equations_ex2*), then the following web page will be provided to them. This visualization consists of a dataset perspective view of the dataflow specification, where users can investigate the schema (*i.e.*, attributes of each dataset).
 
-![List of dataflow specifications](./img/dfviewer-libmesh-app.png)
+![List of dataflow specifications](../img/dfviewer-libmesh-app.png)
 
 ### Query Interface (QI)
 
@@ -188,7 +188,7 @@ Selections | selection(conditions) | *conditions* is used to filter only relevan
 
 Considering our libMesh application (more details below) instrumented to extract provenance and scientific data using DfAnalyzer, users might like to investigate the data element flow from the input dataset *osolve_equation_systems* to the output dataset *oextract_data*, when the velocity of the fluid at the axis x is greater than 0.01. More specifically, they want to know in which times and distances (*oextract_data.x*, which is equivalent to the point in coordinate x) this situation occurs. The figure below presents the dataflow fragment analyzed by this query.
 
-![Dataflow representation of the application systems_of_equations_ex2](./img/dfviewer-zoom.png)
+![Dataflow representation of the application systems_of_equations_ex2](../img/dfviewer-zoom.png)
 
 Based on this dataflow analysis, an HTTP request has to be submitted to our RESTful API with the following URL and message (*i.e.*, HTTP body).
 
@@ -213,4 +213,4 @@ As a result, our RESTful API returns a CSV-format file with the selected content
 
 Besides the query processing capabilities provided by QI, users can develop their queries using our graphical interface, as follows:
 
-![Query specification using our graphical interface](./img/query-dashboard.png)
+![Query specification using our graphical interface](../img/query-dashboard.png)
