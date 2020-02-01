@@ -4,7 +4,7 @@ Provenance Data Extractor (PDE) is a DfAnalyzer component responsible for extrac
 
 Since our RESTful application has been initialized, users can submit HTTP requests with POST method to PDE for extracting provenance and scientific data. Then, considering the dataflow abstraction followed by DfAnalyzer, users have to introduce a message according to this abstraction. Therefore, PDE provides a set of methods to be present in the HTTP message, as follows:
 
-![PDE RESTful services](./img/dfa-docs-pde.png)
+![PDE RESTful services](https://gitlab.com/ssvitor/dataflow_analyzer/blob/master/img/dfa-docs-pde.png)
 
 This web page (http://localhost:22000/dfview/help) can be accessed using a browser after the initialization of DfAnalyzer.
 
