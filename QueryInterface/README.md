@@ -43,7 +43,7 @@ Selections | selection(conditions) | *conditions* is used to filter only relevan
 
 Considering our libMesh application (more details below) instrumented to extract provenance and scientific data using DfAnalyzer, users might like to investigate the data element flow from the input dataset *osolve_equation_systems* to the output dataset *oextract_data*, when the velocity of the fluid at the axis x is greater than 0.01. More specifically, they want to know in which times and distances (*oextract_data.x*, which is equivalent to the point in coordinate x) this situation occurs. The figure below presents the dataflow fragment analyzed by this query.
 
-![Dataflow representation of the application systems_of_equations_ex2](./img/dfviewer-zoom.png)
+![Dataflow representation of the application systems_of_equations_ex2](https://gitlab.com/ssvitor/dataflow_analyzer/blob/master/img/dfviewer-zoom.png)
 
 Based on this dataflow analysis, an HTTP request has to be submitted to our RESTful API with the following URL and message (*i.e.*, HTTP body).
 
