@@ -1,5 +1,22 @@
 # DfAnalyzer tool
 
+## Outline
+
+1. Software requirements
+2. Installation
+3. An overview of DfAnalyzer components, lib and documentations
+
+- Raw Data Extractor and Indexer
+- Dataflow Viewer (DfViewer)
+- Query Interface (QI)
+- Query Dashboard (QD)
+
+4. Docker image
+5. Computational Science and Engineering (CSE) applications: 
+
+- systems_of_equations_ex2
+- prototype_multi-physics
+
 ## Overview
 
 This repository presents DfAnalyzer, a dataflow tool for monitoring, debugging, steering, and analyzing dataflow paths of scientific applications.
