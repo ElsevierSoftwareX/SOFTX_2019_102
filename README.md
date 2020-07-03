@@ -1,18 +1,18 @@
 # DfAnalyzer tool
 
-## Outline
+## Contents
 
-1. Software requirements
-2. Installation
-3. An overview of DfAnalyzer components, lib and documentations
+1. [Software requirements](#overview)
+2. [Installation](#installation)
+3. [An overview of DfAnalyzer components, lib and documentations](#an-overview-of-dfanalyzer-components-and-their-documentations)
 
 - Raw Data Extractor and Indexer
 - Dataflow Viewer (DfViewer)
 - Query Interface (QI)
 - Query Dashboard (QD)
 
-4. Docker image
-5. Computational Science and Engineering (CSE) applications: 
+4. [Docker image](#docker-image)
+5. [Computational Science and Engineering (CSE) applications](#computational-science-and-engineering-applications)
 
 - systems_of_equations_ex2
 - prototype_multi-physics
@@ -336,9 +336,9 @@ DfAnalyzer, its libraries, and CSE applications are stored in directories `DfAna
     <img src="./img/docker.png" width="120">
 </a>
 
-# Computational Science and Engineering (CSE) applications
+# Computational Science and Engineering applications
 
-Here we present the software requirements and how to run CSE applications *systems_of_equations_ex2* and *prototype_multi-physics*.
+Here we present the software requirements and how to run Computational Science and Engineering (CSE) applications *systems_of_equations_ex2* and *prototype_multi-physics*.
 
 ## Software requirements
 
